@@ -1,0 +1,10 @@
+C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\ContaMicroservice\bin\Debug\netcoreapp3.0\appsettings.Development.json
+C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\ContaMicroservice\bin\Debug\netcoreapp3.0\appsettings.json
+C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\ContaMicroservice\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
+C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\ContaMicroservice\obj\Debug\netcoreapp3.0\ContaMicroservice.csprojAssemblyReference.cache
+C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\ContaMicroservice\obj\Debug\netcoreapp3.0\staticwebassets\ContaMicroservice.StaticWebAssets.Manifest.cache
+C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\ContaMicroservice\obj\Debug\netcoreapp3.0\staticwebassets\ContaMicroservice.StaticWebAssets.xml
+C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\ContaMicroservice\obj\Debug\netcoreapp3.0\ContaMicroservice.AssemblyInfoInputs.cache
+C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\ContaMicroservice\obj\Debug\netcoreapp3.0\ContaMicroservice.AssemblyInfo.cs
+C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\ContaMicroservice\obj\Debug\netcoreapp3.0\ContaMicroservice.RazorTargetAssemblyInfo.cache
+C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\ContaMicroservice\bin\Debug\netcoreapp3.0\ContaMicroservice.exe

@@ -1,0 +1,10 @@
+C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\AssociadoMicroservice\bin\Debug\netcoreapp3.0\appsettings.Development.json
+C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\AssociadoMicroservice\bin\Debug\netcoreapp3.0\appsettings.json
+C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\AssociadoMicroservice\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
+C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\AssociadoMicroservice\obj\Debug\netcoreapp3.0\AssociadoMicroservice.csprojAssemblyReference.cache
+C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\AssociadoMicroservice\obj\Debug\netcoreapp3.0\staticwebassets\AssociadoMicroservice.StaticWebAssets.Manifest.cache
+C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\AssociadoMicroservice\obj\Debug\netcoreapp3.0\staticwebassets\AssociadoMicroservice.StaticWebAssets.xml
+C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\AssociadoMicroservice\obj\Debug\netcoreapp3.0\AssociadoMicroservice.AssemblyInfoInputs.cache
+C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\AssociadoMicroservice\obj\Debug\netcoreapp3.0\AssociadoMicroservice.AssemblyInfo.cs
+C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\AssociadoMicroservice\obj\Debug\netcoreapp3.0\AssociadoMicroservice.RazorTargetAssemblyInfo.cache
+C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\AssociadoMicroservice\bin\Debug\netcoreapp3.0\AssociadoMicroservice.exe

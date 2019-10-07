@@ -1,5 +1,0 @@
-D:\git\Arca\backend\Persistence\bin\Debug\netcoreapp3.0\Persistence.deps.json
-D:\git\Arca\backend\Persistence\bin\Debug\netcoreapp3.0\Persistence.dll
-D:\git\Arca\backend\Persistence\obj\Debug\netcoreapp3.0\Persistence.csprojAssemblyReference.cache
-D:\git\Arca\backend\Persistence\obj\Debug\netcoreapp3.0\Persistence.AssemblyInfoInputs.cache
-D:\git\Arca\backend\Persistence\obj\Debug\netcoreapp3.0\Persistence.AssemblyInfo.cs

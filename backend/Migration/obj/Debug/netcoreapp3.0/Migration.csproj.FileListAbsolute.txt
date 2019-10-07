@@ -1,4 +1,0 @@
-D:\git\Arca\backend\Migration\bin\Debug\netcoreapp3.0\Migration.exe
-D:\git\Arca\backend\Migration\obj\Debug\netcoreapp3.0\Migration.csprojAssemblyReference.cache
-D:\git\Arca\backend\Migration\obj\Debug\netcoreapp3.0\Migration.AssemblyInfoInputs.cache
-D:\git\Arca\backend\Migration\obj\Debug\netcoreapp3.0\Migration.AssemblyInfo.cs
