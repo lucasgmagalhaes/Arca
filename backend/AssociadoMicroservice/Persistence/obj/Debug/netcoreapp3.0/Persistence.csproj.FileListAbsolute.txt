@@ -1,5 +1,0 @@
-C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\Persistence\bin\Debug\netcoreapp3.0\Persistence.deps.json
-C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\Persistence\bin\Debug\netcoreapp3.0\Persistence.dll
-C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\Persistence\obj\Debug\netcoreapp3.0\Persistence.csprojAssemblyReference.cache
-C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\Persistence\obj\Debug\netcoreapp3.0\Persistence.AssemblyInfoInputs.cache
-C:\Users\lucas.magalhaes\Desktop\backend\AssociadoMicroservice\Persistence\obj\Debug\netcoreapp3.0\Persistence.AssemblyInfo.cs
