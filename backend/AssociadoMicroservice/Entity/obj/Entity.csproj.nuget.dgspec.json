@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucas.magalhaes\\Desktop\\backend\\AssociadoMicroservice\\Entity\\Entity.csproj": {}
+    "D:\\git\\Arca\\backend\\AssociadoMicroservice\\Entity\\Entity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucas.magalhaes\\Desktop\\backend\\AssociadoMicroservice\\Entity\\Entity.csproj": {
+    "D:\\git\\Arca\\backend\\AssociadoMicroservice\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucas.magalhaes\\Desktop\\backend\\AssociadoMicroservice\\Entity\\Entity.csproj",
+        "projectUniqueName": "D:\\git\\Arca\\backend\\AssociadoMicroservice\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\lucas.magalhaes\\Desktop\\backend\\AssociadoMicroservice\\Entity\\Entity.csproj",
-        "packagesPath": "C:\\Users\\lucas.magalhaes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas.magalhaes\\Desktop\\backend\\AssociadoMicroservice\\Entity\\obj\\",
+        "projectPath": "D:\\git\\Arca\\backend\\AssociadoMicroservice\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\Arca\\backend\\AssociadoMicroservice\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\lucas.magalhaes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

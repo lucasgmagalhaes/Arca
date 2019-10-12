@@ -1222,6 +1222,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Enum": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "Enum/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/Enum.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Enum.dll": {}
+        }
       }
     }
   },
@@ -4794,34 +4817,45 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Enum/1.0.0": {
+      "type": "project",
+      "path": "../Enum/Enum.csproj",
+      "msbuildProject": "../Enum/Enum.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
+      "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 3.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lucas.magalhaes\\.nuget\\packages\\": {},
+    "C:\\Users\\Lucas\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucas.magalhaes\\Desktop\\backend\\ContaMicroservice\\Persistence\\Persistence.csproj",
+      "projectUniqueName": "D:\\git\\Arca\\backend\\ContaMicroservice\\Persistence\\Persistence.csproj",
       "projectName": "Persistence",
-      "projectPath": "C:\\Users\\lucas.magalhaes\\Desktop\\backend\\ContaMicroservice\\Persistence\\Persistence.csproj",
-      "packagesPath": "C:\\Users\\lucas.magalhaes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas.magalhaes\\Desktop\\backend\\ContaMicroservice\\Persistence\\obj\\",
+      "projectPath": "D:\\git\\Arca\\backend\\ContaMicroservice\\Persistence\\Persistence.csproj",
+      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
+      "outputPath": "D:\\git\\Arca\\backend\\ContaMicroservice\\Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lucas.magalhaes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -4834,7 +4868,11 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\git\\Arca\\backend\\ContaMicroservice\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\git\\Arca\\backend\\ContaMicroservice\\Domain\\Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
