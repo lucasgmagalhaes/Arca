@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Migration
+﻿namespace Migration
 {
     public class Class1
     {

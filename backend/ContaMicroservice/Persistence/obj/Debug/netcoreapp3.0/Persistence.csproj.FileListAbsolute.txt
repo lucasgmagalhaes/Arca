@@ -3,3 +3,16 @@ C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\Persistence\bin\Debug
 C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\Persistence\obj\Debug\netcoreapp3.0\Persistence.csprojAssemblyReference.cache
 C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\Persistence\obj\Debug\netcoreapp3.0\Persistence.AssemblyInfoInputs.cache
 C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\Persistence\obj\Debug\netcoreapp3.0\Persistence.AssemblyInfo.cs
+D:\git\Arca\backend\ContaMicroservice\Persistence\bin\Debug\netcoreapp3.0\Persistence.deps.json
+D:\git\Arca\backend\ContaMicroservice\Persistence\bin\Debug\netcoreapp3.0\Persistence.dll
+D:\git\Arca\backend\ContaMicroservice\Persistence\bin\Debug\netcoreapp3.0\Persistence.pdb
+D:\git\Arca\backend\ContaMicroservice\Persistence\bin\Debug\netcoreapp3.0\Domain.dll
+D:\git\Arca\backend\ContaMicroservice\Persistence\bin\Debug\netcoreapp3.0\Enum.dll
+D:\git\Arca\backend\ContaMicroservice\Persistence\bin\Debug\netcoreapp3.0\Domain.pdb
+D:\git\Arca\backend\ContaMicroservice\Persistence\bin\Debug\netcoreapp3.0\Enum.pdb
+D:\git\Arca\backend\ContaMicroservice\Persistence\obj\Debug\netcoreapp3.0\Persistence.csprojAssemblyReference.cache
+D:\git\Arca\backend\ContaMicroservice\Persistence\obj\Debug\netcoreapp3.0\Persistence.AssemblyInfoInputs.cache
+D:\git\Arca\backend\ContaMicroservice\Persistence\obj\Debug\netcoreapp3.0\Persistence.AssemblyInfo.cs
+D:\git\Arca\backend\ContaMicroservice\Persistence\obj\Debug\netcoreapp3.0\Persistence.csproj.CopyComplete
+D:\git\Arca\backend\ContaMicroservice\Persistence\obj\Debug\netcoreapp3.0\Persistence.dll
+D:\git\Arca\backend\ContaMicroservice\Persistence\obj\Debug\netcoreapp3.0\Persistence.pdb
