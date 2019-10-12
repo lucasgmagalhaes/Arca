@@ -7,11 +7,11 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.0-nanoserver-1809 AS build
-WORKDIR /src
+WORKDIR /backend
 COPY ["ContaMicroservice/ContaMicroservice.csproj", "ContaMicroservice/"]
 RUN dotnet restore "ContaMicroservice/ContaMicroservice.csproj"
 COPY . .
-WORKDIR "/src/ContaMicroservice"
+WORKDIR "/backend/ContaMicroservice"
 RUN dotnet build "ContaMicroservice.csproj" -c Release -o /app/build
 
 FROM build AS publish
