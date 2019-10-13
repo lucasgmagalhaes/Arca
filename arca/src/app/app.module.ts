@@ -10,14 +10,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 import { LoginComponent } from './login/login.component';
+import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
-    LoginComponent
+    LoginComponent,
+    RecaptchaV2Component
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,9 @@ import { LoginComponent } from './login/login.component';
     MatListModule,
     MatButtonModule,
 
-    LoginComponent
+    LoginComponent,
+    RecaptchaModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
