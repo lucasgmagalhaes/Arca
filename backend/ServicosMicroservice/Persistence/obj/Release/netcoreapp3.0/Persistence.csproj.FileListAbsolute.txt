@@ -1,0 +1,13 @@
+D:\git\Arca\backend\ServicosMicroservice\Persistence\bin\Release\netcoreapp3.0\Persistence.deps.json
+D:\git\Arca\backend\ServicosMicroservice\Persistence\bin\Release\netcoreapp3.0\Persistence.dll
+D:\git\Arca\backend\ServicosMicroservice\Persistence\bin\Release\netcoreapp3.0\Persistence.pdb
+D:\git\Arca\backend\ServicosMicroservice\Persistence\bin\Release\netcoreapp3.0\Domain.dll
+D:\git\Arca\backend\ServicosMicroservice\Persistence\bin\Release\netcoreapp3.0\Enums.dll
+D:\git\Arca\backend\ServicosMicroservice\Persistence\bin\Release\netcoreapp3.0\Domain.pdb
+D:\git\Arca\backend\ServicosMicroservice\Persistence\bin\Release\netcoreapp3.0\Enums.pdb
+D:\git\Arca\backend\ServicosMicroservice\Persistence\obj\Release\netcoreapp3.0\Persistence.csprojAssemblyReference.cache
+D:\git\Arca\backend\ServicosMicroservice\Persistence\obj\Release\netcoreapp3.0\Persistence.AssemblyInfoInputs.cache
+D:\git\Arca\backend\ServicosMicroservice\Persistence\obj\Release\netcoreapp3.0\Persistence.AssemblyInfo.cs
+D:\git\Arca\backend\ServicosMicroservice\Persistence\obj\Release\netcoreapp3.0\Persistence.csproj.CopyComplete
+D:\git\Arca\backend\ServicosMicroservice\Persistence\obj\Release\netcoreapp3.0\Persistence.dll
+D:\git\Arca\backend\ServicosMicroservice\Persistence\obj\Release\netcoreapp3.0\Persistence.pdb
