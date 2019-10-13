@@ -1,22 +1,27 @@
-<div class="login" >
-<br />
-    <mat-card >
+<div class="login">
+  <br />
+  <mat-card>
+    <div id="icon_login">
+        <mat-icon aria-hidden="false" aria-label="account_circle icon">account_circle</mat-icon>
+        <p id="title_login">LOGIN</p>
+    </div>
+<hr>
     <mat-form-field>
-        <input matInput placeholder="CPF" formControlName="cpf" mask="000.000.000-00">
-      </mat-form-field>
-  <br>
-      <mat-form-field >
-          <input matInput placeholder="Senha" formControlName="password" type="password">      
-        </mat-form-field>
-      <br>
-      <div>
-        <app-recaptcha-v2></app-recaptcha-v2>
-      </div>
-      <br>
-    <button mat-raised-button color="primary">Entrar</button>  
+      <input matInput placeholder="CPF" formControlName="cpf" mask="000.000.000-00">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Senha" formControlName="password" type="password">
+    </mat-form-field>
+    <br>
+    <div>
+      <app-recaptcha-v2></app-recaptcha-v2>
+    </div>
+    <br>
+    <button mat-raised-button color="primary">Entrar</button>
     <hr>
     <div id="footer_login">
-      <a href="url">Cadastre-se </a> |  <a href="url"> Esqueci a senha</a>
+      <a href="url">Cadastre-se </a> | <a href="url"> Esqueci a senha</a>
     </div>
-</mat-card>
-</div> 
+  </mat-card>
+</div>
