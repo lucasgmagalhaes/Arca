@@ -1,0 +1,8 @@
+D:\git\Arca\backend\ServicosMicroservice\Enum\bin\Release\netstandard2.0\Enums.deps.json
+D:\git\Arca\backend\ServicosMicroservice\Enum\bin\Release\netstandard2.0\Enums.dll
+D:\git\Arca\backend\ServicosMicroservice\Enum\bin\Release\netstandard2.0\Enums.pdb
+D:\git\Arca\backend\ServicosMicroservice\Enum\obj\Release\netstandard2.0\Enums.csprojAssemblyReference.cache
+D:\git\Arca\backend\ServicosMicroservice\Enum\obj\Release\netstandard2.0\Enums.AssemblyInfoInputs.cache
+D:\git\Arca\backend\ServicosMicroservice\Enum\obj\Release\netstandard2.0\Enums.AssemblyInfo.cs
+D:\git\Arca\backend\ServicosMicroservice\Enum\obj\Release\netstandard2.0\Enums.dll
+D:\git\Arca\backend\ServicosMicroservice\Enum\obj\Release\netstandard2.0\Enums.pdb

@@ -1,0 +1,11 @@
+D:\git\Arca\backend\ServicosMicroservice\Domain\bin\Debug\netcoreapp3.0\Domain.deps.json
+D:\git\Arca\backend\ServicosMicroservice\Domain\bin\Debug\netcoreapp3.0\Domain.dll
+D:\git\Arca\backend\ServicosMicroservice\Domain\bin\Debug\netcoreapp3.0\Domain.pdb
+D:\git\Arca\backend\ServicosMicroservice\Domain\obj\Debug\netcoreapp3.0\Domain.csprojAssemblyReference.cache
+D:\git\Arca\backend\ServicosMicroservice\Domain\obj\Debug\netcoreapp3.0\Domain.AssemblyInfoInputs.cache
+D:\git\Arca\backend\ServicosMicroservice\Domain\obj\Debug\netcoreapp3.0\Domain.AssemblyInfo.cs
+D:\git\Arca\backend\ServicosMicroservice\Domain\obj\Debug\netcoreapp3.0\Domain.dll
+D:\git\Arca\backend\ServicosMicroservice\Domain\obj\Debug\netcoreapp3.0\Domain.pdb
+D:\git\Arca\backend\ServicosMicroservice\Domain\bin\Debug\netcoreapp3.0\Enums.dll
+D:\git\Arca\backend\ServicosMicroservice\Domain\bin\Debug\netcoreapp3.0\Enums.pdb
+D:\git\Arca\backend\ServicosMicroservice\Domain\obj\Debug\netcoreapp3.0\Domain.csproj.CopyComplete

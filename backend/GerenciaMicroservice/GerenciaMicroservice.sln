@@ -5,13 +5,15 @@ VisualStudioVersion = 16.0.29319.158
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciaMicroservice", "GerenciaMicroservice\GerenciaMicroservice.csproj", "{E67DA735-FC52-42F4-9F09-E4EC4BE2D2E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{2BD6C30F-1DC1-49FA-A0D5-2ACE18928776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Migration", "Migration\Migration.csproj", "{A2700130-5C32-40AE-89FD-51D4F875A997}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migration", "Migration\Migration.csproj", "{A2700130-5C32-40AE-89FD-51D4F875A997}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{2530A4FF-F8BA-40F4-8B3B-B5B89DE7D90B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{2530A4FF-F8BA-40F4-8B3B-B5B89DE7D90B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exception", "Exception\Exception.csproj", "{C3A899A0-9395-44C2-A4F8-9C8B8E16FFAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exception", "Exception\Exception.csproj", "{C3A899A0-9395-44C2-A4F8-9C8B8E16FFAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{E248B26F-C225-44F8-876C-73D0A79911CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transport", "Transport\Transport.csproj", "{7735DFF7-6A88-4A24-8050-EBCA13B8AD8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +25,6 @@ Global
 		{E67DA735-FC52-42F4-9F09-E4EC4BE2D2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E67DA735-FC52-42F4-9F09-E4EC4BE2D2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E67DA735-FC52-42F4-9F09-E4EC4BE2D2E7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2BD6C30F-1DC1-49FA-A0D5-2ACE18928776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BD6C30F-1DC1-49FA-A0D5-2ACE18928776}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BD6C30F-1DC1-49FA-A0D5-2ACE18928776}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BD6C30F-1DC1-49FA-A0D5-2ACE18928776}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A2700130-5C32-40AE-89FD-51D4F875A997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2700130-5C32-40AE-89FD-51D4F875A997}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2700130-5C32-40AE-89FD-51D4F875A997}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +37,14 @@ Global
 		{C3A899A0-9395-44C2-A4F8-9C8B8E16FFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3A899A0-9395-44C2-A4F8-9C8B8E16FFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3A899A0-9395-44C2-A4F8-9C8B8E16FFAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E248B26F-C225-44F8-876C-73D0A79911CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E248B26F-C225-44F8-876C-73D0A79911CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E248B26F-C225-44F8-876C-73D0A79911CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E248B26F-C225-44F8-876C-73D0A79911CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7735DFF7-6A88-4A24-8050-EBCA13B8AD8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7735DFF7-6A88-4A24-8050-EBCA13B8AD8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7735DFF7-6A88-4A24-8050-EBCA13B8AD8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7735DFF7-6A88-4A24-8050-EBCA13B8AD8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
