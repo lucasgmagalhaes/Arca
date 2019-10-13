@@ -1,5 +1,7 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
@@ -9,6 +11,10 @@ import {
    MatCardModule
   } from '@angular/material';
 
+  import {NgxMaskModule, IConfig} from 'ngx-mask'
+  export const options: Partial<IConfig> | (() => Partial<IConfig>) ={};
+
+
 @NgModule({
   declarations: [],
   imports: [
@@ -17,14 +23,16 @@ import {
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    NgxMaskModule.forRoot(options)
   ],
   exports: [
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    NgxMaskModule,
   ]
 })
 export class MaterialDesignModule { }

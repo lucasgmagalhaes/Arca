@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import {NgModule} from '@angular/core';
 import { MaterialDesignModule } from '../material-design/material-design.module';
-
-
-
 
 @Component({
   selector: 'app-login',
