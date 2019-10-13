@@ -10,6 +10,16 @@
     background: inherit;
 }
 
+.mat-toolbar {
+    color: white !important;
+    background: #3f51b5 !important;
+}
+
+.mat-icon-button{
+  position: absolute !important;
+  left: 0 !important;
+}
+
 .mat-toolbar.mat-primary {
     position: sticky;
     top: 0;
