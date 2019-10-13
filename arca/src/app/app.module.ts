@@ -13,10 +13,6 @@ import { MatListModule } from '@angular/material/list';
 
 import { LoginComponent } from './login/login.component';
 
-/**Captcha*/
-import { ReactiveFormsModule } from '@angular/forms';
-// import { NgxCaptchaModule } from 'ngx-captcha';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,9 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatButtonModule,
 
-    LoginComponent,
-    ReactiveFormsModule,
-    // NgxCaptchaModule
+    LoginComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

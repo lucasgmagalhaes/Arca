@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-   MatCheckboxModule,
    MatButtonModule,
    MatInputModule,
    MatFormFieldModule,
@@ -15,7 +14,6 @@ import {
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    MatCheckboxModule,
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
@@ -23,7 +21,6 @@ import {
   ],
   exports: [
     BrowserAnimationsModule,
-    MatCheckboxModule,
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
