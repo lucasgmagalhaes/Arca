@@ -15,7 +15,7 @@ import { LoginComponent } from './login/login.component';
 
 /**Captcha*/
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgxCaptchaModule } from 'ngx-captcha';
+// import { NgxCaptchaModule } from 'ngx-captcha';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { NgxCaptchaModule } from 'ngx-captcha';
 
     LoginComponent,
     ReactiveFormsModule,
-    NgxCaptchaModule
+    // NgxCaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
