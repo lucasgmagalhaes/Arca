@@ -1,6 +1,5 @@
 <div class="login" >
 <br />
-<form [formGroup]="aFormGroup" class="card-login">
     <mat-card >
     <mat-form-field>
         <input matInput placeholder="CPF" value="000.000.000-00">
@@ -11,38 +10,5 @@
       </mat-form-field>
       <br>
     <button mat-raised-button color="primary">Entrar</button>
-
-  <ngx-recaptcha2 #captchaElem
-    [siteKey]="siteKey"
-    (reset)="handleReset()"
-    (expire)="handleExpire()"
-    (load)="handleLoad()"
-    (success)="handleSuccess($event)"
-    [useGlobalDomain]="false"
-    [size]="size"
-    [hl]="lang"
-    [theme]="theme"
-    [type]="type"
-    formControlName="recaptcha">
-  </ngx-recaptcha2>
 </mat-card>
-</form>
-
 </div> 
-
- <!-- <form [formGroup]="aFormGroup">
-    <ngx-recaptcha2 #captchaElem
-      [siteKey]="siteKey"
-      (reset)="handleReset()"
-      (expire)="handleExpire()"
-      (error)="handleError()"
-      (load)="handleLoad()"
-      (success)="handleSuccess($event)"
-      [useGlobalDomain]="false"
-      [size]="size"
-      [hl]="lang"
-      [theme]="theme"
-      [type]="type"
-      formControlName="recaptcha">
-    </ngx-recaptcha2>
-  </form> -->
