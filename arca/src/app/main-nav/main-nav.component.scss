@@ -4,6 +4,9 @@
 
 .sidenav {
     width: 200px;
+    a {
+        color: #325829;
+    }
 }
 
 @media (min-width: 720px) {
@@ -18,7 +21,7 @@
 
 .mat-toolbar {
     color: #325829 !important;
-    background: #FFFFFF !important;
+    background: #ffffff !important;
 }
 
 .mat-icon-button {
@@ -67,7 +70,7 @@
         color: #325829;
         text-decoration: none;
         &:hover {
-            color: #E5B265;
+            color: #e5b265;
         }
     }
 }
