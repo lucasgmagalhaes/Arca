@@ -9,7 +9,9 @@ import {
    MatInputModule,
    MatFormFieldModule,
    MatCardModule,
-   MatIconModule
+   MatIconModule,
+   MatCheckboxModule,
+   MatSelectModule
   } from '@angular/material';
 
   import {NgxMaskModule, IConfig} from 'ngx-mask'
@@ -26,7 +28,9 @@ import {
     MatFormFieldModule,
     MatCardModule,
     NgxMaskModule.forRoot(options),
-    MatIconModule
+    MatIconModule,
+    MatCheckboxModule,
+    MatSelectModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -36,6 +40,8 @@ import {
     MatCardModule,
     NgxMaskModule,
     MatIconModule,
+    MatCheckboxModule,
+    MatSelectModule,
   ]
 })
 export class MaterialDesignModule { }

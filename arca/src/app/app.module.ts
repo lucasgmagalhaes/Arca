@@ -39,7 +39,8 @@ import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-fu
     LoginComponent,
     RecaptchaModule,
     CadastroAssociadoComponent,
-
+    CadastroFuncionarioComponent,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
