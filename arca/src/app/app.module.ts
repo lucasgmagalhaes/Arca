@@ -36,7 +36,6 @@ import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-fu
     MatIconModule,
     MatListModule,
     MatButtonModule,
-
     LoginComponent,
     RecaptchaModule,
     CadastroAssociadoComponent,
