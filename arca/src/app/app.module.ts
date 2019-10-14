@@ -18,6 +18,7 @@ import { CadastroAssociadoComponent } from './cadastro-associado/cadastro-associ
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 import { CadastroAnimalComponent } from './cadastro-animal/cadastro-animal.component';
 import { CadastroParceiroComponent } from './cadastro-parceiro/cadastro-parceiro.component';
+import { DoacaoComponent } from './doacao/doacao.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CadastroParceiroComponent } from './cadastro-parceiro/cadastro-parceiro
     CadastroAssociadoComponent,
     CadastroFuncionarioComponent,
     CadastroAnimalComponent,
-    CadastroParceiroComponent
+    CadastroParceiroComponent,
+    DoacaoComponent
   ],
   imports: [
     BrowserModule,
