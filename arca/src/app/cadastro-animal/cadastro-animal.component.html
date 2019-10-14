@@ -1,0 +1,45 @@
+<div class="cadastroAnimal">
+    <mat-card class="card-cadastroAnimal">
+        <mat-icon aria-hidden="false" aria-label="account_circle icon">pets</mat-icon>
+        <mat-card-title>
+            <label>Novo Animal</label>
+        </mat-card-title>
+        <hr>
+        <mat-card-content>
+            <div class="row">
+                <mat-form-field class="col col-md-3">
+                    <mat-label>Animal</mat-label>
+                    <select matNativeControl required>
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                    </select>
+                </mat-form-field>
+                <mat-form-field class="col col-md-3">
+                    <mat-label>Raça</mat-label>
+                    <select matNativeControl required>
+                        <option value="srd">SRD</option>
+                    </select>
+                </mat-form-field>
+                <mat-form-field class="col col-md-6">
+                    <input matInput placeholder="Nome do Animal" formControlName="nomeAnimal" type="text">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col col-md-12">
+                    <mat-label>Estado do Animal</mat-label>
+                    <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                        cdkAutosizeMaxRows="5"></textarea>
+                </mat-form-field>
+            </div>
+            <div class="row" id="animalDispAdoacao">
+                <input type="checkbox"> Disponível para adoção
+            </div>
+            <div class="row" id="animalMorreu">
+                <input type="checkbox"> Morreu
+            </div>
+            <div class="row">
+                <button mat-raised-button id="btnCadastrarAnimal">Cadastrar</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
