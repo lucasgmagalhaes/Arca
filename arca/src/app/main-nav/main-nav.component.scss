@@ -38,6 +38,8 @@
 .out-logo {
     display: flex;
     justify-content: center;
+    background: white !important;
+    box-shadow: 0px 0px 3px black;
 }
 
 .logo {
@@ -62,7 +64,11 @@
     height: 100%;
     a {
         padding: 15px;
-        color: white;
+        color: #325829;
+        text-decoration: none;
+        &:hover {
+            color: #E5B265;
+        }
     }
 }
 @media (max-width: 720px) {
