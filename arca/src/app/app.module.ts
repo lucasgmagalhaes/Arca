@@ -17,6 +17,7 @@ import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
 import { CadastroAssociadoComponent } from './cadastro-associado/cadastro-associado.component';
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 import { CadastroAnimalComponent } from './cadastro-animal/cadastro-animal.component';
+import { CadastroParceiroComponent } from './cadastro-parceiro/cadastro-parceiro.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CadastroAnimalComponent } from './cadastro-animal/cadastro-animal.compo
     RecaptchaV2Component,
     CadastroAssociadoComponent,
     CadastroFuncionarioComponent,
-    CadastroAnimalComponent
+    CadastroAnimalComponent,
+    CadastroParceiroComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+<div class="cadastroParceiro">
+    <mat-card class="card-cadastroParceiro">
+        <mat-icon aria-hidden="false" aria-label="account_circle icon">supervised_user_circle</mat-icon>
+        <mat-card-title>
+            <label>Novo Parceiro</label>
+        </mat-card-title>
+        <hr>
+        <mat-card-content>
+            <div class="row">
+                <mat-form-field class="col col-md-3">
+                    <input matInput placeholder="CNPJ" formControlName="CNPJParceiro" type="text"
+                        mask="00.000.000/0000-00">
+                </mat-form-field>
+                <mat-form-field class="col col-md-5">
+                    <input matInput placeholder="Nome Parceiro" formControlName="nomeParceiro" type="text">
+                </mat-form-field>
+                <mat-form-field class="col col-md-4">
+                    <mat-label>Ramo</mat-label>
+                    <select matNativeControl required>
+                        <option value="clinicaVeterinaria">Clínica Veterinária</option>
+                        <option value="fornecedorDeRacao">Fornecedor de Ração</option>
+                    </select>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <button mat-raised-button id="btnCadastrarParceiro">Cadastrar</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
