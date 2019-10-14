@@ -34,3 +34,14 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.mat-raised-button
+{
+    background-color: $color-green;
+    color: $color-white;
+}
+
+.mat-card-title, .mat-icon
+{
+    color: #3f51b5;
+}
