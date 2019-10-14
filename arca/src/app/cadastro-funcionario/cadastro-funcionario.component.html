@@ -1,0 +1,67 @@
+<app-main-nav></app-main-nav>
+<div class="cadastroAssociado">
+    <br />
+    <mat-card class="card-cadastroAssociado">
+            <mat-icon aria-hidden="false" aria-label="account_circle icon">account_circle</mat-icon>
+        <mat-card-title>       
+            <label>Novo Associado</label>
+        </mat-card-title>
+        <hr>
+        <mat-card-content>
+
+            <div class="row">
+
+                <mat-form-field class="col col-md-9">
+                    <input matInput placeholder="Nome Completo" formControlName="nomeAssociado" type="text">
+                </mat-form-field>
+                <mat-form-field class="col col-md-3">
+                    <input matInput placeholder="Data de Nascimento" formControlName="dataNascAssociado" type="text"
+                        mask="00/00/0000">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col col-md-6">
+                    <input matInput placeholder="CPF" formControlName="cpfAssociado" type="text" mask="000.000.000-00">
+                </mat-form-field>
+                <mat-form-field class="col col-md-6">
+                    <input matInput placeholder="Email" formControlName="emailAssociado" type="text" mask="00/00/0000">
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col col-md-6">
+                    <input matInput placeholder="Senha" formControlName="senhaAssociado" type="password">
+                </mat-form-field>
+                <mat-form-field class="col col-md-6">
+                    <input matInput placeholder="Confirmação da Senha" formControlName="confSenhaAssociado"
+                        type="password">
+                </mat-form-field>
+            </div>
+            <br>
+            <div class="row">
+                <button mat-raised-button color="primary" id="btnCadastrarAssociado">Cadastrar</button>
+            </div>
+        </mat-card-content>
+        <!-- <div id="icon_login">
+              <mat-icon aria-hidden="false" aria-label="account_circle icon">account_circle</mat-icon>
+              <p id="title_login">LOGIN</p>
+          </div>
+      <hr>
+          <mat-form-field>
+            <input matInput placeholder="CPF" formControlName="cpf" mask="000.000.000-00">
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput placeholder="Senha" formControlName="password" type="password">
+          </mat-form-field>
+          <br>
+          <div>
+            <app-recaptcha-v2></app-recaptcha-v2>
+          </div>
+          <br>
+          <button mat-raised-button color="primary">Entrar</button>
+          <hr>
+          <div id="footer_login">
+            <a href="url">Cadastre-se </a> | <a href="url"> Esqueci a senha</a> -->
+
+    </mat-card>
+</div>
