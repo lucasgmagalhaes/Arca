@@ -14,13 +14,17 @@ import { RecaptchaModule } from 'ng-recaptcha';
 
 import { LoginComponent } from './login/login.component';
 import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
+import { CadastroAssociadoComponent } from './cadastro-associado/cadastro-associado.component';
+import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
     LoginComponent,
-    RecaptchaV2Component
+    RecaptchaV2Component,
+    CadastroAssociadoComponent,
+    CadastroFuncionarioComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,8 @@ import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
     MatListModule,
     MatButtonModule,
     LoginComponent,
-    RecaptchaModule
+    RecaptchaModule,
+    CadastroAssociadoComponent,
 
   ],
   providers: [],
