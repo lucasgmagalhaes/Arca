@@ -32,10 +32,9 @@ import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
     MatIconModule,
     MatListModule,
     MatButtonModule,
-
     LoginComponent,
-    RecaptchaModule,
-   
+    RecaptchaModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
