@@ -2,8 +2,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
+import {TextFieldModule} from '@angular/cdk/text-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import {
    MatButtonModule,
    MatInputModule,
@@ -11,7 +12,8 @@ import {
    MatCardModule,
    MatIconModule,
    MatCheckboxModule,
-   MatSelectModule
+   MatSelectModule,
+   MatRadioModule,
   } from '@angular/material';
 
   import {NgxMaskModule, IConfig} from 'ngx-mask'
@@ -30,7 +32,8 @@ import {
     NgxMaskModule.forRoot(options),
     MatIconModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    TextFieldModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -42,6 +45,8 @@ import {
     MatIconModule,
     MatCheckboxModule,
     MatSelectModule,
+    MatRadioModule,
+    TextFieldModule
   ]
 })
 export class MaterialDesignModule { }
