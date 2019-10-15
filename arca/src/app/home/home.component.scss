@@ -1,0 +1,15 @@
+.home {
+    &__parceiros {
+        &__item {
+            background-color: transparent;
+            box-shadow: none;
+            img {
+              
+                border-top-left-radius: 100%;
+                border-top-right-radius: 100%;
+                border-bottom-left-radius: 100%;
+                border-bottom-right-radius: 100%;
+            }
+        }
+    }
+}

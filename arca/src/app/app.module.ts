@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RecaptchaModule } from 'ng-recaptcha';
 
+
 import { LoginComponent } from './login/login.component';
 import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
 import { CadastroAssociadoComponent } from './cadastro-associado/cadastro-associado.component';
@@ -19,6 +20,8 @@ import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-fu
 import { CadastroAnimalComponent } from './cadastro-animal/cadastro-animal.component';
 import { CadastroParceiroComponent } from './cadastro-parceiro/cadastro-parceiro.component';
 import { DoacaoComponent } from './doacao/doacao.component';
+import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { DoacaoComponent } from './doacao/doacao.component';
     CadastroFuncionarioComponent,
     CadastroAnimalComponent,
     CadastroParceiroComponent,
-    DoacaoComponent
+    DoacaoComponent,
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,8 @@ import { DoacaoComponent } from './doacao/doacao.component';
     RecaptchaModule,
     CadastroAssociadoComponent,
     CadastroFuncionarioComponent,
-   
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

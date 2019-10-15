@@ -1,5 +1,6 @@
 .sidenav-container {
     height: 100%;
+    position: relative;
 }
 
 .sidenav {
@@ -29,9 +30,9 @@
     left: 0 !important;
 }
 
-.mat-sidenav-content {
-    overflow: hidden;
-}
+// .mat-sidenav-content {
+//     overflow: hidden;
+// }
 
 .mat-toolbar.mat-primary {
     position: sticky;
@@ -61,9 +62,7 @@
 }
 
 .menu-desktop {
-    // position: absolute;
-    // right: 0;
-    // top: 15px;
+ 
     height: 100%;
     a {
         padding: 15px;
