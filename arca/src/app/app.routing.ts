@@ -10,9 +10,9 @@ import { HomeComponent } from './home/home.component';
 
 
 export const ROUTES: Routes =
-  [{ path: 'cadastroanimal', component: CadastroAnimalComponent },
+  [{ path: 'cadastro-animal', component: CadastroAnimalComponent },
   { path: 'doacao', component: DoacaoComponent },
-  { path: 'homeServicos', component: HomeServicosComponent },
-  { path: 'homeAdocao', component: HomeAdocaoComponent },
+  { path: 'servicos', component: HomeServicosComponent },
+  { path: 'adocao', component: HomeAdocaoComponent },
   { path: 'home', component: HomeComponent },
   { path: '', pathMatch: 'full', redirectTo:'/home' }];

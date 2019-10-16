@@ -3,10 +3,10 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/homeAdocao">Adoção</a>
+      <a mat-list-item routerLink="/adocao">Adoção</a>
       <a mat-list-item routerLink="/doacao">Doação</a>
       <a mat-list-item href="#">Parceiros</a>
-      <a mat-list-item routerLink="/homeServicos">Serviços</a>
+      <a mat-list-item routerLink="/servicos">Serviços</a>
       <a mat-list-item href="#">Atendimento</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -21,10 +21,10 @@
       </div>
       <div class="menu-desktop">
         <a routerLink="/home"><img class="logo__imagem" src="../../assets/imagens/logo.png"></a>
-        <a routerLink="/homeAdocao">Adoção</a>
+        <a routerLink="/adocao">Adoção</a>
         <a routerLink="/doacao">Doação</a>
         <a href="#">Parceiros</a>
-        <a routerLink="/homeServicos">Serviços</a>
+        <a routerLink="/servicos">Serviços</a>
         <a href="#">Atendimento</a>
       </div>
     </mat-toolbar>
