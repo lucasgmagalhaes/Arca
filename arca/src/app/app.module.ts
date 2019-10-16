@@ -22,6 +22,7 @@ import { CadastroParceiroComponent } from './cadastro-parceiro/cadastro-parceiro
 import { DoacaoComponent } from './doacao/doacao.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { DoacaoInternaComponent } from './doacao-interna/doacao-interna.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FooterComponent } from './footer/footer.component';
     CadastroParceiroComponent,
     DoacaoComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    DoacaoInternaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+<mat-toolbar>
+    <mat-icon aria-hidden="false" aria-label="account_circle icon">pets </mat-icon> Doações
+</mat-toolbar>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="dataDoacao">
+    <th mat-header-cell *matHeaderCellDef> Data da Doação </th>
+    <td mat-cell *matCellDef="let element"> {{element.dataDoacao}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="nomeDoador">
+    <th mat-header-cell *matHeaderCellDef> Nome Doador </th>
+    <td mat-cell *matCellDef="let element"> {{element.nomeDoador}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="cpfDoador">
+    <th mat-header-cell *matHeaderCellDef> CPF Doador </th>
+    <td mat-cell *matCellDef="let element"> {{element.cpfDoador}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="valorDoacao">
+    <th mat-header-cell *matHeaderCellDef> Valor da Doação </th>
+    <td mat-cell *matCellDef="let element"> {{element.valorDoacao}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
