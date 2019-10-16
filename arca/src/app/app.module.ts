@@ -27,6 +27,7 @@ import { HomeServicosComponent } from './home-servicos/home-servicos.component';
 import { ROUTES } from './app.routing';
 import { RouterModule } from '@angular/router';
 import { DoacaoInternaComponent } from './doacao-interna/doacao-interna.component';
+import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-atendimento.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { DoacaoInternaComponent } from './doacao-interna/doacao-interna.componen
     FooterComponent,
     HomeAdocaoComponent,
     HomeServicosComponent,
-    DoacaoInternaComponent
+    DoacaoInternaComponent,
+    CadastroAtendimentoComponent
   ],
   imports: [
     BrowserModule,
