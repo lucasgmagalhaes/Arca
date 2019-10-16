@@ -3,10 +3,10 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Adoção</a>
-      <a mat-list-item href="#">Doação</a>
+      <a mat-list-item routerLink="/homeAdocao">Adoção</a>
+      <a mat-list-item routerLink="/doacao">Doação</a>
       <a mat-list-item href="#">Parceiros</a>
-      <a mat-list-item href="#">Serviços</a>
+      <a mat-list-item routerLink="/homeServicos">Serviços</a>
       <a mat-list-item href="#">Atendimento</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -17,14 +17,14 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <div class="logo">
-        <img class="logo__imagem" src="../../assets/imagens/logo.png">
+        <a routerLink="/home"><img class="logo__imagem" src="../../assets/imagens/logo.png"></a>
       </div>
       <div class="menu-desktop">
-        <img class="logo__imagem" src="../../assets/imagens/logo.png">
-        <a href="#">Adoção</a>
-        <a href="#">Doação</a>
+        <a routerLink="/home"><img class="logo__imagem" src="../../assets/imagens/logo.png"></a>
+        <a routerLink="/homeAdocao">Adoção</a>
+        <a routerLink="/doacao">Doação</a>
         <a href="#">Parceiros</a>
-        <a href="#">Serviços</a>
+        <a routerLink="/homeServicos">Serviços</a>
         <a href="#">Atendimento</a>
       </div>
     </mat-toolbar>

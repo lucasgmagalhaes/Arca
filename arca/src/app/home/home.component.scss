@@ -1,15 +1,50 @@
 .home {
+    .swipe {
+        overflow: hidden;
+        visibility: hidden;
+        position: relative;
+    }
+    .swipe-wrap {
+        overflow: hidden;
+        position: relative;
+    }
+    .swipe-wrap > div {
+        float: left;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__titulo {
+        h4 {
+            font-size: 24px;
+            padding-bottom: 15px;
+        }
+    }
     &__parceiros {
+        h4 {
+            font-size: 24px;
+            padding-bottom: 15px;
+        }
+        padding-top: 50px;
         &__item {
             background-color: transparent;
             box-shadow: none;
             img {
-              
+                width: 80%;
                 border-top-left-radius: 100%;
                 border-top-right-radius: 100%;
                 border-bottom-left-radius: 100%;
                 border-bottom-right-radius: 100%;
             }
+        }
+    }
+    &__banner {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        img {
+            width: 100%;
+            border-radius: 0;
         }
     }
 }

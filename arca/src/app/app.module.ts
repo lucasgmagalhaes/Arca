@@ -22,6 +22,10 @@ import { CadastroParceiroComponent } from './cadastro-parceiro/cadastro-parceiro
 import { DoacaoComponent } from './doacao/doacao.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeAdocaoComponent } from './home-adocao/home-adocao.component';
+import { HomeServicosComponent } from './home-servicos/home-servicos.component';
+import { ROUTES } from './app.routing';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,9 @@ import { FooterComponent } from './footer/footer.component';
     CadastroParceiroComponent,
     DoacaoComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    HomeAdocaoComponent,
+    HomeServicosComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +57,7 @@ import { FooterComponent } from './footer/footer.component';
     RecaptchaModule,
     CadastroAssociadoComponent,
     CadastroFuncionarioComponent,
-    
+    RouterModule.forRoot(ROUTES),
 
   ],
   providers: [],

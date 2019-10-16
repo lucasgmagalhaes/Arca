@@ -1,0 +1,19 @@
+.home-adocao {
+    h1 {
+    }
+    &__animais {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    &__telefone {
+        border: 1px solid gray;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: white;
+        background-color: #77a6f7;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+}

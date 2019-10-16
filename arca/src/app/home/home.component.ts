@@ -11,8 +11,10 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+
+
   ngOnInit() {
-    MaterialDesignModule
+    MaterialDesignModule;
   }
 
 }
