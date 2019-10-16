@@ -1,4 +1,10 @@
 .home {
+  h4 {
+    text-align: center;
+      font-size: 24px;
+      padding-bottom: 15px;
+      color: #325829;
+  }
     .swipe {
         overflow: hidden;
         visibility: hidden;
@@ -14,18 +20,8 @@
         position: relative;
         overflow: hidden;
     }
+     &__parceiros {
 
-    &__titulo {
-        h4 {
-            font-size: 24px;
-            padding-bottom: 15px;
-        }
-    }
-    &__parceiros {
-        h4 {
-            font-size: 24px;
-            padding-bottom: 15px;
-        }
         padding-top: 50px;
         &__item {
             background-color: transparent;
