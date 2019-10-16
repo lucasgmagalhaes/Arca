@@ -14,6 +14,8 @@ import {
   MatCheckboxModule,
   MatSelectModule,
   MatRadioModule,
+  MatTableModule,
+  MatToolbarModule,
 
 } from '@angular/material';
 
@@ -35,6 +37,9 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     MatCheckboxModule,
     MatSelectModule,
     TextFieldModule,
+    MatTableModule,
+    MatToolbarModule,
+
   ],
   exports: [
     BrowserAnimationsModule,
@@ -47,7 +52,9 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     MatCheckboxModule,
     MatSelectModule,
     MatRadioModule,
-    TextFieldModule
+    TextFieldModule,
+    MatTableModule,
+    MatToolbarModule
   ]
 })
 export class MaterialDesignModule { }

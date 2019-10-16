@@ -26,6 +26,7 @@ import { HomeAdocaoComponent } from './home-adocao/home-adocao.component';
 import { HomeServicosComponent } from './home-servicos/home-servicos.component';
 import { ROUTES } from './app.routing';
 import { RouterModule } from '@angular/router';
+import { DoacaoInternaComponent } from './doacao-interna/doacao-interna.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     HomeAdocaoComponent,
     HomeServicosComponent,
+    DoacaoInternaComponent
   ],
   imports: [
     BrowserModule,
