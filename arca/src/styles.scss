@@ -1,7 +1,6 @@
 @import "BootstrapGrip.scss";
 @import "vars.scss";
 
-
 * {
     padding: 0;
     margin: 0;
@@ -10,7 +9,7 @@
 html,
 body {
     height: 100%;
-}
+    }
 
 body {
     margin: 0;
@@ -35,13 +34,12 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.mat-raised-button
-{
+.mat-raised-button {
     background-color: $color-green;
     color: $color-white;
 }
 
-.mat-card-title, .mat-icon
-{
+.mat-card-title,
+.mat-icon {
     color: #3f51b5;
 }

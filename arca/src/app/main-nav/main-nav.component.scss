@@ -1,6 +1,6 @@
 .sidenav-container {
-    height: 100%;
     position: relative;
+    min-height: calc(100vh - 90px);
 }
 
 .sidenav {
@@ -49,12 +49,14 @@
 .logo {
     display: flex;
     justify-content: center;
+    a {
+        display: flex;
+        justify-content: center;
+    }
     &__imagem {
         padding: 5px;
         height: 100%;
-        // position: absolute;
-        // top: 0;
-        @media (max-width: 720px) {
+          @media (max-width: 720px) {
             position: absolute;
             top: 0;
         }
@@ -62,7 +64,6 @@
 }
 
 .menu-desktop {
-
     height: 100%;
     a {
         padding: 15px;
