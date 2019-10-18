@@ -1,0 +1,35 @@
+<mat-toolbar>
+    <mat-icon aria-hidden="false" aria-label="account_circle icon">pets </mat-icon> Animais
+</mat-toolbar>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="animal">
+    <th mat-header-cell *matHeaderCellDef> Animal </th>
+    <td mat-cell *matCellDef="let element"> {{element.animal}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="nomeAnimal">
+    <th mat-header-cell *matHeaderCellDef> Nome Animal </th>
+    <td mat-cell *matCellDef="let element"> {{element.nomeAnimal}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="raca">
+    <th mat-header-cell *matHeaderCellDef> Raça </th>
+    <td mat-cell *matCellDef="let element"> {{element.raca}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="idadeAnimal">
+    <th mat-header-cell *matHeaderCellDef> Idade Animal </th>
+    <td mat-cell *matCellDef="let element"> {{element.idadeAnimal}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

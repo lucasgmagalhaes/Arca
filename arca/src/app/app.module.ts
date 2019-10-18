@@ -29,6 +29,7 @@ import { ROUTES } from './app.routing';
 import { RouterModule } from '@angular/router';
 import { DoacaoInternaComponent } from './doacao-interna/doacao-interna.component';
 import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-atendimento.component';
+import { AnimaisInternaComponent } from './animais-interna/animais-interna.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-at
     HomeAdocaoComponent,
     HomeServicosComponent,
     DoacaoInternaComponent,
-    CadastroAtendimentoComponent
+    CadastroAtendimentoComponent,
+    AnimaisInternaComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,8 @@ import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-at
     CadastroFuncionarioComponent,
     RouterModule.forRoot(ROUTES),
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    // AnimaisInternaComponent,
   ],
   providers: [MatDatepickerModule, MatNativeDateModule],
   bootstrap: [AppComponent]
