@@ -17,6 +17,10 @@ namespace GerenciaMicroservice.Controllers
             _atendimentoService = atendimentoService;
         }
 
+        /// <summary>
+        /// Busca todos os atendimentos cadastrados
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult BuscarTodos()
         {
@@ -30,6 +34,11 @@ namespace GerenciaMicroservice.Controllers
             }
         }
 
+        /// <summary>
+        /// Busca um atendimento pelo seu Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public ActionResult BuscarPorId(long id)
         {
@@ -43,6 +52,11 @@ namespace GerenciaMicroservice.Controllers
             }
         }
 
+        /// <summary>
+        /// Cadastra um novo atendimento
+        /// </summary>
+        /// <param name="atendimento"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult Cadastrar(TAtendimento atendimento)
         {

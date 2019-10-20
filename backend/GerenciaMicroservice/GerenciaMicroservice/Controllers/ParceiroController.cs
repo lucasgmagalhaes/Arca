@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Persistence.Services;
 using System;
+using System.Collections.Generic;
 using Transport;
 
 namespace GerenciaMicroservice.Controllers
@@ -17,8 +18,12 @@ namespace GerenciaMicroservice.Controllers
             _parceiroService = parceiroService;
         }
 
+        /// <summary>
+        /// Busca todos os parceiros cadastrados
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
-        public ActionResult BuscarTodos()
+        public ActionResult<List<Parceiro>> BuscarTodos()
         {
             try
             {
@@ -30,8 +35,13 @@ namespace GerenciaMicroservice.Controllers
             }
         }
 
+        /// <summary>
+        /// Busca um parceiro específico baseado no seu Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
-        public ActionResult BuscarPorId(long id)
+        public ActionResult<Parceiro> BuscarPorId(long id)
         {
             try
             {
@@ -43,6 +53,11 @@ namespace GerenciaMicroservice.Controllers
             }
         }
 
+        /// <summary>
+        /// Faz o cadastro de um novo parceiro
+        /// </summary>
+        /// <param name="parceiro"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult Cadastrar(TParceiro parceiro)
         {
