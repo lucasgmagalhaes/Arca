@@ -31,7 +31,11 @@ namespace GerenciaMicroservice.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex);
+                if (ex.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = ex.InnerException.Message });
+                }
+                return BadRequest(new { mensagem = ex.Message });
             }
         }
 
@@ -49,6 +53,10 @@ namespace GerenciaMicroservice.Controllers
             }
             catch (Exception ex)
             {
+                if (ex.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = ex.InnerException.Message });
+                }
                 return BadRequest(new { mensagem = ex.Message });
             }
         }
@@ -72,6 +80,10 @@ namespace GerenciaMicroservice.Controllers
             }
             catch (Exception ex)
             {
+                if (ex.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = ex.InnerException.Message });
+                }
                 return BadRequest(new { mensagem = ex.Message });
             }
         }
