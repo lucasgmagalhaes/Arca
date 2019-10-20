@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Persistence.Services;
 using System;
+using System.Linq;
 using Transport;
 
 namespace GerenciaMicroservice.Controllers
@@ -53,6 +54,28 @@ namespace GerenciaMicroservice.Controllers
             catch (Exception ex)
             {
                 if(ex.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = ex.InnerException.Message });
+                }
+                return BadRequest(new { mensagem = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Busca os atendimentos feitos por um funcionário em específico
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{id}")]
+        public ActionResult BuscarPorFuncionarioId(long id)
+        {
+            try
+            {
+                return Ok(_atendimentoService.Buscar(atendimento => atendimento.FuncionarioId == id).ToList());
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException != null)
                 {
                     return BadRequest(new { mensagem = ex.InnerException.Message });
                 }
