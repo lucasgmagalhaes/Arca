@@ -27,7 +27,11 @@ namespace ServicosMicroservice.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(e);
+                if (e.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = e.InnerException.Message });
+                }
+                return BadRequest(new { mensagem = e.Message });
             }
         }
 
@@ -40,7 +44,11 @@ namespace ServicosMicroservice.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(e);
+                if (e.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = e.InnerException.Message });
+                }
+                return BadRequest(new { mensagem = e.Message });
             }
         }
 
@@ -65,7 +73,11 @@ namespace ServicosMicroservice.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(e);
+                if (e.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = e.InnerException.Message });
+                }
+                return BadRequest(new { mensagem = e.Message });
             }
         }
 
@@ -79,7 +91,7 @@ namespace ServicosMicroservice.Controllers
                     AdotanteId = animal.AdotanteId,
                     Descricao = animal.Descricao,
                     Especie = animal.Especie,
-                    Id = 0,
+                    Id = animal.Id,
                     Idade = animal.Idade,
                     IsDisponivelParaAdocao = animal.IsDisponivelParaAdocao,
                     IsMorto = animal.IsMorto,
@@ -92,7 +104,11 @@ namespace ServicosMicroservice.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(e);
+                if (e.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = e.InnerException.Message });
+                }
+                return BadRequest(new { mensagem = e.Message });
             }
         }
 
@@ -102,12 +118,15 @@ namespace ServicosMicroservice.Controllers
             try
             {
                 _animalService.Deletar(id);
-
                 return Ok("Animal Removido");
             }
             catch (Exception e)
             {
-                return BadRequest(e);
+                if (e.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = e.InnerException.Message });
+                }
+                return BadRequest(new { mensagem = e.Message });
             }
         }
     }

@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Persistence.Services;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Transport;
 
 namespace ServicosMicroservice.Controllers
@@ -18,47 +20,58 @@ namespace ServicosMicroservice.Controllers
         }
 
         [HttpPost]
-        public ActionResult Doar(TDoacao doacao)
+        public ActionResult<Doacao> Doar(TDoacao doacao)
         {
             try
             {
-                _doacaoService.Inserir(new Doacao()
+                return Ok(_doacaoService.Inserir(new Doacao()
                 {
                     AssociadoId = doacao.AssociadoId,
                     Id = 0,
                     Valor = doacao.Valor
-                });
-                return Ok(doacao);
+                }));
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                return BadRequest(ex);
+                if (e.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = e.InnerException.Message });
+                }
+                return BadRequest(new { mensagem = e.Message });
             }
         }
 
         [HttpGet]
-        public ActionResult BuscarAdocoes()
+        public ActionResult<List<Doacao>> BuscarAdocoes()
         {
             try
             {
                 return Ok(_doacaoService.Buscar());
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                return BadRequest(ex);
+                if (e.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = e.InnerException.Message });
+                }
+                return BadRequest(new { mensagem = e.Message });
             }
         }
 
-        [HttpGet("{id}")]
-        public ActionResult BuscarAdocoesPorAssociado(long id)
+        [HttpGet("Associado/{id}")]
+        public ActionResult<List<Doacao>> BuscarAdocoesPorAssociado(long id)
         {
             try
             {
-                return Ok(_doacaoService.Buscar(doacao => doacao.AssociadoId == id));
+                return Ok(_doacaoService.Buscar(doacao => doacao.AssociadoId == id).ToList());
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                return BadRequest(ex);
+                if(e.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = e.InnerException.Message });
+                }
+                return BadRequest(new { mensagem = e.Message });
             }
         }
     }

@@ -12,18 +12,6 @@
           "bin/placeholder/Enums.dll": {}
         }
       }
-    },
-    ".NETCoreApp,Version=v3.0/win-x86": {
-      "Enums/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Enums.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Enums.dll": {}
-        }
-      }
     }
   },
   "libraries": {
@@ -101,11 +89,6 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
-      }
-    },
-    "runtimes": {
-      "win-x86": {
-        "#import": []
       }
     }
   }

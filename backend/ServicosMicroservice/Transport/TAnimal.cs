@@ -13,6 +13,6 @@ namespace Transport
         public string Descricao { get; set; }
         public bool IsDisponivelParaAdocao { get; set; }
         public bool IsMorto { get; set; }
-        public long AdotanteId { get; set; }
+        public long? AdotanteId { get; set; }
     }
 }
