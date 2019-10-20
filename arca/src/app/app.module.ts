@@ -11,8 +11,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RecaptchaModule } from 'ng-recaptcha';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/';
 
 import { LoginComponent } from './login/login.component';
 import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
@@ -30,6 +30,7 @@ import { RouterModule } from '@angular/router';
 import { DoacaoInternaComponent } from './doacao-interna/doacao-interna.component';
 import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-atendimento.component';
 import { AnimaisInternaComponent } from './animais-interna/animais-interna.component';
+import { MenuInternoComponent } from './menu-interno/menu-interno.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { AnimaisInternaComponent } from './animais-interna/animais-interna.compo
     DoacaoInternaComponent,
     CadastroAtendimentoComponent,
     AnimaisInternaComponent,
+    MenuInternoComponent,
   ],
   imports: [
     BrowserModule,

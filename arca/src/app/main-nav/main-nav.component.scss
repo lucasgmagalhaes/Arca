@@ -30,6 +30,14 @@
     left: 0 !important;
 }
 
+.area-restrita {
+    background: #77a6f7;
+    color: white !important;
+    &:hover {
+        color: #e7e120 !important;
+    }
+}
+
 // .mat-sidenav-content {
 //     overflow: hidden;
 // }
@@ -56,7 +64,7 @@
     &__imagem {
         padding: 5px;
         height: 100%;
-          @media (max-width: 720px) {
+        @media (max-width: 720px) {
             position: absolute;
             top: 0;
         }

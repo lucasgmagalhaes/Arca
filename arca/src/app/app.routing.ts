@@ -7,6 +7,7 @@ import { DoacaoComponent } from './doacao/doacao.component';
 import { HomeServicosComponent } from './home-servicos/home-servicos.component';
 import { HomeAdocaoComponent } from './home-adocao/home-adocao.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 
 export const ROUTES: Routes =
@@ -15,4 +16,5 @@ export const ROUTES: Routes =
   { path: 'servicos', component: HomeServicosComponent },
   { path: 'adocao', component: HomeAdocaoComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: '', pathMatch: 'full', redirectTo:'/home' }];

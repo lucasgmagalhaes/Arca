@@ -1,0 +1,100 @@
+.sidenav-container {
+  position: relative;
+  min-height: calc(100vh - 90px);
+}
+
+.sidenav {
+  width: 200px;
+  a {
+      color: #325829;
+  }
+}
+
+@media (min-width: 720px) {
+  .sidenav {
+      display: none;
+  }
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar {
+  color: #325829 !important;
+  background: #ffffff !important;
+}
+
+.mat-icon-button {
+  position: absolute !important;
+  left: 0 !important;
+}
+
+.area-restrita {
+  background: #77a6f7;
+  color: white !important;
+  &:hover {
+      color: #e7e120 !important;
+  }
+  @media (min-width: 720px) {
+      position: absolute;
+      right: 15px;
+      top: 1px;
+  }
+}
+
+// .mat-sidenav-content {
+//     overflow: hidden;
+// }
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.out-logo {
+  display: flex;
+  justify-content: center;
+  background: white !important;
+  box-shadow: 0px 0px 3px black;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  a {
+      display: flex;
+      justify-content: center;
+  }
+  &__imagem {
+      padding: 5px;
+      height: 100%;
+      @media (max-width: 720px) {
+          position: absolute;
+          top: 0;
+      }
+  }
+}
+
+.menu-desktop {
+  height: 100%;
+  a {
+      padding: 15px;
+      color: #325829;
+      text-decoration: none;
+      &:hover {
+          color: #e5b265;
+      }
+  }
+}
+@media (max-width: 720px) {
+  .menu-desktop {
+      display: none;
+  }
+}
+
+@media (min-width: 720px) {
+  .logo {
+      display: none;
+  }
+}
