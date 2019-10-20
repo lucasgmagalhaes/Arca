@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Persistence.Services;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Transport;
 
@@ -23,7 +24,7 @@ namespace GerenciaMicroservice.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult BuscarTodos()
+        public ActionResult<List<Atendimento>> BuscarTodos()
         {
             try
             {
@@ -45,7 +46,7 @@ namespace GerenciaMicroservice.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public ActionResult BuscarPorId(long id)
+        public ActionResult<Atendimento> BuscarPorId(long id)
         {
             try
             {
@@ -67,7 +68,7 @@ namespace GerenciaMicroservice.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public ActionResult BuscarPorFuncionarioId(long id)
+        public ActionResult<List<Atendimento>> BuscarPorFuncionarioId(long id)
         {
             try
             {
@@ -89,7 +90,7 @@ namespace GerenciaMicroservice.Controllers
         /// <param name="atendimento"></param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult Cadastrar(TAtendimento atendimento)
+        public ActionResult<Atendimento> Cadastrar(TAtendimento atendimento)
         {
             try
             {

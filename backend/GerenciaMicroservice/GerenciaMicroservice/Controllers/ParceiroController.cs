@@ -67,7 +67,7 @@ namespace GerenciaMicroservice.Controllers
         /// <param name="parceiro"></param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult Cadastrar(TParceiro parceiro)
+        public ActionResult<Parceiro> Cadastrar(TParceiro parceiro)
         {
             try
             {
