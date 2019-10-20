@@ -19,6 +19,11 @@ namespace ServicosMicroservice.Controllers
             _doacaoService = doacaoService;
         }
 
+        /// <summary>
+        /// Salva uma nova doação
+        /// </summary>
+        /// <param name="doacao"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult<Doacao> Doar(TDoacao doacao)
         {
@@ -41,6 +46,10 @@ namespace ServicosMicroservice.Controllers
             }
         }
 
+        /// <summary>
+        /// Busca todas as doações cadastradas
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult<List<Doacao>> BuscarAdocoes()
         {
@@ -58,6 +67,11 @@ namespace ServicosMicroservice.Controllers
             }
         }
 
+        /// <summary>
+        /// Busca todas as doações feitas por um associado em específico
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("Associado/{id}")]
         public ActionResult<List<Doacao>> BuscarAdocoesPorAssociado(long id)
         {

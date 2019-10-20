@@ -3,6 +3,8 @@ using Enum;
 using Microsoft.AspNetCore.Mvc;
 using Persistence.Services;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Transport;
 
 namespace ServicosMicroservice.Controllers
@@ -18,8 +20,12 @@ namespace ServicosMicroservice.Controllers
             _animalService = animalService;
         }
 
+        /// <summary>
+        /// Busca todos os animais cadastrados
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
-        public ActionResult BucarTodos()
+        public ActionResult<List<Animal>> BucarTodos()
         {
             try
             {
@@ -35,8 +41,13 @@ namespace ServicosMicroservice.Controllers
             }
         }
 
+        /// <summary>
+        /// Busca um animal específico pelo seu id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
-        public ActionResult BucarTodos(long id)
+        public ActionResult<Animal> BucarTodos(long id)
         {
             try
             {
@@ -52,8 +63,35 @@ namespace ServicosMicroservice.Controllers
             }
         }
 
+        /// <summary>
+        /// Busca todos os animais pelo Id do adotante
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("Adotante/{id}")]
+        public ActionResult<List<Animal>> BuscarPorAdotanteId(long id)
+        {
+            try
+            {
+                return Ok(_animalService.Buscar(animal => animal.AdotanteId == id).ToList());
+            }
+            catch (Exception e)
+            {
+                if (e.InnerException != null)
+                {
+                    return BadRequest(new { mensagem = e.InnerException.Message });
+                }
+                return BadRequest(new { mensagem = e.Message });
+            }
+        }
+
+        /// <summary>
+        /// Cadastra um novo animal
+        /// </summary>
+        /// <param name="animal"></param>
+        /// <returns></returns>
         [HttpPost]
-        public ActionResult Cadastrar(TAnimal animal)
+        public ActionResult<Animal> Cadastrar(TAnimal animal)
         {
             try
             {
@@ -81,6 +119,11 @@ namespace ServicosMicroservice.Controllers
             }
         }
 
+        /// <summary>
+        /// Atualiza as informações de um animal existente
+        /// </summary>
+        /// <param name="animal"></param>
+        /// <returns></returns>
         [HttpPut]
         public ActionResult Atualizar(TAnimal animal)
         {
@@ -112,13 +155,18 @@ namespace ServicosMicroservice.Controllers
             }
         }
 
+        /// <summary>
+        /// Remove um animal pelo seu Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public ActionResult Deletar(long id)
         {
             try
             {
                 _animalService.Deletar(id);
-                return Ok("Animal Removido");
+                return Ok(new { mensagem = "Animal Removido" });
             }
             catch (Exception e)
             {
