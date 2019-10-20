@@ -67,7 +67,7 @@ namespace GerenciaMicroservice.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("{id}")]
+        [HttpGet("Funcionario/{id}")]
         public ActionResult<List<Atendimento>> BuscarPorFuncionarioId(long id)
         {
             try
