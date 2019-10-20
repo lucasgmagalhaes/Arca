@@ -9,5 +9,6 @@ namespace Domain
         public virtual string Raca { get; set; }
         public virtual string TipoAtendimento { get; set; }
         public virtual string Descricao { get; set; }
+        public virtual long FuncionarioId {get; set;}
     }
 }

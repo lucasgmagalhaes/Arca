@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Enum;
+using System;
 
 namespace Domain
 {

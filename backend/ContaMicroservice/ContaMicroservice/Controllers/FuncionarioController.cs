@@ -28,7 +28,7 @@ namespace ContaMicroservice.Controllers
                     {
                         Id = 0,
                         Cpf = tFuncionario.Cpf,
-                        DataNascimento = tFuncionario.DataNascimento,
+                        
                         Email = tFuncionario.Email,
                         Nome = tFuncionario.Nome,
                         Senha = tFuncionario.Senha,
@@ -57,7 +57,7 @@ namespace ContaMicroservice.Controllers
                     {
                         Id = 0,
                         Cpf = tFuncionario.Cpf,
-                        DataNascimento = tFuncionario.DataNascimento,
+                        
                         Email = tFuncionario.Email,
                         Nome = tFuncionario.Nome,
                         Senha = tFuncionario.Senha,

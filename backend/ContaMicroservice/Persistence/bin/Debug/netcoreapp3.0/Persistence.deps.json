@@ -10,6 +10,7 @@
         "dependencies": {
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "3.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0"
         },
         "runtime": {
@@ -815,7 +816,9 @@
       },
       "Domain/1.0.0": {
         "dependencies": {
-          "Enum": "1.0.0"
+          "Enum": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "3.0.0"
         },
         "runtime": {
           "Domain.dll": {}

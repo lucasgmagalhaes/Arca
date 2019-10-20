@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\lucas.magalhaes\\Desktop\\ContaMicroservice\\ContaMicroservice\\ContaMicroservice.csproj",
+  "FilePath": "d:\\git\\Arca\\backend\\ContaMicroservice\\ContaMicroservice\\ContaMicroservice.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -10,7 +10,7 @@
     ]
   },
   "ProjectWorkspaceState": {
-    "TagHelpers": [ContaMicroservice
+    "TagHelpers": [
       {
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView",
@@ -14341,7 +14341,7 @@
     ],
     "CSharpLanguageVersion": 800
   },
-  "RootNamespace": "AssociadoMicroservice",
+  "RootNamespace": "ContaMicroservice",
   "Documents": [],
   "SerializationFormat": "0.2"
 }
