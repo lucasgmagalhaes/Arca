@@ -814,6 +814,10 @@
         }
       },
       "Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "3.0.0"
+        },
         "runtime": {
           "Domain.dll": {}
         }

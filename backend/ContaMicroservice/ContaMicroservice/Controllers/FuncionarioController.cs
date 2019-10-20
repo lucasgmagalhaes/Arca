@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Persistence.Services;
 using System;
+using System.Text.Json;
 using Transport;
 
 namespace ContaMicroservice.Controllers
@@ -17,6 +18,16 @@ namespace ContaMicroservice.Controllers
             _funcionarioService = funcionarioService;
         }
 
+        /// <summary>
+        /// Cadastra um novo funcionário
+        /// </summary>
+        /// <example>
+        /// Financeiro = 0
+        /// Administrativo = 1
+        /// Recepção = 2
+        /// </example>
+        /// <param name="tFuncionario"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Cadastrar(TFuncionario tFuncionario)
         {
@@ -28,7 +39,7 @@ namespace ContaMicroservice.Controllers
                     {
                         Id = 0,
                         Cpf = tFuncionario.Cpf,
-                        
+                        DataNascimento = tFuncionario.DataNascimento,
                         Email = tFuncionario.Email,
                         Nome = tFuncionario.Nome,
                         Senha = tFuncionario.Senha,
@@ -40,12 +51,17 @@ namespace ContaMicroservice.Controllers
                 }
                 catch (Exception ex)
                 {
-                    return BadRequest(ex);
+                    return BadRequest(new { mensagem = ex.Message });
                 }
             }
             return BadRequest("Objeto vazio");
         }
 
+        /// <summary>
+        /// Atualiza um funcionário existente
+        /// </summary>
+        /// <param name="tFuncionario"></param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Atualizar(TFuncionario tFuncionario)
         {
@@ -55,9 +71,9 @@ namespace ContaMicroservice.Controllers
                 {
                     _funcionarioService.Atualizar(new Funcionario()
                     {
-                        Id = 0,
+                        Id = tFuncionario.Id,
                         Cpf = tFuncionario.Cpf,
-                        
+                        DataNascimento = tFuncionario.DataNascimento,
                         Email = tFuncionario.Email,
                         Nome = tFuncionario.Nome,
                         Senha = tFuncionario.Senha,
@@ -69,12 +85,17 @@ namespace ContaMicroservice.Controllers
                 }
                 catch (Exception ex)
                 {
-                    return BadRequest(ex);
+                    return BadRequest(new { mensagem = ex.Message });
                 }
             }
             return BadRequest("Objeto vazio");
         }
 
+        /// <summary>
+        /// Busca um associado baseado no id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult Buscar(long id)
         {
@@ -85,7 +106,7 @@ namespace ContaMicroservice.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex);
+                return BadRequest(new { mensagem = ex.Message });
             }
         }
     }

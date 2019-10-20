@@ -39,7 +39,7 @@ namespace GerenciaMicroservice.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex);
+                return BadRequest(new { mensagem = ex.Message });
             }
         }
 
@@ -57,7 +57,7 @@ namespace GerenciaMicroservice.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex);
+                return BadRequest(new { mensagem = ex.Message });
             }
         }
     }

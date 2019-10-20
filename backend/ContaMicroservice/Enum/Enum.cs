@@ -1,8 +1,12 @@
 ﻿namespace Enum
 {
+    /// <summary>
+    /// Contém os tipos de setores que um funcionário pode trabalhar
+    /// </summary>
     public enum Setor
     {
         FINANCEIRO = 0,
-        CONTABILIDADE = 1
+        ADMINISTRATIVO = 1,
+        RECEPCAO = 2
     }
 }

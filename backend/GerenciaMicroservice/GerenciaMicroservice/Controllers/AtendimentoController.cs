@@ -26,7 +26,7 @@ namespace GerenciaMicroservice.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex);
+                return BadRequest(new { mensagem = ex.Message });
             }
         }
 
@@ -39,7 +39,7 @@ namespace GerenciaMicroservice.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex);
+                return BadRequest(new { mensagem = ex.Message });
             }
         }
 
@@ -50,7 +50,8 @@ namespace GerenciaMicroservice.Controllers
             {
                 return Ok(_atendimentoService.Inserir(new Atendimento()
                 {
-                    Data = atendimento.Data,
+                    DataAtendimento = atendimento.Data,
+                    FuncionarioId = atendimento.FuncionarioId,
                     Descricao = atendimento.Descricao,
                     Raca = atendimento.Raca,
                     TipoAtendimento = atendimento.TipoAtendimento
@@ -58,7 +59,7 @@ namespace GerenciaMicroservice.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex);
+                return BadRequest(new { mensagem = ex.Message });
             }
         }
     }
