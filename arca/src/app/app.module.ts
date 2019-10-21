@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -13,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/';
+import { FuncionarioService } from './services/funcionario.service';
 
 import { LoginComponent } from './login/login.component';
 import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
@@ -31,6 +33,7 @@ import { DoacaoInternaComponent } from './doacao-interna/doacao-interna.componen
 import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-atendimento.component';
 import { AnimaisInternaComponent } from './animais-interna/animais-interna.component';
 import { MenuInternoComponent } from './menu-interno/menu-interno.component';
+import { TESTEAPIComponent } from './testeapi/testeapi.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,7 @@ import { MenuInternoComponent } from './menu-interno/menu-interno.component';
     CadastroAtendimentoComponent,
     AnimaisInternaComponent,
     MenuInternoComponent,
+    TESTEAPIComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,9 +73,10 @@ import { MenuInternoComponent } from './menu-interno/menu-interno.component';
     RouterModule.forRoot(ROUTES),
     MatDatepickerModule,
     MatNativeDateModule,
+    HttpClientModule
     // AnimaisInternaComponent,
   ],
-  providers: [MatDatepickerModule, MatNativeDateModule],
+  providers: [MatDatepickerModule, MatNativeDateModule, FuncionarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
