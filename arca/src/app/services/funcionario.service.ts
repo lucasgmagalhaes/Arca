@@ -11,6 +11,10 @@ export class FuncionarioService {
   constructor(private http: HttpClient) { }
 
   listar() {
-    return this.http.get<any[]>(`${this.funcionarioUrl}`);
+    return this.http.get<Array<any>>(`${this.funcionarioUrl}`);
+  }
+
+  cadastrar(contato:any){
+    return this.http.post(`${this.funcionarioUrl}`, contato);
   }
 }
