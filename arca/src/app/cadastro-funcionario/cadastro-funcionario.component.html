@@ -5,51 +5,53 @@
       <label>Novo Funcionario</label>
     </mat-card-title>
     <hr>
-    <mat-card-content #frm="ngForm" (ngSubmit)="cadastrarFuncionario(ngForm)">
-      <div class="row">
-        <mat-form-field class="col col-md-9">
-          <input matInput placeholder="Nome Completo" formControlName="nomeFuncionario" type="text" [(ngModel)]="contato.nome">
-        </mat-form-field>
-        <mat-form-field class="col col-md-3">
-          <input matInput placeholder="Data de Nascimento" formControlName="dataNascFuncionario" type="text"
-            mask="00/00/0000" [(ngModel)]="contato.data-nascimento">
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <mat-form-field class="col col-md-6">
-          <input matInput placeholder="CPF" formControlName="cpfFuncionario" type="text" mask="000.000.000-00" [(ngModel)]="contato.cpf">
-        </mat-form-field>
-        <mat-form-field class="col col-md-6">
-          <input matInput placeholder="Email" formControlName="emailFuncionario" type="text" [(ngModel)]="contato.email">
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <mat-form-field class="col col-md-6">
-          <mat-label>Setor</mat-label>
-          <select matNativeControl required>
-            <option value="financeiro" [(ngModel)]="contato.financeiro">Financeiro</option>
-            <option value="administrativo" [(ngModel)]="contato.admimistrativo">Administrativo</option>
-            <option value="recepcao" [(ngModel)]="contato.recepcao">Recepção</option>
-          </select>
-        </mat-form-field>
-        <mat-form-field class="col col-md-6">
-          <input matInput placeholder="Salário" formControlName="salarioFuncionario" type="number" [(ngModel)]="contato.salario">
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <mat-form-field class="col col-md-6">
-          <input matInput placeholder="Senha" formControlName="senhaFuncionario" type="password" [(ngModel)]="contato.senha">
-        </mat-form-field>
-        <mat-form-field class="col col-md-6">
-          <input matInput placeholder="Confirmação da Senha" formControlName="confSenhaFuncionario" type="password" [(ngModel)]="contato.confirmacao-senha">
-        </mat-form-field>
-      </div>
-      <div class="row" id="funcinarioAdm">
-        <input type="checkbox" [(ngModel)]="contato.check-admin"> Usuário Administrador
-      </div>
-      <div class="row">
-        <button mat-raised-button id="btnCadastrarFuncionario" type="submit">Cadastrar</button>
-      </div>
+    <mat-card-content>
+      <form formGroup="funcionarioForm">
+        <div class="row">
+          <mat-form-field class="col col-md-9">
+            <input matInput placeholder="Nome Completo" formControlName="nome" type="text">
+          </mat-form-field>
+          <mat-form-field class="col col-md-3">
+            <input matInput placeholder="Data de Nascimento" formControlName="dataNascimento" type="text"
+              mask="00/00/0000">
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field class="col col-md-6">
+            <input matInput placeholder="CPF" formControlName="cpf" type="text" mask="000.000.000-00">
+          </mat-form-field>
+          <mat-form-field class="col col-md-6">
+            <input matInput placeholder="Email" formControlName="emailFuncionario" type="text">
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field class="col col-md-6">
+            <mat-label>Setor</mat-label>
+            <select matNativeControl formControlName="setor">
+              <option value="0">Financeiro</option>
+              <option value="1">Administrativo</option>
+              <option value="2">Recepção</option>
+            </select>
+          </mat-form-field>
+          <mat-form-field class="col col-md-6">
+            <input matInput placeholder="Salário" formControlName="salario" type="number">
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field class="col col-md-6">
+            <input matInput placeholder="Senha" formControlName="senha" type="password">
+          </mat-form-field>
+          <mat-form-field class="col col-md-6">
+            <input matInput placeholder="Confirmação da Senha" formControlName="confirmarSenha" type="password">
+          </mat-form-field>
+        </div>
+        <div class="row" id="funcinarioAdm">
+          <input type="checkbox" formControlName="isAdministrador"> Usuário Administrador
+        </div>
+        <div class="row">
+          <button mat-raised-button (click)="cadastrar()" type="submit">Cadastrar</button>
+        </div>
+      </form>
     </mat-card-content>
   </mat-card>
 </div>
