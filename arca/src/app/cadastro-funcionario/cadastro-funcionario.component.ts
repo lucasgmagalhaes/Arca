@@ -27,7 +27,6 @@ export class CadastroFuncionarioComponent implements OnInit {
 
   cadastrar(frm: FormGroup){
     this.funcionarioService.cadastrar(this.contato).subscribe(resposta => 200)
-    frm.reset();
   }
 
 }

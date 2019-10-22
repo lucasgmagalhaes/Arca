@@ -5,26 +5,26 @@
       <label>Novo Funcionario</label>
     </mat-card-title>
     <hr>
-    <mat-card-content frm="ngForm" (ngSubmit)="cadastrarFuncionario(ngForm)">
+    <mat-card-content #frm="ngForm" (ngSubmit)="cadastrarFuncionario(ngForm)">
       <div class="row">
-        <mat-form-field class="col col-md-9 form-group" [formGroup]="guestForm">
+        <mat-form-field class="col col-md-9">
           <input matInput placeholder="Nome Completo" formControlName="nomeFuncionario" type="text" [(ngModel)]="contato.nome">
         </mat-form-field>
-        <mat-form-field class="col col-md-3 form-group" [formGroup]="guestForm">
+        <mat-form-field class="col col-md-3">
           <input matInput placeholder="Data de Nascimento" formControlName="dataNascFuncionario" type="text"
             mask="00/00/0000" [(ngModel)]="contato.data-nascimento">
         </mat-form-field>
       </div>
       <div class="row">
-        <mat-form-field class="col col-md-6 form-group" [formGroup]="guestForm">
+        <mat-form-field class="col col-md-6">
           <input matInput placeholder="CPF" formControlName="cpfFuncionario" type="text" mask="000.000.000-00" [(ngModel)]="contato.cpf">
         </mat-form-field>
-        <mat-form-field class="col col-md-6 form-group" [formGroup]="guestForm">
+        <mat-form-field class="col col-md-6">
           <input matInput placeholder="Email" formControlName="emailFuncionario" type="text" [(ngModel)]="contato.email">
         </mat-form-field>
       </div>
       <div class="row">
-        <mat-form-field class="col col-md-6 form-group" [formGroup]="guestForm">
+        <mat-form-field class="col col-md-6">
           <mat-label>Setor</mat-label>
           <select matNativeControl required>
             <option value="financeiro" [(ngModel)]="contato.financeiro">Financeiro</option>
@@ -32,19 +32,19 @@
             <option value="recepcao" [(ngModel)]="contato.recepcao">Recepção</option>
           </select>
         </mat-form-field>
-        <mat-form-field class="col col-md-6 form-group" [formGroup]="guestForm">
+        <mat-form-field class="col col-md-6">
           <input matInput placeholder="Salário" formControlName="salarioFuncionario" type="number" [(ngModel)]="contato.salario">
         </mat-form-field>
       </div>
       <div class="row">
-        <mat-form-field class="col col-md-6 form-group" [formGroup]="guestForm">
+        <mat-form-field class="col col-md-6">
           <input matInput placeholder="Senha" formControlName="senhaFuncionario" type="password" [(ngModel)]="contato.senha">
         </mat-form-field>
-        <mat-form-field class="col col-md-6 form-group" [formGroup]="guestForm">
+        <mat-form-field class="col col-md-6">
           <input matInput placeholder="Confirmação da Senha" formControlName="confSenhaFuncionario" type="password" [(ngModel)]="contato.confirmacao-senha">
         </mat-form-field>
       </div>
-      <div class="row" id="funcinarioAdm form-group" [formGroup]="guestForm">
+      <div class="row" id="funcinarioAdm">
         <input type="checkbox" [(ngModel)]="contato.check-admin"> Usuário Administrador
       </div>
       <div class="row">
