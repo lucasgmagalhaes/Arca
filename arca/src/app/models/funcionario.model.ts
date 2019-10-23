@@ -1,11 +1,13 @@
+
+
 export interface Funcionario {
   setor: number;
   salario: number;
   isAdministrador: boolean;
   id: number;
   nome: string;
-  dataNascimento: Date;
+  dataNascimento: DateConstructor;
   cpf: string;
-  email: string;
+  emailFuncionario: string;
   senha: string;
 }

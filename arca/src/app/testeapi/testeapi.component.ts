@@ -14,11 +14,11 @@ export class TESTEAPIComponent implements OnInit {
   constructor(private funcionarioService: FuncionarioService) { }
 
   ngOnInit() {
-    this.listar();
+    // this.listar();
   }
 
-  listar() {
-    this.funcionarioService.listar().subscribe(dados => this.funcionarios = dados);
-  }
+  // listar() {
+  //   this.funcionarioService.listar().subscribe(dados => this.funcionarios = dados);
+  // }
 
 }

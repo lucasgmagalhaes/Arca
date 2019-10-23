@@ -4,6 +4,8 @@ import { FuncionarioService } from '../services/funcionario.service';
 import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/forms';
 
 
+@NgModule({})
+
 @Component({
   selector: 'app-cadastro-funcionario',
   templateUrl: './cadastro-funcionario.component.html',
@@ -13,6 +15,7 @@ export class CadastroFuncionarioComponent implements OnInit {
   funcionarioForm: FormGroup;
   constructor(private funcionarioService: FuncionarioService) { }
 
+
   ngOnInit() {
     this.funcionarioForm = new FormGroup({
       nome: new FormControl("", Validators.required),
@@ -21,14 +24,17 @@ export class CadastroFuncionarioComponent implements OnInit {
       salario: new FormControl(0, Validators.required),
       isAdministrador: new FormControl(false),
       cpf: new FormControl("", Validators.required),
-      email: new FormControl("", [Validators.email, Validators.required]),
+      emailFuncionario: new FormControl("", [Validators.email, Validators.required]),
       senha: new FormControl("", Validators.required),
       confirmarSenha: new FormControl("", Validators.required),
     }, this.compararStrings("senha", "confirmarSenha"));
+
   }
 
-  async cadastrar(){
-    if(!this.funcionarioForm.valid){
+
+
+  async cadastrar() {
+    if (!this.funcionarioForm.valid) {
       // Deve exibir algo na tela para o usuário
       console.log("Formulário inválido");
     }
