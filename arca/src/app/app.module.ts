@@ -37,6 +37,7 @@ import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-at
 import { AnimaisInternaComponent } from './animais-interna/animais-interna.component';
 import { MenuInternoComponent } from './menu-interno/menu-interno.component';
 import { TESTEAPIComponent } from './testeapi/testeapi.component';
+import { FormatDatepickerComponent } from './format-datepicker/format-datepicker.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { TESTEAPIComponent } from './testeapi/testeapi.component';
     AnimaisInternaComponent,
     MenuInternoComponent,
     TESTEAPIComponent,
+    FormatDatepickerComponent,
   ],
   imports: [
     BrowserModule,
