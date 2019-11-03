@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  contaApi: "https://contamicroservice.azurewebsites.net/api",
-  servicoApi: "https://servicosmicroservicepi.azurewebsites.net/api",
-  gerenciaApi: "https://gerenciamicroservice.azurewebsites.net/api"
+  contaApi: "https://service-conta.azurewebsites.net/api",
+  servicoApi: "https://service-servicos.azurewebsites.net/api",
+  gerenciaApi: "https://service-gerencia.azurewebsites.net/api"
 };
 
 /*
