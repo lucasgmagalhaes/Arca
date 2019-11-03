@@ -9,6 +9,7 @@ import { HomeAdocaoComponent } from './home-adocao/home-adocao.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
+import { CadastroParceiroComponent } from './cadastro-parceiro/cadastro-parceiro.component';
 
 
 export const ROUTES: Routes =
@@ -19,4 +20,5 @@ export const ROUTES: Routes =
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro-funcionario', component: CadastroFuncionarioComponent },
+  { path: 'cadastro-parceiro', component: CadastroParceiroComponent },
   { path: '', pathMatch: 'full', redirectTo:'/home' }];

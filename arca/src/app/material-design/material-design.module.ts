@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 
 import { TextFieldModule } from '@angular/cdk/text-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import {
   MatButtonModule,
   MatInputModule,
@@ -17,6 +16,7 @@ import {
   MatTableModule,
   MatToolbarModule,
   MatDatepickerModule,
+  MatSnackBarModule
 
 } from '@angular/material';
 
@@ -41,7 +41,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     MatTableModule,
     MatToolbarModule,
     MatDatepickerModule,
-
+    MatSnackBarModule,
   ],
   exports: [
     BrowserAnimationsModule,
@@ -57,8 +57,9 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     TextFieldModule,
     MatTableModule,
     MatToolbarModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialDesignModule { }
-export class AppModule {}
+export class AppModule { }
