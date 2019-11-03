@@ -1,5 +1,4 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import { MaterialDesignModule } from '../material-design/material-design.module';
 import { FuncionarioService } from '../services/funcionario.service';
 import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/forms';
 

@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Funcionario } from "../models/funcionario.model";
 import { environment } from 'src/environments/environment';
+import { Observable, Subject, ReplaySubject, from, of, range } from 'rxjs';
 
 /**
  * eu prefiro usar *Promisse* no lugar de *Observable* no contenxto
@@ -18,8 +19,8 @@ export class FuncionarioService {
   private readonly rotaFuncionario = "funcionario";
   constructor(private http: HttpClient) {}
 
-  listar(): Promise<Funcionario[]> {
-    return this.http.get<Funcionario[]>(`${environment.contaApi}/${this.rotaFuncionario}`).toPromise();
+  listar(): Observable<Funcionario[]> {
+    return this.http.get<Funcionario[]>(`${environment.contaApi}/${this.rotaFuncionario}`);
   }
 
   cadastrar(funcionario: Funcionario): Promise<Funcionario> {
