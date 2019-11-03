@@ -1,0 +1,31 @@
+$timeAnimation: 1s;
+$opacity: 0.8;
+
+.loading {
+  background: url(../../assets/imagens/load.gif) no-repeat center center;
+  opacity: $opacity;
+  background-size: 400px;
+  width: 100%;
+  height: 100%;
+  animation: fadein $timeAnimation;
+}
+
+.loading-background {
+  height: 100%;
+  width: 100%;
+  background: white;
+  z-index: 100;
+  opacity: $opacity;
+  position: fixed;
+  top: 0;
+  animation: fadein $timeAnimation;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: $opacity;
+  }
+}
