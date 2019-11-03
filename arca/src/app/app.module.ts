@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -37,6 +36,8 @@ import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-at
 import { AnimaisInternaComponent } from './animais-interna/animais-interna.component';
 import { MenuInternoComponent } from './menu-interno/menu-interno.component';
 import { TESTEAPIComponent } from './testeapi/testeapi.component';
+import { FormatDatepickerComponent } from './format-datepicker/format-datepicker.component';
+import { FuncionariosInternaComponent } from './funcionarios-interna/funcionarios-interna.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,8 @@ import { TESTEAPIComponent } from './testeapi/testeapi.component';
     AnimaisInternaComponent,
     MenuInternoComponent,
     TESTEAPIComponent,
+    FormatDatepickerComponent,
+    FuncionariosInternaComponent,
   ],
   imports: [
     BrowserModule,

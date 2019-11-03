@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\backend",
-    "\\backend\\GerenciaMicroservice\\Domain"
+    "\\backend\\ContaMicroservice",
+    "\\backend\\GerenciaMicroservice"
   ],
-  "SelectedNode": "\\backend\\AssociadoMicroservice",
+  "SelectedNode": "\\backend\\ContaMicroservice\\ContaMicroservice.sln",
   "PreviewInSolutionExplorer": false
 }

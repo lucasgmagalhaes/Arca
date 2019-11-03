@@ -1,15 +1,20 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import { MaterialDesignModule } from '../material-design/material-design.module';
 import { FuncionarioService } from '../services/funcionario.service';
 import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/forms';
 
+import {DateAdapter, MAT_DATE_FORMATS} from '@angular/material/core';
+import { AppDateAdapter, APP_DATE_FORMATS } from '../format-datepicker/format-datepicker.component';
 
 @NgModule({})
 
 @Component({
   selector: 'app-cadastro-funcionario',
   templateUrl: './cadastro-funcionario.component.html',
-  styleUrls: ['./cadastro-funcionario.component.scss']
+  styleUrls: ['./cadastro-funcionario.component.scss'],
+  providers: [
+    {provide: DateAdapter, useClass: AppDateAdapter},
+    {provide: MAT_DATE_FORMATS, useValue: APP_DATE_FORMATS}
+  ]
 })
 export class CadastroFuncionarioComponent implements OnInit {
   funcionarioForm: FormGroup;
@@ -17,27 +22,28 @@ export class CadastroFuncionarioComponent implements OnInit {
 
 
   ngOnInit() {
+
     this.funcionarioForm = new FormGroup({
-      nome: new FormControl("", Validators.required),
-      dataNascimento: new FormControl("", Validators.required),
-      setor: new FormControl("", Validators.required),
-      salario: new FormControl(0, Validators.required),
-      isAdministrador: new FormControl(false),
-      cpf: new FormControl("", Validators.required),
-      emailFuncionario: new FormControl("", [Validators.email, Validators.required]),
-      senha: new FormControl("", Validators.required),
-      confirmarSenha: new FormControl("", Validators.required),
+      nome: new FormControl('', Validators.required),
+      dataNascimento: new FormControl('',  Validators.required),
+      setor: new FormControl(+'', Validators.required),
+      salario: new FormControl('', Validators.required),
+      isAdministrador: new FormControl((false), Validators.required),
+      cpf: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
+      senha: new FormControl('', Validators.required),
+      confirmarSenha: new FormControl('',  Validators.required),
     }, this.compararStrings("senha", "confirmarSenha"));
 
   }
 
-
-
+ 
   async cadastrar() {
     if (!this.funcionarioForm.valid) {
       // Deve exibir algo na tela para o usuário
       console.log("Formulário inválido");
     }
+   
 
     // this.funcionarioForm.value converte os valores do formGroup para um objeto
     // as propriedades desse objeto são ajustadas para uma interface do tipo "Funcionario"
@@ -49,6 +55,10 @@ export class CadastroFuncionarioComponent implements OnInit {
      * **Método não testado. Verifique se as propriedades estão sendo passadas da forma esperada**
      * **Remova esse comentário após a verificação**
      */
+    this.funcionarioForm.value.cpf = this.funcionarioForm.value.cpf.replace('.', '');
+    this.funcionarioForm.value.cpf = this.funcionarioForm.value.cpf.replace('-', '');
+    this.funcionarioForm.value.setor = +this.funcionarioForm.value.setor;
+
     await this.funcionarioService.cadastrar(this.funcionarioForm.value);
     console.log("Funcionário cadastrado com sucesso");
   }

@@ -12,8 +12,9 @@
             <input matInput placeholder="Nome Completo" formControlName="nome" type="text">
           </mat-form-field>
           <mat-form-field class="col col-md-3">
-            <input matInput placeholder="Data de Nascimento" formControlName="dataNascimento" type="datetime"
-              mask="00/00/0000">
+            <input matInput placeholder="Data de Nascimento" [matDatepicker]="datepickerRef" name="datepicker" formControlName="dataNascimento" required readonly/>
+            <mat-datepicker-toggle [for]="datepickerRef" matSuffix></mat-datepicker-toggle>
+            <mat-datepicker #datepickerRef></mat-datepicker>
           </mat-form-field>
         </div>
         <div class="row">
@@ -21,15 +22,15 @@
             <input matInput placeholder="CPF" formControlName="cpf" type="text" mask="000.000.000-00">
           </mat-form-field>
           <mat-form-field class="col col-md-6">
-            <input matInput placeholder="Email" formControlName="emailFuncionario" type="text">
+            <input matInput placeholder="Email" formControlName="email" type="text">
           </mat-form-field>
         </div>
         <div class="row">
           <mat-form-field class="col col-md-6">
             <mat-label>Setor</mat-label>
-            <select matNativeControl formControlName="setor">
-              <option value="0">Financeiro</option>
-              <option value="1">Administrativo</option>
+            <select matNativeControl formControlName="setor" id="setor">
+              <option value=0>Financeiro</option>
+              <option value=1>Administrativo</option>
               <option value="2">Recepção</option>
             </select>
           </mat-form-field>
