@@ -8,27 +8,24 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Lucas\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\italo\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\git\\Arca\\backend\\GerenciaMicroservice\\Exception\\Exception.csproj",
+      "projectUniqueName": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\GerenciaMicroservice\\Exception\\Exception.csproj",
       "projectName": "Exception",
-      "projectPath": "D:\\git\\Arca\\backend\\GerenciaMicroservice\\Exception\\Exception.csproj",
-      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "D:\\git\\Arca\\backend\\GerenciaMicroservice\\Exception\\obj\\",
+      "projectPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\GerenciaMicroservice\\Exception\\Exception.csproj",
+      "packagesPath": "C:\\Users\\italo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\GerenciaMicroservice\\Exception\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\italo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"

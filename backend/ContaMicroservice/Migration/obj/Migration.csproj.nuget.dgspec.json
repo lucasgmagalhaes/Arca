@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\git\\Arca\\backend\\ContaMicroservice\\Migration\\Migration.csproj": {}
+    "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ContaMicroservice\\Migration\\Migration.csproj": {}
   },
   "projects": {
-    "D:\\git\\Arca\\backend\\ContaMicroservice\\Migration\\Migration.csproj": {
+    "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ContaMicroservice\\Migration\\Migration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\Arca\\backend\\ContaMicroservice\\Migration\\Migration.csproj",
+        "projectUniqueName": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ContaMicroservice\\Migration\\Migration.csproj",
         "projectName": "Migration",
-        "projectPath": "D:\\git\\Arca\\backend\\ContaMicroservice\\Migration\\Migration.csproj",
-        "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\Arca\\backend\\ContaMicroservice\\Migration\\obj\\",
+        "projectPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ContaMicroservice\\Migration\\Migration.csproj",
+        "packagesPath": "C:\\Users\\italo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ContaMicroservice\\Migration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\italo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
