@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\git\\Arca\\backend\\ServicosMicroservice\\Persistence\\Persistence.csproj": {}
+    "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
-    "D:\\git\\Arca\\backend\\ServicosMicroservice\\Domain\\Domain.csproj": {
+    "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\italo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\italo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
@@ -32,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "D:\\git\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj": {
-                "projectPath": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj"
+              "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj": {
+                "projectPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj"
               }
             }
           }
@@ -69,30 +67,23 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
-      },
-      "runtimes": {
-        "win-x86": {
-          "#import": []
-        }
       }
     },
-    "D:\\git\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj": {
+    "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj",
+        "projectUniqueName": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj",
         "projectName": "Enums",
-        "projectPath": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj",
-        "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Enum\\obj\\",
+        "projectPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj",
+        "packagesPath": "C:\\Users\\italo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Enum\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\italo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -134,30 +125,23 @@
           "warn": true,
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
-      },
-      "runtimes": {
-        "win-x86": {
-          "#import": []
-        }
       }
     },
-    "D:\\git\\Arca\\backend\\ServicosMicroservice\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Persistence\\obj\\",
+        "projectPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\italo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\italo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
@@ -169,8 +153,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "D:\\git\\Arca\\backend\\ServicosMicroservice\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Domain\\Domain.csproj"
+              "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Domain\\Domain.csproj"
               }
             }
           }
@@ -209,11 +193,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x86": {
-          "#import": []
         }
       }
     }

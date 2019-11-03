@@ -12,18 +12,6 @@
           "bin/placeholder/Enums.dll": {}
         }
       }
-    },
-    ".NETCoreApp,Version=v3.0/win-x86": {
-      "Enums/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Enums.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Enums.dll": {}
-        }
-      }
     }
   },
   "libraries": {
@@ -39,27 +27,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lucas\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\italo\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Transport\\Transport.csproj",
+      "projectUniqueName": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Transport\\Transport.csproj",
       "projectName": "Transport",
-      "projectPath": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Transport\\Transport.csproj",
-      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Transport\\obj\\",
+      "projectPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Transport\\Transport.csproj",
+      "packagesPath": "C:\\Users\\italo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Transport\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\italo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
@@ -71,8 +56,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "D:\\git\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj": {
-              "projectPath": "D:\\git\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj"
+            "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj": {
+              "projectPath": "C:\\Users\\italo\\Documents\\GitHub\\7periodo\\Arca\\backend\\ServicosMicroservice\\Enum\\Enums.csproj"
             }
           }
         }
@@ -101,11 +86,6 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
-      }
-    },
-    "runtimes": {
-      "win-x86": {
-        "#import": []
       }
     }
   }

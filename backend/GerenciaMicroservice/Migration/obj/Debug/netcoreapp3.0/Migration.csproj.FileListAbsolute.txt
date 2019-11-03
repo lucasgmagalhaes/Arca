@@ -3,3 +3,11 @@ C:\Users\lucas.magalhaes\Desktop\backend\GerenciaMicroservice\Migration\bin\Debu
 C:\Users\lucas.magalhaes\Desktop\backend\GerenciaMicroservice\Migration\obj\Debug\netcoreapp3.0\Migration.csprojAssemblyReference.cache
 C:\Users\lucas.magalhaes\Desktop\backend\GerenciaMicroservice\Migration\obj\Debug\netcoreapp3.0\Migration.AssemblyInfoInputs.cache
 C:\Users\lucas.magalhaes\Desktop\backend\GerenciaMicroservice\Migration\obj\Debug\netcoreapp3.0\Migration.AssemblyInfo.cs
+C:\Users\italo\Documents\GitHub\7periodo\Arca\backend\GerenciaMicroservice\Migration\bin\Debug\netcoreapp3.0\Migration.deps.json
+C:\Users\italo\Documents\GitHub\7periodo\Arca\backend\GerenciaMicroservice\Migration\bin\Debug\netcoreapp3.0\Migration.dll
+C:\Users\italo\Documents\GitHub\7periodo\Arca\backend\GerenciaMicroservice\Migration\bin\Debug\netcoreapp3.0\Migration.pdb
+C:\Users\italo\Documents\GitHub\7periodo\Arca\backend\GerenciaMicroservice\Migration\obj\Debug\netcoreapp3.0\Migration.csprojAssemblyReference.cache
+C:\Users\italo\Documents\GitHub\7periodo\Arca\backend\GerenciaMicroservice\Migration\obj\Debug\netcoreapp3.0\Migration.AssemblyInfoInputs.cache
+C:\Users\italo\Documents\GitHub\7periodo\Arca\backend\GerenciaMicroservice\Migration\obj\Debug\netcoreapp3.0\Migration.AssemblyInfo.cs
+C:\Users\italo\Documents\GitHub\7periodo\Arca\backend\GerenciaMicroservice\Migration\obj\Debug\netcoreapp3.0\Migration.dll
+C:\Users\italo\Documents\GitHub\7periodo\Arca\backend\GerenciaMicroservice\Migration\obj\Debug\netcoreapp3.0\Migration.pdb
