@@ -28,4 +28,10 @@ export class FuncionarioService {
       .post<Funcionario>(`${environment.contaApi}/${this.rotaFuncionario}`, funcionario)
       .toPromise();
   }
+
+  deletar(id) {
+    return this.http
+      .delete<Funcionario>(`${environment.contaApi}/${this.rotaFuncionario}`, id)
+      // .toPromise();
+  }
 }
