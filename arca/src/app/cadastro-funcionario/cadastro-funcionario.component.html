@@ -1,6 +1,5 @@
 <div class="cadastroFuncionario">
   <mat-card class="card-cadastroFuncionario">
-    <mat-icon aria-hidden="false" aria-label="account_circle icon">account_circle</mat-icon>
     <mat-card-title>
       <label>Novo Funcionario</label>
     </mat-card-title>
@@ -8,10 +7,10 @@
     <mat-card-content>
       <form [formGroup]="funcionarioForm">
         <div class="row">
-          <mat-form-field class="col col-md-9">
+          <mat-form-field class="col col-md-6">
             <input matInput placeholder="Nome Completo" formControlName="nome" type="text">
           </mat-form-field>
-          <mat-form-field class="col col-md-3">
+          <mat-form-field class="col col-md-6">
             <input matInput placeholder="Data de Nascimento" [matDatepicker]="datepickerRef" name="datepicker"
               formControlName="dataNascimento" required readonly />
             <mat-datepicker-toggle [for]="datepickerRef" matSuffix></mat-datepicker-toggle>
@@ -29,11 +28,11 @@
         <div class="row">
           <mat-form-field class="col col-md-6">
             <mat-label>Setor</mat-label>
-            <select matNativeControl formControlName="setor" id="setor">
-              <option value=0>Financeiro</option>
-              <option value=1>Administrativo</option>
-              <option value="2">Recepção</option>
-            </select>
+            <mat-select formControlName="setor" id="setor">
+              <mat-option value=0>Financeiro</mat-option>
+              <mat-option value=1>Administrativo</mat-option>
+              <mat-option value="2">Recepção</mat-option>
+            </mat-select>
           </mat-form-field>
           <mat-form-field class="col col-md-6">
             <input matInput placeholder="Salário" formControlName="salario" type="number">
@@ -47,11 +46,13 @@
             <input matInput placeholder="Confirmação da Senha" formControlName="confirmarSenha" type="password">
           </mat-form-field>
         </div>
-        <div class="row" id="funcinarioAdm">
-          <input type="checkbox" formControlName="isAdministrador"> Usuário Administrador
-        </div>
         <div class="row">
-          <button mat-raised-button (click)="cadastrar()" type="submit">Cadastrar</button>
+          <div class="col col-md-6">
+            <mat-checkbox formControlName="isAdministrador">Usuário Administrador</mat-checkbox>
+          </div>
+          <div class="col col-md-6">
+            <button class="btn-cadastro" mat-raised-button (click)="cadastrar()" type="submit">Cadastrar</button>
+          </div>
         </div>
       </form>
     </mat-card-content>

@@ -2,15 +2,14 @@
     .card-cadastroFuncionario {
         width: 50%;
         margin: auto;
+        margin-top: 60px;
     }
 }
 
-#btnCadastrarFuncionario {
+.btn-cadastro {
     float: right;
-    margin-right: 2%;
 }
 
-#funcinarioAdm {
-    float: left;
-    margin-left: 1%;
+label {
+    color: #325829;
 }
