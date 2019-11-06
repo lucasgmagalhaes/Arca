@@ -12,7 +12,8 @@
             <input matInput placeholder="Nome Completo" formControlName="nome" type="text">
           </mat-form-field>
           <mat-form-field class="col col-md-3">
-            <input matInput placeholder="Data de Nascimento" [matDatepicker]="datepickerRef" name="datepicker" formControlName="dataNascimento" required readonly/>
+            <input matInput placeholder="Data de Nascimento" [matDatepicker]="datepickerRef" name="datepicker"
+              formControlName="dataNascimento" required readonly />
             <mat-datepicker-toggle [for]="datepickerRef" matSuffix></mat-datepicker-toggle>
             <mat-datepicker #datepickerRef></mat-datepicker>
           </mat-form-field>
@@ -52,9 +53,6 @@
         <div class="row">
           <button mat-raised-button (click)="cadastrar()" type="submit">Cadastrar</button>
         </div>
-        <!-- <div class="row">
-          <button mat-raised-button (click)="deletar(16)">Deletar</button>
-        </div> -->
       </form>
     </mat-card-content>
   </mat-card>
