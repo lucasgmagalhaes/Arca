@@ -41,5 +41,15 @@ body {
 
 .mat-card-title,
 .mat-icon {
-    color: #3f51b5;
+    color: #325829;
 }
+
+@media (min-width: 800px)
+{
+   .mat-card
+   {
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;  
+   }
+ }
