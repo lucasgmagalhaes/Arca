@@ -16,10 +16,7 @@ export class FuncionariosInternaComponent implements OnInit {
 
   dataSource = new FuncionarioDataSource(this.funcionarioService);
   displayedColumns: string[] = ['nome', 'dataNascimento', 'setor', 'id'];
-
   constructor(private funcionarioService: FuncionarioService) { }
-
-
   ngOnInit() { }
 }
 

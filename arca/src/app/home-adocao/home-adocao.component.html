@@ -12,11 +12,11 @@
   <div class="row home-adocao__animais">
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding: 15px">
       <mat-card>
-        <mat-card-title class="home-adocao__animais__nome" *matCellDef="let element"> {{element.nome}} </mat-card-title>
+        <mat-card-title *matCellDef="let element" class="home-adocao__animais__nome"> {{element.nome}} </mat-card-title>
         <img mat-card-image src="../../assets/imagens/noticia1.jpg">
 
-        <mat-card-content>
-          <p *matCellDef="let element"> {{element.descricao}}
+        <mat-card-content *matCellDef="let element">
+          <p>{{element.descricao}}
           </p>
         </mat-card-content>
 
