@@ -9,4 +9,3 @@ export interface Animal {
     ismorto: string,
     AdotanteId: string
   }
-  
