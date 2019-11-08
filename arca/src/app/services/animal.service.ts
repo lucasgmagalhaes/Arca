@@ -7,21 +7,16 @@ import { Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class AnimalService {
-  private readonly rotaAnimal = "animal";
+  private readonly rotaAnimal = "Animal";
   constructor(private http: HttpClient) {}
 
-  // listar(): Promise<Animal[]> {
-  //   return this.http.get<Animal[]>(`${environment.contaApi}/${this.rotaAnimal}`).toPromise();
-  // }
-
-
-  listar(): Observable<Animal[]> {
-    return this.http.get<Animal[]>(`${environment.contaApi}/${this.rotaAnimal}`);
+  listar(): Promise<Animal[]> {
+    return this.http.get<Animal[]>(`${environment.servicoApi}/${this.rotaAnimal}`).toPromise();
   }
 
-  cadastrar(funcionario: Animal): Promise<Animal> {
+  cadastrar(animal: Animal): Promise<Animal> {
     return this.http
-      .post<Animal>(`${environment.contaApi}/${this.rotaAnimal}`, funcionario)
+      .post<Animal>(`${environment.servicoApi}/${this.rotaAnimal}`, animal)
       .toPromise();
   }
 }

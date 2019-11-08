@@ -27,13 +27,13 @@
                 <div class="row">
                     <mat-form-field class="col col-md-2">
                         <mat-label>Idade</mat-label>
-                        <input matInput placeholder="Idade do Animal" formControlName="idade" type="text" mask="00">
+                        <input matInput placeholder="Idade do Animal" formControlName="idade" type="number" mask="00">
                     </mat-form-field>
                     <mat-form-field class="col col-md-4">
                         <mat-label>Meses/Anos</mat-label>
                         <select matNativeControl formControlName="medicaoidade">
-                            <option value="M">Meses</option>
-                            <option value="A">Anos</option>
+                            <option value="0">Meses</option>
+                            <option value="1">Anos</option>
                         </select>
                     </mat-form-field>
                     <mat-form-field class="col col-md-6">

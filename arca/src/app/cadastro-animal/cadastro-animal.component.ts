@@ -19,11 +19,11 @@ export class CadastroAnimalComponent implements OnInit {
       especie: new FormControl("", Validators.required),
       raca: new FormControl("", Validators.required),
       nome: new FormControl("", Validators.required),
-      idade: new FormControl(0, Validators.required),
-      medicaoidade: new FormControl(false),
+      idade: new FormControl(+"", Validators.required),
+      medicaoidade: new FormControl(+"", Validators.required),
       descricao: new FormControl("", Validators.required),
-      isdisponivelparaadocao: new FormControl("", Validators.required),
-      ismorto: new FormControl("", Validators.required),
+      isdisponivelparaadocao: new FormControl(false, Validators.required),
+      ismorto: new FormControl(false, Validators.required),
     },
     )
     //  }, this.compararStrings("senha", "confirmarSenha"));
@@ -31,12 +31,15 @@ export class CadastroAnimalComponent implements OnInit {
   }
 
   async cadastrar() {
+
     if (!this.animalForm.valid) {
+      alert("formulário inválido");
       // Deve exibir algo na tela para o usuário
       console.log("Formulário inválido");
     }
 
     await this.animalService.cadastrar(this.animalForm.value);
+    alert("Animal cadastrado com sucesso");
     console.log("Animal cadastrado com sucesso");
   }
 }
