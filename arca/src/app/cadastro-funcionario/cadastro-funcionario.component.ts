@@ -1,9 +1,10 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { FuncionarioService } from '../services/funcionario.service';
 import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/forms';
-
 import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
 import { AppDateAdapter, APP_DATE_FORMATS } from '../format-datepicker/format-datepicker.component';
+import { LoadingService } from '../services/loading.service';
+import { MatSnackBar } from '@angular/material';
 
 @NgModule({})
 
@@ -18,8 +19,7 @@ import { AppDateAdapter, APP_DATE_FORMATS } from '../format-datepicker/format-da
 })
 export class CadastroFuncionarioComponent implements OnInit {
   funcionarioForm: FormGroup;
-  constructor(private funcionarioService: FuncionarioService) { }
-
+  constructor(private funcionarioService: FuncionarioService,  private loading: LoadingService, private notificacao: MatSnackBar) { }
 
   ngOnInit() {
 
@@ -36,38 +36,30 @@ export class CadastroFuncionarioComponent implements OnInit {
     }, this.compararStrings("senha", "confirmarSenha"));
 
   }
-
-
   async cadastrar() {
     if (!this.funcionarioForm.valid) {
-      // Deve exibir algo na tela para o usuário
       console.log("Formulário inválido");
     }
 
-
-    // this.funcionarioForm.value converte os valores do formGroup para um objeto
-    // as propriedades desse objeto são ajustadas para uma interface do tipo "Funcionario"
-    // (para isso o nome das propriedades tanto do formGroup como ta interface precisam ser iguais).
-    // Como a interface "Funcionario" não possui a propriedade "confirmarSenha" ela não será enviada
-    // para a api
-
-    /**
-     * **Método não testado. Verifique se as propriedades estão sendo passadas da forma esperada**
-     * **Remova esse comentário após a verificação**
-     */
     this.funcionarioForm.value.cpf = this.funcionarioForm.value.cpf.replace('.', '');
     this.funcionarioForm.value.cpf = this.funcionarioForm.value.cpf.replace('-', '');
     this.funcionarioForm.value.setor = +this.funcionarioForm.value.setor;
 
-    await this.funcionarioService.cadastrar(this.funcionarioForm.value);
-    console.log("Funcionário cadastrado com sucesso");
+    try {
+      this.loading.exibir();
+      await this.funcionarioService.cadastrar(this.funcionarioForm.value);
+      this.funcionarioForm.reset();
+      this.notificacao.open("Funcionário cadastrado com sucesso", "Ok", {
+        duration: 3000
+      });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      this.loading.esconder();
+    }
+
   }
 
-  /**
-   * Validador para as senhas. Verifica se ambos os valores são iguais
-   * (Caso exista outros formulários com validação de senha, use esse mesmo método.
-   * **Mas retire ele daqui e coloque em um lugar global**)
-   */
   compararStrings(control1: string, control2: string): ValidationErrors {
     if (control1 !== control2) {
       return {
