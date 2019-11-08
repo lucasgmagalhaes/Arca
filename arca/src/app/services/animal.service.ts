@@ -7,16 +7,16 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class AnimalService {
-  private readonly rotaAnimal = "animal";
+  private readonly rotaAnimal = "Animal";
   constructor(private http: HttpClient) {}
 
   listar(): Promise<Animal[]> {
-    return this.http.get<Animal[]>(`${environment.contaApi}/${this.rotaAnimal}`).toPromise();
+    return this.http.get<Animal[]>(`${environment.servicoApi}/${this.rotaAnimal}`).toPromise();
   }
 
-  cadastrar(funcionario: Animal): Promise<Animal> {
+  cadastrar(animal: Animal): Promise<Animal> {
     return this.http
-      .post<Animal>(`${environment.contaApi}/${this.rotaAnimal}`, funcionario)
+      .post<Animal>(`${environment.servicoApi}/${this.rotaAnimal}`, animal)
       .toPromise();
   }
 }
