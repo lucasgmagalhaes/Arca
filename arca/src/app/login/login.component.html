@@ -1,5 +1,6 @@
 <div class="login">
   <mat-card>
+      <form [formGroup]="loginForm">
     <div id="icon_login">
       <mat-icon aria-hidden="false" aria-label="account_circle icon">account_circle</mat-icon>
       <p id="title_login">LOGIN</p>
@@ -19,11 +20,12 @@
       <app-recaptcha-v2></app-recaptcha-v2>
     </div>
     <div class="row">
-      <button mat-raised-button>Entrar</button>
+        <button class="btn-login" mat-raised-button (click)="logar()" type="submit">Entrar</button>
     </div>
     <hr>
     <div id="footer_login">
       <a href="url">Cadastre-se </a> | <a href="url"> Esqueci a senha</a>
     </div>
+    </form>
   </mat-card>
 </div>

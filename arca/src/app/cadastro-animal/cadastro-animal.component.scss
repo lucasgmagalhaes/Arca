@@ -1,17 +1,26 @@
+.mat-card-title,
+.mat-icon {
+    color: #325829;
+}
 
 @media (min-width: 800px)
 {
-   .card-cadastroAnimal
+   .mat-card
    {
-       width: 50%;
-     
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;  
    }
  }
- 
+
+ label {
+    color: #325829;
+}
+
  #btnCadastrarAnimal
  {
      float: right;
-     margin-right: 2%;
+      margin-right: 2%;
  }
 
  #animalDispAdoacao, #animalMorreu
