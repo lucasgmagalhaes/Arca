@@ -21,14 +21,6 @@ export class FuncionariosInternaComponent implements OnInit {
 
 
   ngOnInit() { }
-
-  deletar(id) {
-    alert("oi");
-    console.log(id);
-    this.funcionarioService.deletar(id);
-  }
-
-
 }
 
 export class FuncionarioDataSource extends DataSource<any> {
