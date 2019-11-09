@@ -25,7 +25,7 @@ namespace ContaMicroservice.Controllers
         /// </summary>
         /// <param name="autenticacao"></param>
         /// <returns></returns>
-        [HttpGet("Autenticar")]
+        [HttpPost("Autenticar")]
         public ActionResult<Associado> AutenticarAssociado(Autenticacao autenticacao)
         {
             try

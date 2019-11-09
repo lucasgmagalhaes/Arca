@@ -19,8 +19,8 @@ export class AnimalDataSource extends DataSource<any> {
     return this.animalService.listar();
   }
   disconnect() { }
-  // console.log(animalService.listar());
-}
+
+  }
 
 
 export class HomeAdocaoComponent implements OnInit {

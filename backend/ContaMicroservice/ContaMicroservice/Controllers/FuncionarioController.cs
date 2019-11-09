@@ -65,7 +65,7 @@ namespace ContaMicroservice.Controllers
         /// </summary>
         /// <param name="autenticacao"></param>
         /// <returns></returns>
-        [HttpGet("Autenticar")]
+        [HttpPost("Autenticar")]
         public ActionResult<Funcionario> AutenticarFuncionario(Autenticacao autenticacao)
         {
             try
