@@ -72,15 +72,15 @@ namespace ContaMicroservice.Controllers
             {
                 if (autenticacao == null)
                 {
-                    return BadRequest(new { mensagem = "Login e senha não informados" });
+                    return BadRequest(new { mensagem = "Cpf e senha não informados" });
                 }
 
                 Funcionario associado = _funcionarioService
-               .Buscar(associado => associado.Email == autenticacao.Email && associado.Senha == autenticacao.Senha).FirstOrDefault();
+               .Buscar(associado => associado.Cpf == autenticacao.Cpf && associado.Senha == autenticacao.Senha).FirstOrDefault();
 
                 if (associado == null)
                 {
-                    return BadRequest(new { mensagem = "Email ou senha inválidos" });
+                    return BadRequest(new { mensagem = "Cpf ou senha inválidos" });
                 }
                 return Ok(associado);
             }
