@@ -11,15 +11,6 @@ import { Funcionario } from "../models/funcionario.model";
 })
 
 
-
-export class FuncionariosInternaComponent implements OnInit {
-
-  dataSource = new FuncionarioDataSource(this.funcionarioService);
-  displayedColumns: string[] = ['nome', 'dataNascimento', 'setor', 'id'];
-  constructor(private funcionarioService: FuncionarioService) { }
-  ngOnInit() { }
-}
-
 export class FuncionarioDataSource extends DataSource<any> {
   constructor(private funcionarioService: FuncionarioService) {
     super();
@@ -28,5 +19,11 @@ export class FuncionarioDataSource extends DataSource<any> {
     return this.funcionarioService.listar();
   }
   disconnect() { }
+}
 
+export class FuncionariosInternaComponent implements OnInit {
+  dataSource = new FuncionarioDataSource(this.funcionarioService);
+  displayedColumns: string[] = ['nome', 'dataNascimento', 'setor', 'id'];
+  constructor(private funcionarioService: FuncionarioService) { }
+  ngOnInit() { }
 }

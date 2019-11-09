@@ -40,6 +40,7 @@ import { FormatDatepickerComponent } from './format-datepicker/format-datepicker
 import { FuncionariosInternaComponent } from './funcionarios-interna/funcionarios-interna.component';
 import { LoadingComponent } from './loading/loading.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,6 @@ import { LoadingComponent } from './loading/loading.component';
     DoacaoComponent,
     HomeComponent,
     FooterComponent,
-    HomeAdocaoComponent,
     HomeServicosComponent,
     DoacaoInternaComponent,
     CadastroAtendimentoComponent,
@@ -63,6 +63,7 @@ import { LoadingComponent } from './loading/loading.component';
     FormatDatepickerComponent,
     FuncionariosInternaComponent,
     LoadingComponent,
+    HomeAdocaoComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,7 +84,7 @@ import { LoadingComponent } from './loading/loading.component';
     MatNativeDateModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [MatDatepickerModule, MatNativeDateModule, FuncionarioService],
   bootstrap: [AppComponent]

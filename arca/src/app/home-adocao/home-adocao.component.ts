@@ -2,7 +2,7 @@ import { Animal } from './../models/animal.model';
 import { Component, OnInit } from '@angular/core';
 import { MaterialDesignModule } from '../material-design/material-design.module';
 import { AnimalService } from '../services/animal.service';
-import { Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 import { DataSource } from '@angular/cdk/collections';
 
 @Component({
@@ -10,6 +10,19 @@ import { DataSource } from '@angular/cdk/collections';
   templateUrl: './home-adocao.component.html',
   styleUrls: ['./home-adocao.component.scss']
 })
+
+export class AnimalDataSource extends DataSource<any> {
+  constructor(private animalService: AnimalService) {
+    super();
+  }
+  connect(): Observable<Animal[]> {
+    return this.animalService.listar();
+  }
+  disconnect() { }
+  // console.log(animalService.listar());
+}
+
+
 export class HomeAdocaoComponent implements OnInit {
   dataSource = new AnimalDataSource(this.animalService);
   displayedColumns: string[] = ['nome', 'descricao'];
@@ -20,43 +33,3 @@ export class HomeAdocaoComponent implements OnInit {
 
   }
 }
-
-export class AnimalDataSource extends DataSource<any> {
-  constructor(private animalService: AnimalService) {
-    super();
-  }
-  connect(): Observable<Animal[]> {
-    return this.animalService.listar();
-  }
-  disconnect() { }
-
-    console.log(this.animalService.listar());
-  }
-}
-
-// export class AnimalInternaComponent implements OnInit {
-
-//   // dataSource = new AnimalDataSource(this.animalService);
-//   displayedColumns: string[] = ['nome', 'descricao'];
-
-
-
-//   ngOnInit() { }
-
-
-
-// }
-
-// export class AnimalDataSource extends DataSource<any> {
-//   constructor(private animalService: AnimalService) {
-//     super();
-//   }
-//   connect(): Promise<Animal[]> {
-//     return this.animalService.listar();
-//   }
-//   disconnect() { }
-
-// }
-
-
-
