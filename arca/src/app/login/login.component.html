@@ -1,31 +1,32 @@
 <div class="login">
   <mat-card>
-      <form [formGroup]="loginForm">
-    <div id="icon_login">
-      <mat-icon aria-hidden="false" aria-label="account_circle icon">account_circle</mat-icon>
-      <p id="title_login">LOGIN</p>
-    </div>
-    <hr>
-    <div class="row">
-      <mat-form-field class="col col-md-12">
-        <input matInput placeholder="CPF" formControlName="cpf" mask="000.000.000-00">
-      </mat-form-field>
-    </div>
-    <div class="row">
-      <mat-form-field class="col col-md-12">
-        <input matInput placeholder="Senha" formControlName="password" type="password">
-      </mat-form-field>
-    </div>
-    <div>
-      <app-recaptcha-v2></app-recaptcha-v2>
-    </div>
-    <div class="row">
-        <button class="btn-login" mat-raised-button (click)="logar()" type="submit">Entrar</button>
-    </div>
-    <hr>
-    <div id="footer_login">
-      <a routerLink="/tipo-usuario">Cadastre-se </a> | <a href="url"> Esqueci a senha</a>
-    </div>
+    <form [formGroup]="loginForm">
+      <div id="icon_login">
+        <mat-icon aria-hidden="false" aria-label="account_circle icon">account_circle</mat-icon>
+        <p id="title_login">LOGIN</p>
+      </div>
+      <hr>
+      <div class="row">
+        <mat-form-field class="col col-md-12">
+          <input matInput placeholder="CPF" formControlName="cpf" mask="000.000.000-00">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field class="col col-md-12">
+          <input matInput placeholder="Senha" formControlName="senha" type="password">
+        </mat-form-field>
+      </div>
+      <div>
+        <re-captcha (resolved)="resolved()" siteKey="6LfGYr0UAAAAADtqJxa4iHT-IEWgDCe5666vQK6d"></re-captcha>
+      </div>
+      <div class="row">
+        <button class="btn-login" [disabled]="!authValid" mat-raised-button (click)="login()"
+          type="submit">Entrar</button>
+      </div>
+      <hr>
+      <div id="footer_login">
+        <a routerLink="/tipo-usuario">Cadastre-se </a> | <a href="url"> Esqueci a senha</a>
+      </div>
     </form>
   </mat-card>
 </div>
