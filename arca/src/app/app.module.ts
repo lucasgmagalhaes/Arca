@@ -39,6 +39,7 @@ import { TESTEAPIComponent } from './testeapi/testeapi.component';
 import { FormatDatepickerComponent } from './format-datepicker/format-datepicker.component';
 import { FuncionariosInternaComponent } from './funcionarios-interna/funcionarios-interna.component';
 import { LoadingComponent } from './loading/loading.component';
+import { TipoUsuarioComponent } from './tipo-usuario/tipo-usuario.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { LoadingComponent } from './loading/loading.component';
     FormatDatepickerComponent,
     FuncionariosInternaComponent,
     LoadingComponent,
+    TipoUsuarioComponent,
   ],
   imports: [
     BrowserModule,
