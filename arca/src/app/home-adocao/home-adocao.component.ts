@@ -30,9 +30,7 @@ export class AnimalDataSource extends DataSource<any> {
   }
   disconnect() { }
 
-    console.log(this.animalService.listar());
   }
-}
 
 // export class AnimalInternaComponent implements OnInit {
 
