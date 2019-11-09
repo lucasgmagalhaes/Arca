@@ -17,7 +17,7 @@ import { Observable, Subject, ReplaySubject, from, of, range } from 'rxjs';
 })
 export class FuncionarioService {
   private readonly rotaFuncionario = "funcionario";
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   listar(): Observable<Funcionario[]> {
     return this.http.get<Funcionario[]>(`${environment.contaApi}/${this.rotaFuncionario}`);
@@ -27,11 +27,5 @@ export class FuncionarioService {
     return this.http
       .post<Funcionario>(`${environment.contaApi}/${this.rotaFuncionario}`, funcionario)
       .toPromise();
-  }
-
-  deletar(id) {
-    return this.http
-      .delete<Funcionario>(`${environment.contaApi}/${this.rotaFuncionario}`, id)
-      // .toPromise();
   }
 }

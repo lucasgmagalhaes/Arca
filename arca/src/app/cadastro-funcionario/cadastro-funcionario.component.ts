@@ -19,7 +19,7 @@ import { MatSnackBar } from '@angular/material';
 })
 export class CadastroFuncionarioComponent implements OnInit {
   funcionarioForm: FormGroup;
-  constructor(private funcionarioService: FuncionarioService,  private loading: LoadingService, private notificacao: MatSnackBar) { }
+  constructor(private funcionarioService: FuncionarioService, private loading: LoadingService, private notificacao: MatSnackBar) { }
 
   ngOnInit() {
 
@@ -68,10 +68,7 @@ export class CadastroFuncionarioComponent implements OnInit {
     }
     return null;
   }
-  deletar(id) {
 
-    this.funcionarioService.deletar(id);
-  }
 }
 
 

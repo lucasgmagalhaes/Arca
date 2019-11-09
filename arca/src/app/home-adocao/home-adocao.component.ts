@@ -30,4 +30,33 @@ export class AnimalDataSource extends DataSource<any> {
   }
   disconnect() { }
 
+    console.log(this.animalService.listar());
+  }
 }
+
+// export class AnimalInternaComponent implements OnInit {
+
+//   // dataSource = new AnimalDataSource(this.animalService);
+//   displayedColumns: string[] = ['nome', 'descricao'];
+
+
+
+//   ngOnInit() { }
+
+
+
+// }
+
+// export class AnimalDataSource extends DataSource<any> {
+//   constructor(private animalService: AnimalService) {
+//     super();
+//   }
+//   connect(): Promise<Animal[]> {
+//     return this.animalService.listar();
+//   }
+//   disconnect() { }
+
+// }
+
+
+
