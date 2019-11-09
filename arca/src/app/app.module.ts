@@ -39,7 +39,7 @@ import { TESTEAPIComponent } from './testeapi/testeapi.component';
 import { FormatDatepickerComponent } from './format-datepicker/format-datepicker.component';
 import { FuncionariosInternaComponent } from './funcionarios-interna/funcionarios-interna.component';
 import { LoadingComponent } from './loading/loading.component';
-
+import { AnimalService } from './services/animal.service';
 
 @NgModule({
   declarations: [
@@ -84,9 +84,9 @@ import { LoadingComponent } from './loading/loading.component';
     MatNativeDateModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [MatDatepickerModule, MatNativeDateModule, FuncionarioService],
+  providers: [MatDatepickerModule, MatNativeDateModule, FuncionarioService, AnimalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

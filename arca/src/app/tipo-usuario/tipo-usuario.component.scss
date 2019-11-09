@@ -1,0 +1,23 @@
+//   .tipo-usuario
+//    {
+//     margin: auto;
+//     margin-top: 60px;  
+//    }
+ 
+   @media (min-width: 800px)
+{
+   .mat-card
+   {
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;  
+   }
+
+ }
+
+ #btnCadastrarNovoAssociado,
+ #btnCadastrarNovoFuncionario
+ {
+     width: 40%;
+     margin-left: 15%;
+}

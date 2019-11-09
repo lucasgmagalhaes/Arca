@@ -11,7 +11,7 @@ export class AnimalService {
   constructor(private http: HttpClient) {}
 
   listar(): Observable<Animal[]> {
-    return this.http.get<Animal[]>(`${environment.servicoApi}/${this.rotaAnimal}`);
+    return this.http.get<Animal[]>(`${environment.contaApi}/${this.rotaAnimal}`);
   }
 
   cadastrar(animal: Animal): Promise<Animal> {
