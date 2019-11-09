@@ -1,5 +1,0 @@
-C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\Migration\bin\Debug\netcoreapp3.0\Migration.deps.json
-C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\Migration\bin\Debug\netcoreapp3.0\Migration.dll
-C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\Migration\obj\Debug\netcoreapp3.0\Migration.csprojAssemblyReference.cache
-C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\Migration\obj\Debug\netcoreapp3.0\Migration.AssemblyInfoInputs.cache
-C:\Users\lucas.magalhaes\Desktop\backend\ContaMicroservice\Migration\obj\Debug\netcoreapp3.0\Migration.AssemblyInfo.cs
