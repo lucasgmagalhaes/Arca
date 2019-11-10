@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { MaterialDesignModule } from '../material-design/material-design.module';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { AssociadoService } from '../services/associado.service';
+import { LoadingService } from '../services/loading.service';
+import { SessionService } from '../services/session.service';
 
 @Component({
   selector: 'app-login',
@@ -16,9 +20,31 @@ import { MaterialDesignModule } from '../material-design/material-design.module'
 
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  loginForm: FormGroup;
+  authValid: boolean;
+  constructor(private associadoService: AssociadoService, private loading: LoadingService, private sessionService: SessionService) { }
 
   ngOnInit() {
+    this.loginForm = new FormGroup({
+      cpf: new FormControl("", Validators.required),
+      senha: new FormControl("", Validators.required)
+    });
   }
 
+  resolved() {
+    this.authValid = true;
+  }
+
+  async login() {
+    if (this.isDadosValidos()) {
+      this.loading.exibir();
+      const associado = await this.associadoService.login(this.loginForm.value);
+      this.sessionService.login(associado.id.toString());
+      this.loading.esconder();
+    }
+  }
+
+  private isDadosValidos() {
+    return this.loginForm.valid && this.authValid;
+  }
 }

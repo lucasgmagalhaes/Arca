@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,  NO_ERRORS_SCHEMA  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -20,7 +20,6 @@ import { FuncionarioService } from './services/funcionario.service';
 import { TipoUsuarioComponent } from './tipo-usuario/tipo-usuario.component';
 
 import { LoginComponent } from './login/login.component';
-import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
 import { CadastroAssociadoComponent } from './cadastro-associado/cadastro-associado.component';
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 import { CadastroAnimalComponent } from './cadastro-animal/cadastro-animal.component';
@@ -42,12 +41,14 @@ import { FuncionariosInternaComponent } from './funcionarios-interna/funcionario
 import { LoadingComponent } from './loading/loading.component';
 import { AnimalService } from './services/animal.service';
 
+//import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
     LoginComponent,
-    RecaptchaV2Component,
     CadastroAssociadoComponent,
     CadastroFuncionarioComponent,
     CadastroAnimalComponent,
@@ -66,6 +67,7 @@ import { AnimalService } from './services/animal.service';
     LoadingComponent,
     HomeAdocaoComponent,
     TipoUsuarioComponent,
+  //  MDBBootstrapModule,
   ],
   imports: [
     BrowserModule,
@@ -87,6 +89,7 @@ import { AnimalService } from './services/animal.service';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+  //  MDBBootstrapModule.forRoot(),
   ],
   providers: [MatDatepickerModule, MatNativeDateModule, FuncionarioService, AnimalService],
   bootstrap: [AppComponent]
