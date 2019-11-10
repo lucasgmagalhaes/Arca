@@ -1,23 +1,49 @@
-//   .tipo-usuario
-//    {
-//     margin: auto;
-//     margin-top: 60px;  
-//    }
+  .tipo-usuario
+   {
+    margin-left: 0px; 
+    margin-right: 0px; 
+    margin-bottom: 20px;
+   }
  
-   @media (min-width: 800px)
-{
-   .mat-card
+   
+ #btnCadastrarNovoAssociado,
+ #btnCadastrarNovoFuncionario
+ {
+     width: 40%;
+     margin-left: 15%;
+     border-radius: 100px;
+}
+
+.mat-card
    {
     width: 50%;
     margin: auto;
     margin-top: 60px;  
    }
 
- }
 
- #btnCadastrarNovoAssociado,
- #btnCadastrarNovoFuncionario
- {
-     width: 40%;
-     margin-left: 15%;
-}
+   @media (max-width: 800px)
+{
+   .mat-card
+   {
+    width: 98%;
+    margin: auto;
+    margin-top: 60px;  
+   }
+
+   
+   .mat-card-content
+   {
+    text-align: center; 
+   }
+
+
+   #btnCadastrarNovoAssociado,
+   #btnCadastrarNovoFuncionario
+   {
+       width: 60%;
+       border-radius: 100px;
+       margin-left: 0px;
+  }
+
+ }
