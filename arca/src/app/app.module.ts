@@ -17,6 +17,7 @@ import { RecaptchaModule } from 'ng-recaptcha';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/';
 import { FuncionarioService } from './services/funcionario.service';
+import { TipoUsuarioComponent } from './tipo-usuario/tipo-usuario.component';
 
 import { LoginComponent } from './login/login.component';
 import { RecaptchaV2Component } from './recaptcha-v2/recaptcha-v2.component';
@@ -64,6 +65,7 @@ import { AnimalService } from './services/animal.service';
     FuncionariosInternaComponent,
     LoadingComponent,
     HomeAdocaoComponent,
+    TipoUsuarioComponent,
   ],
   imports: [
     BrowserModule,

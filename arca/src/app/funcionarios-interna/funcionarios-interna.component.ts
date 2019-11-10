@@ -1,14 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FuncionarioService } from '../services/funcionario.service';
-import { Observable, Subject, ReplaySubject, from, of, range } from 'rxjs';
+import { Observable} from 'rxjs';
 import { DataSource } from '@angular/cdk/collections';
 import { Funcionario } from "../models/funcionario.model";
-
-@Component({
-  selector: 'app-funcionarios-interna',
-  templateUrl: './funcionarios-interna.component.html',
-  styleUrls: ['./funcionarios-interna.component.scss']
-})
 
 
 export class FuncionarioDataSource extends DataSource<any> {
@@ -20,6 +14,13 @@ export class FuncionarioDataSource extends DataSource<any> {
   }
   disconnect() { }
 }
+
+@Component({
+  selector: 'app-funcionarios-interna',
+  templateUrl: './funcionarios-interna.component.html',
+  styleUrls: ['./funcionarios-interna.component.scss']
+})
+
 
 export class FuncionariosInternaComponent implements OnInit {
   dataSource = new FuncionarioDataSource(this.funcionarioService);
