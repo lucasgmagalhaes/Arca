@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,  NO_ERRORS_SCHEMA  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -40,6 +40,9 @@ import { FuncionariosInternaComponent } from './funcionarios-interna/funcionario
 import { LoadingComponent } from './loading/loading.component';
 import { TipoUsuarioComponent } from './tipo-usuario/tipo-usuario.component';
 
+//import { MDBBootstrapModule } from 'angular-bootstrap-md';
+ 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +66,7 @@ import { TipoUsuarioComponent } from './tipo-usuario/tipo-usuario.component';
     FuncionariosInternaComponent,
     LoadingComponent,
     TipoUsuarioComponent,
+  //  MDBBootstrapModule,
   ],
   imports: [
     BrowserModule,
@@ -84,8 +88,10 @@ import { TipoUsuarioComponent } from './tipo-usuario/tipo-usuario.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+  //  MDBBootstrapModule.forRoot(),
   ],
   providers: [MatDatepickerModule, MatNativeDateModule, FuncionarioService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  //schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }

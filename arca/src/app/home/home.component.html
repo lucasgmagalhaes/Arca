@@ -87,32 +87,14 @@
     </div>
   </div>
   <div class="row home__parceiros">
-    <h4>NOSSOS PARCEIROS</h4>
-
-    <div class="col-lg-3">
+    <h4>NOSSOS PARCEIROS</h4>  
+    <div class="col-lg-3" *ngFor="let p of parceiros.slice(0, 4);">
       <mat-card class=" home__parceiros__item">
-
-        <img mat-card-image src="../../assets/imagens/noticia1.jpg">
+        <div>
+          <mat-icon aria-hidden="false" aria-label="account_circle icon">pets</mat-icon>
+        </div>
       </mat-card>
-    </div>
-    <div class="col-lg-3">
-      <mat-card class=" home__parceiros__item">
-
-        <img mat-card-image src="../../assets/imagens/noticia1.jpg">
-      </mat-card>
-    </div>
-    <div class="col-lg-3">
-      <mat-card class=" home__parceiros__item">
-
-        <img mat-card-image src="../../assets/imagens/noticia1.jpg">
-      </mat-card>
-    </div>
-
-    <div class="col-lg-3">
-      <mat-card class=" home__parceiros__item">
-
-        <img mat-card-image src="../../assets/imagens/noticia1.jpg">
-      </mat-card>
+      <label> &nbsp;{{p.nome}}</label>
     </div>
   </div>
 </div>

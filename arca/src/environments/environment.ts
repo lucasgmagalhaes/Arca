@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   contaApi: "https://localhost:44328/api",
-  servicoApi: "https://service-servicos.azurewebsites.net/api",
+  servicoApi: "https://localhost:44328/api",
   gerenciaApi: "https://service-gerencia.azurewebsites.net/api"
 };
 
