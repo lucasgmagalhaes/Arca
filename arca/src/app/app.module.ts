@@ -39,6 +39,7 @@ import { FormatDatepickerComponent } from './format-datepicker/format-datepicker
 import { FuncionariosInternaComponent } from './funcionarios-interna/funcionarios-interna.component';
 import { LoadingComponent } from './loading/loading.component';
 import { TipoUsuarioComponent } from './tipo-usuario/tipo-usuario.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 //import { MDBBootstrapModule } from 'angular-bootstrap-md';
  
@@ -88,6 +89,7 @@ import { TipoUsuarioComponent } from './tipo-usuario/tipo-usuario.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule
   //  MDBBootstrapModule.forRoot(),
   ],
   providers: [MatDatepickerModule, MatNativeDateModule, FuncionarioService],

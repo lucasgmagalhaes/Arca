@@ -1,30 +1,17 @@
 <div class="container home-adocao">
   <h1>ADOÇÃO DE ANIMAIS</h1>
-  <div class="row">
-    <mat-form-field class="col col-md-3">
-      <mat-label>Animal</mat-label>
-      <select matNativeControl required>
-        <option value="cachorro">Cachorro</option>
-        <option value="gato">Gato</option>
-      </select>
-    </mat-form-field>
-  </div>
   <div class="row home-adocao__animais">
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding: 15px">
+    <div class="col-lg-3 col-md-3 col-sm-12 home-adocao__card__animais col-xs-12" style="padding: 15px" *ngFor="let a of animais">
       <mat-card>
-        <mat-card-title *matCellDef="let element" class="home-adocao__animais__nome"> {{element.nome}} </mat-card-title>
-        <img mat-card-image src="../../assets/imagens/noticia1.jpg">
-
+        <mat-card-title class="home-adocao__card__animais__nome"> {{a.nome}} </mat-card-title>
+        <img mat-card-image class="imgsource" [src]="a.img">
         <mat-card-content *matCellDef="let element">
-          <p>{{element.descricao}}
+          <p>{{a.descricao}}
           </p>
         </mat-card-content>
-
       </mat-card>
-
     </div>
   </div>
-
   <div class="row home-adocao__telefone">
     <div class="col-12">
       para adotar ligue: 4002-8922

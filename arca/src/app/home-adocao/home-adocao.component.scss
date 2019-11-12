@@ -2,11 +2,22 @@
     h1 {
         text-align: center;
     }
-    &__animais {
-        padding-top: 15px;
-        padding-bottom: 15px;
-        &__none {
-            text-align: center;
+    &__card {
+        width: 150px;
+        height: 150px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: center;
+            object-position: center;
+            
+        }
+     &__animais {
+         padding-top: 15px;
+         padding-bottom: 15px;
+         &__none {
+                text-align: center;
+            }
         }
     }
     &__telefone {
