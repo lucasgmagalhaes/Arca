@@ -1,6 +1,5 @@
 
-export interface Autenticacao
-{
+export interface Autenticacao {
     email: string;
     senha: string;
 }

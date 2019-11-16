@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { DoacaoComponent } from './doacao.component';
+import { DoacaoComponent } from "./doacao.component";
 
-describe('DoacaoComponent', () => {
+describe("DoacaoComponent", () => {
   let component: DoacaoComponent;
   let fixture: ComponentFixture<DoacaoComponent>;
 
@@ -19,7 +19,7 @@ describe('DoacaoComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

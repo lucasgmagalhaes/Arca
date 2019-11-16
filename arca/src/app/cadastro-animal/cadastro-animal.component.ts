@@ -1,13 +1,13 @@
-import { Component, OnInit, NgModule } from '@angular/core';
-import { AnimalService } from '../services/animal.service';
-import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/forms';
+import { Component, OnInit, NgModule } from "@angular/core";
+import { AnimalService } from "../services/animal.service";
+import { FormGroup, FormControl, Validators, ValidationErrors } from "@angular/forms";
 
 @NgModule({})
 
 @Component({
-  selector: 'app-cadastro-animal',
-  templateUrl: './cadastro-animal.component.html',
-  styleUrls: ['./cadastro-animal.component.scss']
+  selector: "app-cadastro-animal",
+  templateUrl: "./cadastro-animal.component.html",
+  styleUrls: ["./cadastro-animal.component.scss"]
 })
 export class CadastroAnimalComponent implements OnInit {
   animalForm: FormGroup;
@@ -25,7 +25,7 @@ export class CadastroAnimalComponent implements OnInit {
       isdisponivelparaadocao: new FormControl(false, Validators.required),
       ismorto: new FormControl(false, Validators.required),
     },
-    )
+    );
     //  }, this.compararStrings("senha", "confirmarSenha"));
 
   }

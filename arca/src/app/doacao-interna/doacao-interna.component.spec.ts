@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { DoacaoInternaComponent } from './doacao-interna.component';
+import { DoacaoInternaComponent } from "./doacao-interna.component";
 
-describe('DoacaoInternaComponent', () => {
+describe("DoacaoInternaComponent", () => {
   let component: DoacaoInternaComponent;
   let fixture: ComponentFixture<DoacaoInternaComponent>;
 
@@ -19,7 +19,7 @@ describe('DoacaoInternaComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

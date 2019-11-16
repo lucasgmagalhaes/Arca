@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { Component } from "@angular/core";
+import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
+import { Observable } from "rxjs";
+import { map, shareReplay } from "rxjs/operators";
 
 @Component({
-  selector: 'app-menu-interno',
-  templateUrl: './menu-interno.component.html',
-  styleUrls: ['./menu-interno.component.scss']
+  selector: "app-menu-interno",
+  templateUrl: "./menu-interno.component.html",
+  styleUrls: ["./menu-interno.component.scss"]
 })
 export class MenuInternoComponent {
 

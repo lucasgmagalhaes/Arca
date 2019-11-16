@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { FuncionariosInternaComponent } from './funcionarios-interna.component';
+import { FuncionariosInternaComponent } from "./funcionarios-interna.component";
 
-describe('FuncionariosInternaComponent', () => {
+describe("FuncionariosInternaComponent", () => {
   let component: FuncionariosInternaComponent;
   let fixture: ComponentFixture<FuncionariosInternaComponent>;
 
@@ -19,7 +19,7 @@ describe('FuncionariosInternaComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

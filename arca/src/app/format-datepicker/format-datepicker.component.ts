@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 import { NativeDateAdapter } from "@angular/material";
 import { MatDateFormats } from "@angular/material/core";
 
 @Component({
-  selector: 'app-format-datepicker',
-  templateUrl: './format-datepicker.component.html',
-  styleUrls: ['./format-datepicker.component.scss']
+  selector: "app-format-datepicker",
+  templateUrl: "./format-datepicker.component.html",
+  styleUrls: ["./format-datepicker.component.scss"]
 })
 export class FormatDatepickerComponent implements OnInit {
 
@@ -23,7 +23,7 @@ export class AppDateAdapter extends NativeDateAdapter {
       day = +day < 10 ? "0" + day : day;
       let month: string = (date.getMonth() + 1).toString();
       month = +month < 10 ? "0" + month : month;
-      let year = date.getFullYear();
+      const year = date.getFullYear();
       return `${day}/${month}/${year}`;
     }
     return date.toDateString();

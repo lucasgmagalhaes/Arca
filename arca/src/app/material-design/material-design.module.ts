@@ -1,9 +1,9 @@
 
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { TextFieldModule } from '@angular/cdk/text-field';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TextFieldModule } from "@angular/cdk/text-field";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
   MatButtonModule,
   MatInputModule,
@@ -18,9 +18,9 @@ import {
   MatDatepickerModule,
   MatSnackBarModule
 
-} from '@angular/material';
+} from "@angular/material";
 
-import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { NgxMaskModule, IConfig } from "ngx-mask";
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
 
