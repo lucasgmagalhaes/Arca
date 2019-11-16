@@ -1,18 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ParceiroService } from '../services/parceiro.service';
-import { LoadingService } from '../services/loading.service';
-import { MatSnackBar } from '@angular/material';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { FormGroup, FormControl, Validators, FormGroupDirective } from "@angular/forms";
+import { ParceiroService } from "../services/parceiro.service";
+import { LoadingService } from "../services/loading.service";
+import { MatSnackBar } from "@angular/material";
 
 @Component({
-  selector: 'app-cadastro-parceiro',
-  templateUrl: './cadastro-parceiro.component.html',
-  styleUrls: ['./cadastro-parceiro.component.scss']
+  selector: "app-cadastro-parceiro",
+  templateUrl: "./cadastro-parceiro.component.html",
+  styleUrls: ["./cadastro-parceiro.component.scss"]
 })
 export class CadastroParceiroComponent implements OnInit {
-
   formCadastro: FormGroup;
-  constructor(private parceiroService: ParceiroService, private loading: LoadingService, private notificacao: MatSnackBar) { }
+  @ViewChild(FormGroupDirective, { static: false }) _form: FormGroupDirective;
+  constructor(
+    private parceiroService: ParceiroService,
+    private loading: LoadingService,
+    private notificacao: MatSnackBar
+  ) {}
 
   ngOnInit() {
     this.formCadastro = new FormGroup({
@@ -31,6 +35,7 @@ export class CadastroParceiroComponent implements OnInit {
       this.loading.exibir();
       await this.parceiroService.cadastrar(this.formCadastro.value);
       this.formCadastro.reset();
+      this._form.resetForm();
       this.notificacao.open("Parceiro cadastrado com sucesso", "Ok", {
         duration: 3000
       });
