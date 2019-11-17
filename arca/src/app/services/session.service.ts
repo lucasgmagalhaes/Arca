@@ -7,7 +7,7 @@ import { BehaviorSubject } from "rxjs";
 export class SessionService {
   private _isLoged = new BehaviorSubject<boolean>(false);
   private _tipoUsuario = new BehaviorSubject<string>("");
-  constructor() {}
+  constructor() { }
 
   login(userCode: string, tipoUsuario: "associado" | "funcionario") {
     localStorage.setItem("USERID", userCode);
@@ -28,8 +28,7 @@ export class SessionService {
     return this._tipoUsuario.asObservable();
   }
 
-  getUserId()
-  {
+  getUserId() {
     return +localStorage.getItem("USERID");
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { NgModule } from "@angular/core";
 import { MaterialDesignModule } from "../material-design/material-design.module";
-import { FormGroup, Validators, FormControl } from "@angular/forms";
+import { FormGroup, Validators, FormControl, AbstractControl } from "@angular/forms";
 import { AssociadoService } from "../services/associado.service";
 import { LoadingService } from "../services/loading.service";
 import { SessionService } from "../services/session.service";
@@ -27,13 +27,17 @@ export class LoginComponent implements OnInit {
     private sessionService: SessionService,
     private notificacao: MatSnackBar,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
       cpf: new FormControl("", Validators.required),
       senha: new FormControl("", Validators.required)
     });
+  }
+
+  get(control: string) {
+    return this.loginForm.get(control);
   }
 
   resolved() {
@@ -56,7 +60,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  private isDadosValidos() {
+  isDadosValidos() {
     return this.loginForm.valid && this.authValid;
   }
 
