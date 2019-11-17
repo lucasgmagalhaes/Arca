@@ -22,6 +22,7 @@
         <re-captcha (resolved)="resolved()" siteKey="6LfGYr0UAAAAADtqJxa4iHT-IEWgDCe5666vQK6d"></re-captcha>
       </div>
       <div class="row align-right">
+        <a class="signup" routerLink="/cadastro-associado">Cadastrar-se</a>
         <button class="btn-login" [disabled]="!isDadosValidos()" mat-raised-button (click)="login()"
           type="submit">Entrar</button>
       </div>
