@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { NgModule } from '@angular/core';
-import { MaterialDesignModule } from '../material-design/material-design.module';
-import { FormGroup, Validators, FormControl } from '@angular/forms';
-import { AssociadoService } from '../services/associado.service';
-import { LoadingService } from '../services/loading.service';
-import { SessionService } from '../services/session.service';
+import { Component, OnInit } from "@angular/core";
+import { NgModule } from "@angular/core";
+import { MaterialDesignModule } from "../material-design/material-design.module";
+import { FormGroup, Validators, FormControl, AbstractControl } from "@angular/forms";
+import { AssociadoService } from "../services/associado.service";
+import { LoadingService } from "../services/loading.service";
+import { SessionService } from "../services/session.service";
+import { MatSnackBar } from "@angular/material";
+import { FuncionarioService } from "../services/funcionario.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -22,13 +25,24 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
   authValid: boolean;
-  constructor(private associadoService: AssociadoService, private loading: LoadingService, private sessionService: SessionService) { }
+  constructor(
+    private associadoService: AssociadoService,
+    private funcionarioService: FuncionarioService,
+    private loading: LoadingService,
+    private sessionService: SessionService,
+    private notificacao: MatSnackBar,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
       cpf: new FormControl("", Validators.required),
       senha: new FormControl("", Validators.required)
     });
+  }
+
+  get(control: string) {
+    return this.loginForm.get(control);
   }
 
   resolved() {
@@ -48,7 +62,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  private isDadosValidos() {
+  isDadosValidos() {
     return this.loginForm.valid && this.authValid;
   }
 }

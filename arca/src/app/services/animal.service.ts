@@ -1,13 +1,14 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Animal } from "../models/animal.model";
-import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { getMatScrollStrategyAlreadyAttachedError } from '@angular/cdk/overlay/typings/scroll/scroll-strategy';
+import { environment } from "src/environments/environment";
+import { Observable, ObservedValueOf, timer} from "rxjs";
+import { map, debounceTime } from "rxjs/operators";
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class AnimalService {
   private readonly rotaAnimal = "Animal";
   constructor(private http: HttpClient) { }

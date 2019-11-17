@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  contaApi: "https://localhost:5000/api",
+  contaApi: "https://localhost:5001/api",
   servicoApi: "https://localhost:5201/api",
   gerenciaApi: "https://localhost:5101/api",
 };

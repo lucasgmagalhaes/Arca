@@ -1,41 +1,41 @@
-.login 
-{
-    width: 100vw;
-    height: 100vh;
-    //  background: #6C7A89;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-         }
-    .mat-card {
-        width: 335px;;
-        background: #fff;
-         }
-         body {
-            margin: 0px;
-    }
-
-.mat-card
-{
-    text-align: center;
+.login {
+  height: 76vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.mat-icon 
-{
+.mat-card {
+  width: 335px;
+  background: #fff;
+}
+body {
+  margin: 0px;
+}
+
+.mat-card {
+  text-align: center;
+}
+.mat-icon {
   margin-left: -22px;
   font-size: 50px;
 }
 
-#title_login
-{
-    font-size: 15px;
+#title_login {
+  font-size: 15px;
 }
-#footer_login 
-{
-    font-size: 10px;
+#footer_login {
+  font-size: 10px;
 }
 
-.mat-raised-button
-{
-    margin-top: 10px;
+.mat-raised-button {
+  margin-top: 10px;
+}
+
+.captcha {
+  margin-top: 10px;
+}
+
+.btn-login {
+  margin-right: 15px;
 }

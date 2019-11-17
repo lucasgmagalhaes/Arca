@@ -1,6 +1,8 @@
-import { Component, OnInit, NgModule } from '@angular/core';
-import { AnimalService } from '../services/animal.service';
-import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/forms';
+import { Component, OnInit, NgModule, ViewChild } from "@angular/core";
+import { AnimalService } from "../services/animal.service";
+import { FormGroup, FormControl, Validators, ValidationErrors, FormGroupDirective } from "@angular/forms";
+import { LoadingService } from '../services/loading.service';
+import { MatSnackBar } from '@angular/material';
 
 @NgModule({})
 
@@ -11,7 +13,10 @@ import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/f
 })
 export class CadastroAnimalComponent implements OnInit {
   animalForm: FormGroup;
-  constructor(private animalService: AnimalService) { }
+  @ViewChild(FormGroupDirective, { static: false }) _form: FormGroupDirective;
+  constructor(private animalService: AnimalService,
+    private loading: LoadingService,
+    private notificacao: MatSnackBar) { }
 
   ngOnInit() {
 
@@ -19,8 +24,8 @@ export class CadastroAnimalComponent implements OnInit {
       especie: new FormControl("", Validators.required),
       raca: new FormControl("", Validators.required),
       nome: new FormControl("", Validators.required),
-      idade: new FormControl(+"", Validators.required),
-      medicaoidade: new FormControl(+"", Validators.required),
+      idade: new FormControl(0, Validators.required),
+      medicaoidade: new FormControl(0, Validators.required),
       descricao: new FormControl("", Validators.required),
       isdisponivelparaadocao: new FormControl(false, Validators.required),
       ismorto: new FormControl(false, Validators.required),
@@ -33,17 +38,21 @@ export class CadastroAnimalComponent implements OnInit {
   get(field: string) {
     return this.animalForm.get(field);
   }
-  
-  async cadastrar() {
 
-    if (!this.animalForm.valid) {
-      alert("formulário inválido");
-      // Deve exibir algo na tela para o usuário
-      console.log("Formulário inválido");
+  async cadastrar() {
+    this.loading.exibir();
+    try {
+      await this.animalService.cadastrar(this.animalForm.value);
+      this.notificacao.open("Animal cadastrado com sucesso!", "Ok", {
+        duration: 3000
+      });
+      this._form.resetForm();
+      this.animalForm.reset();
+    } catch (error) {
+      console.log(error);
+      this.notificacao.open("Não foi possível cadastrar o animal :(", "Ok", { duration: 5000 });
     }
 
-    await this.animalService.cadastrar(this.animalForm.value);
-    alert("Animal cadastrado com sucesso");
-    console.log("Animal cadastrado com sucesso");
+    this.loading.esconder();
   }
 }
