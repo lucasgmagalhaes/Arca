@@ -54,8 +54,8 @@
                         <mat-form-field>
                             <mat-label>Meses/Anos</mat-label>
                             <mat-select required formControlName="medicaoidade">
-                                <mat-option value="0">Meses</mat-option>
-                                <mat-option value="1">Anos</mat-option>
+                                <mat-option [value]="0">Meses</mat-option>
+                                <mat-option [value]="1">Anos</mat-option>
                             </mat-select>
                             <mat-error *ngIf="get('medicaoidade').errors && get('medicaoidade').errors['required']">Campo Obrigatório</mat-error>
                         </mat-form-field>
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="row align-right">
-                    <button mat-raised-button id="btnCadastrarAnimal" (click)="cadastrar()"
+                    <button [disabled]="!animalForm.valid" mat-raised-button id="btnCadastrarAnimal" (click)="cadastrar()"
                         type="submit">Cadastrar</button>
                 </div>
 
