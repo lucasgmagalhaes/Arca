@@ -9,23 +9,18 @@ import { getMatScrollStrategyAlreadyAttachedError } from '@angular/cdk/overlay/t
   providedIn: 'root'
 })
 export class AtendimentoService {
-  private readonly rotaAtendimento = "Atendimento";
+  private readonly rotaAtendimento = "atendimento";
   constructor(private http: HttpClient) { }
 
-  listar(): Observable<Atendimento[]> {
-    return this.http.get<Atendimento[]>(`${environment.servicoApi}/${this.rotaAtendimento}`);
-  }
+  // listar(): Observable<Atendimento[]> {
+  //   return this.http.get<Atendimento[]>(`${environment.gerenciaApi}/${this.rotaAtendimento}`);
+  // }
 
   cadastrar(atendimento: Atendimento): Promise<Atendimento> {
     return this.http
-      .post<Atendimento>(`${environment.servicoApi}/${this.rotaAtendimento}`, atendimento)
+      .post<Atendimento>(`${environment.gerenciaApi}/${this.rotaAtendimento}`, atendimento)
       .toPromise();
   }
-
-  // buscarImgAleatoria(): Observable<string> {
-  //   return this.http.get<string>("https://dog.ceo/api/breeds/image/random").pipe(map(resultado => resultado["message"]));
-
-  // }
 }
 
 

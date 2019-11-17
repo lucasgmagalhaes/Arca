@@ -4,5 +4,5 @@ export interface Atendimento {
     raca: string
     tipoAtendimento: string;
     descricao: string;
-    funcionarioId:number;
+    funcionarioId: "1";
 }
