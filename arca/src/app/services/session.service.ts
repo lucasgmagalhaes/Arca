@@ -27,4 +27,9 @@ export class SessionService {
   getUserType() {
     return this._tipoUsuario.asObservable();
   }
+
+  getUserId()
+  {
+    return +localStorage.getItem("USERID");
+  }
 }
