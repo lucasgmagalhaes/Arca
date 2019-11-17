@@ -78,7 +78,7 @@ namespace GerenciaMicroservice
         {
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ContaMicroservice");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "GerenciaMicroservice");
                 c.RoutePrefix = string.Empty;
             });
             app.UseEndpoints(endpoints =>
@@ -108,7 +108,7 @@ namespace GerenciaMicroservice
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "ContaMicroservice",
+                    Title = "GerenciaMicroservice",
                     Version = "v1"
                 });
 
