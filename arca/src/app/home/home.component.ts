@@ -12,10 +12,10 @@ import { Observable, Subject, ReplaySubject, from, of, range } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-  parceiros: Array<any>
+  parceiros: Parceiro[] = [];
 
   constructor(private parceiroService: ParceiroService) { }
- 
+
   ngOnInit() {
      this.listar();
   }

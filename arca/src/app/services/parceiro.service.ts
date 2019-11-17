@@ -16,7 +16,7 @@ export class ParceiroService {
   }
 
   listar(): Observable<Parceiro[]> {
-    return this.http.get<Parceiro[]>(`${environment.contaApi}/${this.rotaParceiro}`);
+    return this.http.get<Parceiro[]>(`${environment.gerenciaApi}/${this.rotaParceiro}`);
   }
 
 }
