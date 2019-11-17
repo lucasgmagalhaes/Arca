@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DoacaoInternaComponent } from './doacao-interna.component';
+import { CadastroAnimalComponent } from './cadastro-animal.component';
 
-describe('DoacaoInternaComponent', () => {
-  let component: DoacaoInternaComponent;
-  let fixture: ComponentFixture<DoacaoInternaComponent>;
+describe('CadastroAnimalComponent', () => {
+  let component: CadastroAnimalComponent;
+  let fixture: ComponentFixture<CadastroAnimalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DoacaoInternaComponent ]
+      declarations: [ CadastroAnimalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DoacaoInternaComponent);
+    fixture = TestBed.createComponent(CadastroAnimalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

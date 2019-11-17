@@ -10,14 +10,19 @@ import { FuncionarioService } from "../services/funcionario.service";
 import { Router } from "@angular/router";
 
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.scss"]
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
+
 @NgModule({
-  exports: [MaterialDesignModule]
+  exports: [
+    MaterialDesignModule
+  ]
 })
+
 export class LoginComponent implements OnInit {
+
   loginForm: FormGroup;
   authValid: boolean;
   constructor(
@@ -45,42 +50,19 @@ export class LoginComponent implements OnInit {
   }
 
   async login() {
-    if (this.isDadosValidos()) {
+    if (this.isDadosValidos() == true) {
       this.loading.exibir();
-      try {
-        await this.tentarLogar();
-        this.router.navigate([""]);
-      } catch {
-        this.notificacao.open("Usuário ou senha inválidos", "Ok", {
-          duration: 5000
-        });
-      }
-
+      const associado = await this.associadoService.login(this.loginForm.value);
+      this.sessionService.login(associado.id.toString());
       this.loading.esconder();
+    }
+    else{
+      this.loading.esconder();
+      alert("dadosidos inval");
     }
   }
 
   isDadosValidos() {
     return this.loginForm.valid && this.authValid;
-  }
-
-  private async tentarLogar() {
-    try {
-      await this.fazerLoginAssociado();
-    } catch (error) {
-      await this.fazerLoginFuncionario();
-    }
-  }
-
-  private async fazerLoginAssociado() {
-    const associado = await this.associadoService.login(this.loginForm.value);
-    this.sessionService.login(associado.id.toString(), "associado");
-  }
-
-  private async fazerLoginFuncionario() {
-    const funcionario = await this.funcionarioService.login(
-      this.loginForm.value
-    );
-    this.sessionService.login(funcionario.id.toString(), "funcionario");
   }
 }

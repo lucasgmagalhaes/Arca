@@ -1,10 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Funcionario } from "../models/funcionario.model";
-import { environment } from "src/environments/environment";
-import { Observable, Subject, ReplaySubject, from, of, range } from "rxjs";
-import { DadosLogin } from "../models/dadosLogin.model";
-import { Associado } from "../models/associado.model";
+import { environment } from 'src/environments/environment';
+import { Observable, Subject, ReplaySubject, from, of, range } from 'rxjs';
 
 /**
  * eu prefiro usar *Promisse* no lugar de *Observable* no contenxto
@@ -20,10 +18,6 @@ import { Associado } from "../models/associado.model";
 export class FuncionarioService {
   private readonly rotaFuncionario = "funcionario";
   constructor(private http: HttpClient) { }
-
-  login(dadosLogin: DadosLogin): Promise<Funcionario> {
-    return this.http.post<Funcionario>(`${environment.contaApi}/${this.rotaFuncionario}/autenticar`, dadosLogin).toPromise();
-  }
 
   listar(): Observable<Funcionario[]> {
     return this.http.get<Funcionario[]>(`${environment.contaApi}/${this.rotaFuncionario}`);

@@ -1,11 +1,11 @@
-import { Injectable } from "@angular/core";
-import { Parceiro } from "../models/parceiro.model";
-import { HttpClient } from "@angular/common/http";
-import { environment } from "src/environments/environment";
-import { Observable, Subject, ReplaySubject, from, of, range } from "rxjs";
+import { Injectable } from '@angular/core';
+import { Parceiro } from '../models/parceiro.model';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { Observable, Subject, ReplaySubject, from, of, range } from 'rxjs';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class ParceiroService {
   private readonly rotaParceiro = "parceiro";

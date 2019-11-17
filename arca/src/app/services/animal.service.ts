@@ -6,12 +6,12 @@ import { Observable, ObservedValueOf, timer} from "rxjs";
 import { map, debounceTime } from "rxjs/operators";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 
 export class AnimalService {
-  private readonly rotaAnimal = "animal";
-  constructor(private http: HttpClient) {}
+  private readonly rotaAnimal = "Animal";
+  constructor(private http: HttpClient) { }
 
   listar(): Observable<Animal[]> {
     return this.http.get<Animal[]>(`${environment.servicoApi}/${this.rotaAnimal}`);
@@ -28,3 +28,5 @@ export class AnimalService {
 
   }
 }
+
+

@@ -7,9 +7,7 @@
       <a mat-list-item routerLink="/cadastro-funcionario">Cadastro Funcionário</a>
       <a mat-list-item href="/cadastro-parceiro">Cadastro Parceiros</a>
       <a mat-list-item routerLink="/servicos">Cadastro Serviços</a>
-      <a mat-list-item href="#">Cadastro Atendimento</a>
-      <a mat-list-item href="/doacao">Doação</a>
-
+      <a mat-list-item href="/cadastro-atendimento">Cadastro Atendimento</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -27,8 +25,8 @@
         <a routerLink="/cadastro-funcionario">Cadastro Funcionário</a>
         <a routerLink="/cadastro-parceiro">Cadastro Parceiros</a>
         <a routerLink="/servicos">Cadastro Serviços</a>
-        <a routerLink="">Cadastro Atendimento</a>
         <a *ngIf="userType === 'associado'" routerLink="/doacao">Doação</a>
+        <a routerLink="/cadastro-atendimento">Cadastro Atendimento</a>
         <a routerLink="/login" class="area-restrita">Logout</a>
       </div>
     </mat-toolbar>

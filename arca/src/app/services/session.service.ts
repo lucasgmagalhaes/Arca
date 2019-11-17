@@ -1,10 +1,11 @@
-import { Injectable } from "@angular/core";
-import { BehaviorSubject } from "rxjs";
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class SessionService {
+
   private _isLoged = new BehaviorSubject<boolean>(false);
   private _tipoUsuario = new BehaviorSubject<string>("");
   constructor() {
@@ -19,14 +20,13 @@ export class SessionService {
     }
   }
 
-  login(userCode: string, tipoUsuario: "associado" | "funcionario") {
+  login(userCode: string) {
     localStorage.setItem("USERID", userCode);
-    localStorage.setItem("USER_TYPE", tipoUsuario);
     this._isLoged.next(true);
   }
 
   logout() {
-    localStorage.clear();
+    localStorage.removeItem("USERID");
     this._isLoged.next(false);
   }
 

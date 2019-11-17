@@ -6,9 +6,9 @@ import { SessionService } from "../services/session.service";
 
 
 @Component({
-  selector: "app-doacao",
-  templateUrl: "./doacao.component.html",
-  styleUrls: ["./doacao.component.scss"]
+  selector: 'app-doacao',
+  templateUrl: './doacao.component.html',
+  styleUrls: ['./doacao.component.scss']
 })
 export class DoacaoComponent implements OnInit {
 
@@ -18,7 +18,7 @@ export class DoacaoComponent implements OnInit {
     private userLogado: SessionService
   ) { }
 
-  ngOnInit() { 
+  ngOnInit() {
 
   }
 
@@ -30,16 +30,16 @@ export class DoacaoComponent implements OnInit {
     }
 
     try {
-    
+
       await this.doacaoService.cadastrar(doacao);
-      this.notificacao.open("Doação realizada com sucesso", "Ok", 
+      this.notificacao.open("Doação realizada com sucesso", "Ok",
       {
-        duration: 1000       
+        duration: 1000
       });
       this.notificacao.dismiss();
     } catch (error) {
       console.log(error);
-    } 
+    }
   }
 
 }

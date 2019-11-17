@@ -3,4 +3,4 @@
  */
 const rotasApp = {
 
-};
+}

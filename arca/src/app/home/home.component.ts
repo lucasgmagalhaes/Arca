@@ -1,14 +1,14 @@
-import { Parceiro } from "./../models/parceiro.model";
-import { ParceiroService } from "./../services/parceiro.service";
-import { Component, OnInit } from "@angular/core";
-import { MaterialDesignModule } from "../material-design/material-design.module";
-import { DataSource } from "@angular/cdk/collections";
-import { Observable, Subject, ReplaySubject, from, of, range } from "rxjs";
+import { Parceiro } from './../models/parceiro.model';
+import { ParceiroService } from './../services/parceiro.service';
+import { Component, OnInit } from '@angular/core';
+import { MaterialDesignModule } from '../material-design/material-design.module';
+import { DataSource } from '@angular/cdk/collections';
+import { Observable, Subject, ReplaySubject, from, of, range } from 'rxjs';
 
 @Component({
-  selector: "app-home",
-  templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.scss"]
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 

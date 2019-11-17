@@ -1,20 +1,22 @@
 <div class="row tipo-usuario">
-  <div class="col col-12">
-    <mat-card class="row">
-      <mat-card-content>
-        <img src="../../assets/imagens/func.png">
-        <button routerLink="/cadastro-funcionario" mat-raised-button id="btnCadastrarNovoFuncionario">Novo
-          Funcionário</button>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <div class="col col-12">
-    <mat-card class="row">
-      <mat-card-content>
-        <img src="../../assets/imagens/user.png">
-        <button routerLink="/cadastro-associado" mat-raised-button id="btnCadastrarNovoAssociado">Novo
-          Associado</button>
-      </mat-card-content>
-    </mat-card>
-  </div>
+    <div class="col col-5">
+        <mat-card class="row">
+            <mat-card-content>
+                <img src="../../assets/imagens/func.png">
+                <button routerLink="/cadastro-funcionario" mat-raised-button id="btnCadastrarNovoFuncionario" (click)="cadastrarFuncionario()"
+                    type="submit">Novo Funcionário</button>
+            </mat-card-content>
+        </mat-card>
+
+
+    </div>
+    <div class="col col-5">
+        <mat-card class="row">
+            <mat-card-content>
+                <img src="../../assets/imagens/user.png">
+                <button routerLink="/cadastro-associado" mat-raised-button id="btnCadastrarNovoAssociado" (click)="cadastrarAssociado()"
+                    type="submit">Novo Associado</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
 </div>

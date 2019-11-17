@@ -5,9 +5,9 @@ import { map, shareReplay } from "rxjs/operators";
 import { SessionService } from '../services/session.service';
 
 @Component({
-  selector: "app-menu-interno",
-  templateUrl: "./menu-interno.component.html",
-  styleUrls: ["./menu-interno.component.scss"]
+  selector: 'app-menu-interno',
+  templateUrl: './menu-interno.component.html',
+  styleUrls: ['./menu-interno.component.scss']
 })
 export class MenuInternoComponent {
 

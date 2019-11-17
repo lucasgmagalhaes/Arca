@@ -13,75 +13,76 @@
   </div>
   <div class="row">
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding: 15px">
-      <mat-card>
-        <mat-card-title> NOTÍCIA1 </mat-card-title>
-        <img mat-card-image src="../../assets/imagens/noticia1.jpg">
+      <mat-card class="home__noticia">
+        <a href="http://arcabrasil.org.br/index.php/25-anos-em-defesa-dos-animais/">
+          <img mat-card-image src="../../assets/imagens/noticia1.jpg">
+          <mat-card-title  class="home__noticia__titulo">26 anos em defesa dos animais</mat-card-title>
 
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-
+          <mat-card-content>
+            <p>
+                Realizar projetos que atuam na raiz dos problemas, envolvendo toda a sociedade, por um mundo livre de sofrimento animal é nossa missão.
+            </p>
+          </mat-card-content>
+        </a>
       </mat-card>
 
     </div>
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding: 15px">
-      <mat-card>
-        <mat-card-title> NOTÍCIA1 </mat-card-title>
-        <img mat-card-image src="../../assets/imagens/noticia1.jpg">
+        <mat-card class="home__noticia">
+            <a href="http://arcabrasil.org.br/index.php/flipper-um-culto-a-liberdade/">
+              <img mat-card-image src="../../assets/imagens/noticia2.jpg">
+              <mat-card-title  class="home__noticia__titulo"> FLIPPER VOLTA PRA CASA: a emocionante devolução ao oceano do último golfinho mantido em cativeiro no Brasil  </mat-card-title>
 
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-
-      </mat-card>
-
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding: 15px">
-      <mat-card>
-        <mat-card-title> NOTÍCIA1 </mat-card-title>
-        <img mat-card-image src="../../assets/imagens/noticia1.jpg">
-
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-
-      </mat-card>
+              <mat-card-content>
+                <p>
+                    A origem da ARCA Brasil está ligada a uma história idílica. Por sua beleza e delicadeza pode ser até difícil acreditar que
+                </p>
+              </mat-card-content>
+            </a>
+          </mat-card>
 
     </div>
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding: 15px">
-      <mat-card>
-        <mat-card-title>ANIMAL 1</mat-card-title>
-        <img mat-card-image src="../../assets/imagens/noticia1.jpg">
+        <mat-card class="home__noticia">
+            <a href="http://arcabrasil.org.br/index.php/anjos/">
 
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-      </mat-card>
+              <img mat-card-image src="../../assets/imagens/noticia3.jpg">
+              <mat-card-title class="home__noticia__titulo"> Anjos da adoção: Entenda a importância do lar transitório  </mat-card-title>
+              <mat-card-content>
+                <p>Num cenário em que os abrigos não suportam mais animais, o Lar Transitório surge como a opção mais viável no preparo de
+                </p>
+              </mat-card-content>
+            </a>
+          </mat-card>
+
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding: 15px">
+        <mat-card class="home__noticia">
+            <a href="http://arcabrasil.org.br/index.php/25-anos-em-defesa-dos-animais/">
+
+              <img mat-card-image src="../../assets/imagens/noticia4.png">
+              <mat-card-title class="home__noticia__titulo">
+                  ARCA Brasil: Atuação pioneira
+               </mat-card-title>
+              <mat-card-content>
+                <p>
+                    Conheça os projetos que vêm transformando a realidade dos animais em nosso país.
+                      </p>
+              </mat-card-content>
+            </a>
+          </mat-card>
     </div>
   </div>
   <div class="row home__banner">
     <div class="col-12">
       <a routerLink='/doacao'><img src="../../assets/imagens/banner-doacao.PNG"></a>
+      <!-- <mat-card class=" home__parceiros__item">
+          <img mat-card-image src="../../assets/imagens/banner-doacao.PNG">
+        </mat-card> -->
     </div>
   </div>
-  <h4>NOSSOS PARCEIROS</h4>
   <div class="row home__parceiros">
+    <h4>NOSSOS PARCEIROS</h4>
     <div class="col-lg-3" *ngFor="let p of parceiros.slice(0, 4);">
       <mat-card class=" home__parceiros__item">
         <div>
