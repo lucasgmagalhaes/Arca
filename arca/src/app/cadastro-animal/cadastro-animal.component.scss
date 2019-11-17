@@ -1,30 +1,38 @@
 .mat-card-title,
 .mat-icon {
-    color: #325829;
+  color: #325829;
 }
 
-@media (min-width: 800px)
-{
-   .mat-card
-   {
+@media (min-width: 800px) {
+  .mat-card {
     width: 50%;
     margin: auto;
-    margin-top: 60px;  
-   }
- }
-
- label {
-    color: #325829;
+    margin-top: 60px;
+  }
 }
 
- #btnCadastrarAnimal
- {
-     float: right;
-      margin-right: 2%;
- }
+label {
+  color: #325829;
+}
 
- #animalDispAdoacao, #animalMorreu
- {
-    text-align: left;
-    margin-left: 1%;
- }
+.align-right {
+  justify-content: flex-end;
+}
+
+#btnCadastrarAnimal {
+  margin-right: 2%;
+}
+
+#animalDispAdoacao,
+#animalMorreu {
+  text-align: left;
+  margin-left: 1%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+textarea.mat-input-element {
+  resize: none;
+}
