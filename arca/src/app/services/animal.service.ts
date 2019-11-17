@@ -22,6 +22,7 @@ export class AnimalService {
   }
 
   buscarImgAleatoria(): Observable<string> {
-    return this.http.get<string>("https://dog.ceo/api/breeds/image/random").pipe(map(resultado => resultado.message));
+    return this.http.get<string>("https://dog.ceo/api/breeds/image/random").pipe(map(resultado => resultado["message"]));
+
   }
 }
