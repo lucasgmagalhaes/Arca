@@ -36,11 +36,15 @@ export class LoginComponent implements OnInit {
   }
 
   async login() {
-    if (this.isDadosValidos()) {
+    if (this.isDadosValidos() == true) {
       this.loading.exibir();
       const associado = await this.associadoService.login(this.loginForm.value);
       this.sessionService.login(associado.id.toString());
       this.loading.esconder();
+    }
+    else{
+      this.loading.esconder();
+      alert("dadosidos inval");
     }
   }
 

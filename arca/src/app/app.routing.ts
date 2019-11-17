@@ -12,12 +12,14 @@ import { LoginComponent } from './login/login.component';
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 import { CadastroParceiroComponent } from './cadastro-parceiro/cadastro-parceiro.component';
 import { TipoUsuarioComponent } from './tipo-usuario/tipo-usuario.component';
+import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-atendimento.component';
 
 export const ROUTES: Routes =
   [{ path: 'cadastro-animal', component: CadastroAnimalComponent },
   { path: 'cadastro-funcionario', component: CadastroFuncionarioComponent },
   { path: 'cadastro-associado', component: CadastroAssociadoComponent },
   { path: 'cadastro-parceiro', component: CadastroParceiroComponent },
+  { path: 'cadastro-atendimento', component: CadastroAtendimentoComponent},
   { path: 'doacao', component: DoacaoComponent },
   { path: 'servicos', component: HomeServicosComponent },
   { path: 'adocao', component: HomeAdocaoComponent },

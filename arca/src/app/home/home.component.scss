@@ -45,32 +45,26 @@
                 background: #1dd1a1;
                 color: white;
                 font-size: 25px;
-                font-family: 'Varela Round', sans-serif;
+                font-family: "Varela Round", sans-serif;
                 margin-top: 50%;
 
-                .mat-icon{
+                .mat-icon {
                     margin-top: 25%;
                     font-size: 400%;
                     margin-right: 40%;
                 }
             }
-            div:hover
-            {
+            div:hover {
                 transform: rotateY(180deg);
-                .mat-icon{
-                  color: yellow;
+                .mat-icon {
+                    color: yellow;
                 }
-                
             }
-         
-         
         }
-        label
-        {
+        label {
             color: #1dd1a1;
             font-size: 25px;
-            font-family: 'Varela Round', sans-serif;
-          
+            font-family: "Varela Round", sans-serif;
         }
     }
     &__banner {
@@ -79,6 +73,20 @@
         img {
             width: 100%;
             border-radius: 0;
+        }
+    }
+
+    &__noticia {
+        a,
+        p {
+            text-decoration: none;
+        }
+        p {
+            font-size: 12px;
+        }
+        &__titulo {
+            line-height: 20px;
+            font-size: 14px;
         }
     }
 }

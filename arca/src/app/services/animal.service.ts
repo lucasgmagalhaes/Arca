@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Animal } from "../models/animal.model";
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { getMatScrollStrategyAlreadyAttachedError } from '@angular/cdk/overlay/typings/scroll/scroll-strategy';
 @Injectable({
   providedIn: 'root'
