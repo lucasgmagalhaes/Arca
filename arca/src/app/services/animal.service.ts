@@ -20,6 +20,11 @@ export class AnimalService {
       .post<Animal>(`${environment.servicoApi}/${this.rotaAnimal}`, animal)
       .toPromise();
   }
+
+  buscarImgAleatoria(): Observable<string> {
+    return this.http.get<string>("https://dog.ceo/api/breeds/image/random").pipe(map(resultado => resultado["message"]));
+
+  }
 }
 
 
