@@ -33,7 +33,7 @@ export class CadastroAnimalComponent implements OnInit {
   get(field: string) {
     return this.animalForm.get(field);
   }
-  
+
   async cadastrar() {
 
     if (!this.animalForm.valid) {

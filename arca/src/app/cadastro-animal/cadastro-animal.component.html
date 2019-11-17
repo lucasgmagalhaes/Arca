@@ -17,7 +17,7 @@
                                 <mat-option value="cachorro">Cachorro</mat-option>
                                 <mat-option value="gato">Gato</mat-option>
                             </mat-select>
-                            <mat-error *ngIf="get('especie').errors?.required">Campo Obrigatório</mat-error>
+                            <mat-error *ngIf="get('especie').errors && get('especie').errors['required']">Campo Obrigatório</mat-error>
                         </mat-form-field>
                     </div>
 
@@ -27,14 +27,14 @@
                             <mat-select required formControlName="raca">
                                 <mat-option value="srd">SRD</mat-option>
                             </mat-select>
-                            <mat-error *ngIf="get('raca').errors?.required">Campo Obrigatório</mat-error>
+                            <mat-error *ngIf="get('raca').errors && get('raca').errors['required']">Campo Obrigatório</mat-error>
                         </mat-form-field>
                     </div>
 
                     <div class="col col-md-6">
                         <mat-form-field>
                             <input required matInput placeholder="Nome do Animal" formControlName="nome" type="text">
-                            <mat-error *ngIf="get('nome').errors?.required">Campo Obrigatório</mat-error>
+                            <mat-error *ngIf="get('nome').errors && get('nome').errors['required']">Campo Obrigatório</mat-error>
                         </mat-form-field>
                     </div>
 
@@ -46,7 +46,7 @@
                             <mat-label>Idade</mat-label>
                             <input required matInput placeholder="Idade do Animal" formControlName="idade" type="number"
                                 mask="00">
-                            <mat-error *ngIf="get('idade').errors?.required">Campo Obrigatório</mat-error>
+                            <mat-error *ngIf="get('idade').errors && get('idade').errors['required']">Campo Obrigatório</mat-error>
                         </mat-form-field>
                     </div>
 
@@ -57,7 +57,7 @@
                                 <mat-option value="0">Meses</mat-option>
                                 <mat-option value="1">Anos</mat-option>
                             </mat-select>
-                            <mat-error *ngIf="get('medicaoidade').errors?.required">Campo Obrigatório</mat-error>
+                            <mat-error *ngIf="get('medicaoidade').errors && get('medicaoidade').errors['required']">Campo Obrigatório</mat-error>
                         </mat-form-field>
                     </div>
 
@@ -65,7 +65,7 @@
                         <mat-form-field appearance="outline">
                             <mat-label>Estado do Animal</mat-label>
                             <textarea required matInput rows="5" formControlName="descricao"></textarea>
-                            <mat-error *ngIf="get('descricao').errors?.required">Campo Obrigatório</mat-error>
+                            <mat-error *ngIf="get('descricao').errors && get('descricao').errors['required']">Campo Obrigatório</mat-error>
                         </mat-form-field>
                     </div>
 
