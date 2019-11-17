@@ -19,7 +19,7 @@ export const ROUTES: Routes =
   { path: 'cadastro-funcionario', component: CadastroFuncionarioComponent },
   { path: 'cadastro-associado', component: CadastroAssociadoComponent },
   { path: 'cadastro-parceiro', component: CadastroParceiroComponent },
-  { path: 'cadastro-atendimento', component: CadastroAtendimentoComponent},
+  { path: 'cadastro-atendimento', component: CadastroAtendimentoComponent },
   { path: 'doacao', component: DoacaoComponent },
   { path: 'servicos', component: HomeServicosComponent },
   { path: 'adocao', component: HomeAdocaoComponent },
