@@ -19,7 +19,6 @@ export class DoacaoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
   }
 
   async doar(valor) {
@@ -28,7 +27,6 @@ export class DoacaoComponent implements OnInit {
       valor: valor,
       associadoId: this.userLogado.getUserId()
     }
-
     try {
 
       await this.doacaoService.cadastrar(doacao);
@@ -36,7 +34,6 @@ export class DoacaoComponent implements OnInit {
       {
         duration: 1000
       });
-      this.notificacao.dismiss();
     } catch (error) {
       console.log(error);
     }

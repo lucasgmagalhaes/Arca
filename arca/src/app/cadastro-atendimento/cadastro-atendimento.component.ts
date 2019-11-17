@@ -1,3 +1,5 @@
+import { Funcionario } from './../models/funcionario.model';
+import { SessionService } from './../services/session.service';
 import { Component, OnInit, NgModule } from '@angular/core';
 import { MaterialDesignModule } from '../material-design/material-design.module';
 import { AtendimentoService } from '../services/atendimento.service';
@@ -12,7 +14,7 @@ import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/f
 })
 export class CadastroAtendimentoComponent implements OnInit {
   atendimentoForm: FormGroup;
-  constructor(private atendimentoService: AtendimentoService) { }
+  constructor(private atendimentoService: AtendimentoService, private userLogado: SessionService) { }
 
   ngOnInit() {
     // MaterialDesignModule
@@ -21,7 +23,8 @@ export class CadastroAtendimentoComponent implements OnInit {
       dataAtendimento: new FormControl("", Validators.required),
       tipoAtendimento: new FormControl("", Validators.required),
       descricao: new FormControl("", Validators.required),
-
+      funcionarioId: new FormControl (this.userLogado.getUserId(), Validators.required)
+      
     },
     )
 

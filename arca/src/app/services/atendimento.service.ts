@@ -9,7 +9,7 @@ import { getMatScrollStrategyAlreadyAttachedError } from '@angular/cdk/overlay/t
   providedIn: 'root'
 })
 export class AtendimentoService {
-  private readonly rotaAtendimento = "Atendimento";
+  private readonly rotaAtendimento = "atendimento";
   constructor(private http: HttpClient) { }
 
   // listar(): Observable<Atendimento[]> {
