@@ -22,10 +22,14 @@
             {
                 return "Server=" + Server + ";Database=" + Database
                 + ";Trusted_Connection=Yes;";
+                
+
             }
 
             return "Server=" + Server + ";Database=" + Database
                 + ";User ID=" + UserId + ";Password=" + Password + ";";
+            
+
         }
     }
 }

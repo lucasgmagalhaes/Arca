@@ -21,15 +21,18 @@ export class CadastroAtendimentoComponent implements OnInit {
       dataAtendimento: new FormControl("", Validators.required),
       tipoAtendimento: new FormControl("", Validators.required),
       descricao: new FormControl("", Validators.required),
+
     },
     )
+
   }
+
   get(field: string) {
     return this.atendimentoForm.get(field);
   }
 
   async cadastrar() {
-
+    alert("cadastro");
     if (!this.atendimentoForm.valid) {
       alert("formulário inválido");
       // Deve exibir algo na tela para o usuário
