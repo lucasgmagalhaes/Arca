@@ -7,7 +7,17 @@ import { BehaviorSubject } from "rxjs";
 export class SessionService {
   private _isLoged = new BehaviorSubject<boolean>(false);
   private _tipoUsuario = new BehaviorSubject<string>("");
-  constructor() { }
+  constructor() {
+    const id = localStorage.getItem("USERID");
+    if (id !== null) {
+      this._isLoged.next(true);
+    }
+
+    const type = localStorage.getItem("USER_TYPE");
+    if (type !== null) {
+      this._tipoUsuario.next(type);
+    }
+  }
 
   login(userCode: string, tipoUsuario: "associado" | "funcionario") {
     localStorage.setItem("USERID", userCode);
