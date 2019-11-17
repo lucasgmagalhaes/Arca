@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   contaApi: "https://localhost:5000/api",
-  servicoApi: "https://localhost:5100/api",
-  gerenciaApi: "https://localhost:5200/api",
+  servicoApi: "https://localhost:5201/api",
+  gerenciaApi: "https://localhost:5101/api",
 };
 
 /*
