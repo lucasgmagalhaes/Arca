@@ -27,4 +27,16 @@ export class MenuInternoComponent {
     this.sessionService.logout();
     this.router.navigate([""]);
   }
+
+  isAssociadoPermitionLevel() {
+    return this.userType === "associado";
+  }
+
+  isAdminPermissionLevelOnly() {
+    return this.userType === "admin";
+  }
+
+  isAdminPermissionLevel() {
+    return this.userType === "funcionario" || this.userType === "admin";
+  }
 }
