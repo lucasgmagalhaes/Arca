@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { Observable } from "rxjs";
 import { map, shareReplay } from "rxjs/operators";
 import { SessionService } from '../services/session.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-interno',
@@ -12,14 +13,18 @@ import { SessionService } from '../services/session.service';
 export class MenuInternoComponent {
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-  .pipe(
-    map(result => result.matches),
-    shareReplay()
-  );
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
 
   userType: string;
-  constructor(private breakpointObserver: BreakpointObserver, private sessionService: SessionService) {
+  constructor(private breakpointObserver: BreakpointObserver, private sessionService: SessionService, private router: Router) {
     this.sessionService.getUserType().subscribe(type => this.userType = type);
   }
 
+  logout() {
+    this.sessionService.logout();
+    this.router.navigate([""]);
+  }
 }
