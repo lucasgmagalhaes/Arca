@@ -1,3 +1,4 @@
+import { DoacaoService } from './services/doacao.service';
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule,  NO_ERRORS_SCHEMA  } from "@angular/core";
@@ -92,7 +93,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     NgbModule
   //  MDBBootstrapModule.forRoot(),
   ],
-  providers: [MatDatepickerModule, MatNativeDateModule, FuncionarioService],
+  providers: [MatDatepickerModule, MatNativeDateModule, FuncionarioService, DoacaoService],
   bootstrap: [AppComponent],
   // schemas: [ NO_ERRORS_SCHEMA ]
 })

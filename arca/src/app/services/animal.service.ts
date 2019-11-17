@@ -4,9 +4,11 @@ import { Animal } from "../models/animal.model";
 import { environment } from "src/environments/environment";
 import { Observable, ObservedValueOf, timer} from "rxjs";
 import { map, debounceTime } from "rxjs/operators";
+
 @Injectable({
   providedIn: "root"
 })
+
 export class AnimalService {
   private readonly rotaAnimal = "animal";
   constructor(private http: HttpClient) {}
