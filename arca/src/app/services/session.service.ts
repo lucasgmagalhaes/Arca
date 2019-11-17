@@ -20,8 +20,9 @@ export class SessionService {
     }
   }
 
-  login(userCode: string) {
+  login(userCode: string, tipoUsuario: "associado" | "funcionario") {
     localStorage.setItem("USERID", userCode);
+    localStorage.setItem("USER_TYPE", tipoUsuario);
     this._isLoged.next(true);
   }
 
