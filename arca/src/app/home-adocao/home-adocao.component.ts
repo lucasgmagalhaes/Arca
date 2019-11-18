@@ -5,16 +5,6 @@ import { AnimalService } from '../services/animal.service';
 import { Observable } from 'rxjs';
 import { DataSource } from '@angular/cdk/collections';
 
-// export class AnimalDataSource extends DataSource<any> {
-//   constructor(private animalService: AnimalService) {
-//     super();
-//   }
-//   connect(): Observable<Animal[]> {
-//     return this.animalService.listar();
-//   }
-//   disconnect() { }
-//   }
-
 
 @Component({
   selector: 'app-home-adocao',

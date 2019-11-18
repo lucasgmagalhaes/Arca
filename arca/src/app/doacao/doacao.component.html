@@ -34,7 +34,7 @@
                         <p>R$ 50,00</p>
                     </button>
                 </mat-form-field>
-                <mat-form-field class="col col-md-6" >
+                <mat-form-field class="col col-md-6">
                     <button mat-raised-button class="money" (click)="doar(100)">
                         <p>R$ 100,00</p>
                     </button>
@@ -63,6 +63,13 @@
                         <p>R$ 1000,00</p>
                     </button>
                 </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col col-md-12">
+                    <button mat-raised-button class="money"(click)="openDialog()" routerLink="/doacao-interna">
+                        <p>HISTÓRICO DE DOAÇÕES</p>
+                    </button>
+                </mat-form-field>               
             </div>
         </mat-card-content>
     </mat-card>

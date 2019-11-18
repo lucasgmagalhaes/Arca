@@ -16,6 +16,10 @@ export class DoacaoService {
     return this.http.get<Doacao[]>(`${environment.servicoApi}/${this.rotaDoacao}`);
   }
 
+  listarAssociado(id: number): Observable<Doacao[]> {
+    return this.http.get<Doacao[]>(`${environment.servicoApi}/${this.rotaDoacao}/Associado/${id}`);
+  }
+
   cadastrar(doacao: Doacao): Promise<Doacao> {
     return this.http
       .post<Doacao>(`${environment.servicoApi}/${this.rotaDoacao}`, doacao)

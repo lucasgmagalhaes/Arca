@@ -1,3 +1,4 @@
+import { DoacaoInternaComponent } from './doacao-interna/doacao-interna.component';
 import { CadastroAssociadoComponent } from './cadastro-associado/cadastro-associado.component';
 import {
   Routes
@@ -26,4 +27,5 @@ export const ROUTES: Routes =
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'tipo-usuario', component: TipoUsuarioComponent },
+  { path: 'doacao-interna', component: DoacaoInternaComponent },
   { path: '', pathMatch: 'full', redirectTo: '/home' }];

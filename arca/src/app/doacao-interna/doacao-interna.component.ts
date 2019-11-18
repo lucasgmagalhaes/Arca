@@ -1,24 +1,10 @@
+import { DoacaoService } from './../services/doacao.service';
+import { Doacao } from './../models/doacao.model';
 import { Component, OnInit } from '@angular/core';
-
-export interface Doacoes {
-  nomeDoador: string;
-  dataDoacao: string;
-  cpfDoador: string;
-  valorDoacao: number;
-}
-
-const ELEMENT_DATA: Doacoes[] = [
-  {dataDoacao: "2019-10-10", nomeDoador: 'Hydrogen', cpfDoador: "321.987.525-98", valorDoacao: 100.00},
-  {dataDoacao: "2019-10-09", nomeDoador: 'Helium', cpfDoador: "321.987.525-98", valorDoacao: 300.00},
-  {dataDoacao: "2019-10-08", nomeDoador: 'Lithium', cpfDoador: "321.987.525-98", valorDoacao: 1000.00},
-  {dataDoacao: "2019-10-07", nomeDoador: 'Beryllium', cpfDoador: "321.987.525-98", valorDoacao: 1000.00},
-  {dataDoacao: "2019-10-06", nomeDoador: 'Boron', cpfDoador: "321.987.525-98", valorDoacao: 1000.00},
-  {dataDoacao: "2019-10-05", nomeDoador: 'Carbon', cpfDoador: "321.987.525-98", valorDoacao: 200.00},
-  {dataDoacao: "2019-10-04", nomeDoador: 'Nitrogen', cpfDoador: "321.987.525-98", valorDoacao: 300.00},
-  {dataDoacao: "2019-10-03", nomeDoador: 'Oxygen', cpfDoador: "321.987.525-98", valorDoacao: 500.00},
-  {dataDoacao: "2019-10-02", nomeDoador: 'Fluorine', cpfDoador: "321.987.525-98", valorDoacao: 1000.00},
-  {dataDoacao: "2019-10-01", nomeDoador: 'Neon', cpfDoador: "321.987.525-98", valorDoacao: 100.00},
-];
+import { Observable} from 'rxjs';
+import { DataSource } from '@angular/cdk/collections';
+import { MaterialDesignModule } from '../material-design/material-design.module';
+import { SessionService } from '../services/session.service';
 
 @Component({
   selector: 'app-doacao-interna',
@@ -28,12 +14,16 @@ const ELEMENT_DATA: Doacoes[] = [
 
 export class DoacaoInternaComponent implements OnInit {
 
-  displayedColumns: string[] = ['dataDoacao', 'nomeDoador', 'cpfDoador', 'valorDoacao'];
-  dataSource = ELEMENT_DATA;
+  doacoes: Doacao[] = [];
 
-  constructor() { }
+  constructor(private doacaoService: DoacaoService, private userLogado: SessionService) { }
 
   ngOnInit() {
+     this.listarAssociado();
+  }
+
+  listarAssociado() {
+    this.doacaoService.listarAssociado(this.userLogado.getUserId()).subscribe(dados => this.doacoes = dados);
   }
 
 }
