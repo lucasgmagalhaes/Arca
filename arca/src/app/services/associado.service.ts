@@ -11,11 +11,15 @@ import { Associado } from '../models/associado.model';
 })
 export class AssociadoService {
 
-  private readonly rotaFuncionario = "associado";
+  private readonly rotaAssociado = "associado";
   constructor(private http: HttpClient) { }
 
   login(dadosLogin: DadosLogin): Promise<Associado> {
-    return this.http.post<Associado>(`${environment.contaApi}/${this.rotaFuncionario}/autenticar`, dadosLogin).toPromise();
+    return this.http.post<Associado>(`${environment.contaApi}/${this.rotaAssociado}/autenticar`, dadosLogin).toPromise();
   }
-  
+
+  cadastrar(dadosAssociado: Associado) {
+    return this.http.post<Associado>(`${environment.contaApi}/${this.rotaAssociado}`, dadosAssociado).toPromise();
+  }
+
 }

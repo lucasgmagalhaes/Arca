@@ -1,40 +1,72 @@
 <div class="cadastroAssociado">
-    <mat-card class="card-cadastroAssociado">
-        <mat-card-title>
-            <label><mat-icon aria-hidden="false" aria-label="account_circle icon">account_circle</mat-icon>
-                &nbsp;Novo Associado</label>
-        </mat-card-title>
-        <hr>
-        <mat-card-content>
-            <div class="row">
-                <mat-form-field class="col col-md-9">
-                    <input matInput placeholder="Nome Completo" formControlName="nomeAssociado" type="text">
-                </mat-form-field>
-                <mat-form-field class="col col-md-3">
-                    <input matInput placeholder="Data de Nascimento" formControlName="dataNascAssociado" type="text"
-                        mask="00/00/0000">
-                </mat-form-field>
-            </div>
-            <div class="row">
-                <mat-form-field class="col col-md-6">
-                    <input matInput placeholder="CPF" formControlName="cpfAssociado" type="text" mask="000.000.000-00">
-                </mat-form-field>
-                <mat-form-field class="col col-md-6">
-                    <input matInput placeholder="Email" formControlName="emailAssociado" type="text" mask="00/00/0000">
-                </mat-form-field>
-            </div>
-            <div class="row">
-                <mat-form-field class="col col-md-6">
-                    <input matInput placeholder="Senha" formControlName="senhaAssociado" type="password">
-                </mat-form-field>
-                <mat-form-field class="col col-md-6">
-                    <input matInput placeholder="Confirmação da Senha" formControlName="confSenhaAssociado"
-                        type="password">
-                </mat-form-field>
-            </div>
-            <div class="row">
-                <button mat-raised-button id="btnCadastrarAssociado">Cadastrar</button>
-            </div>
-        </mat-card-content>
-    </mat-card>
+  <mat-card class="card-cadastroAssociado">
+
+    <mat-card-title>
+      <label>
+        <mat-icon aria-hidden="false" aria-label="account_circle icon">account_circle</mat-icon>
+        &nbsp;Novo Associado
+      </label>
+    </mat-card-title>
+
+    <hr>
+
+    <mat-card-content>
+      <form [formGroup]="associadoForm">
+
+        <div class="row">
+          <mat-form-field class="col col-md-9">
+            <input matInput placeholder="Nome Completo" formControlName="nome" type="text">
+            <mat-error *ngIf="get('nome').errors && get('nome').errors['required']">Campo Obrigatório
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="col col-md-3">
+            <input matInput placeholder="Data de Nascimento" [matDatepicker]="datepickerRef" name="datepicker"
+              formControlName="dataNascimento" required readonly />
+            <mat-datepicker-toggle [for]="datepickerRef" matSuffix></mat-datepicker-toggle>
+            <mat-datepicker #datepickerRef></mat-datepicker>
+            <mat-error *ngIf="get('dataNascimento').errors && get('dataNascimento').errors['required']">Campo
+              Obrigatório
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field class="col col-md-6">
+            <input matInput placeholder="CPF" formControlName="cpf" type="text" mask="000.000.000-00">
+            <mat-error *ngIf="get('cpf').errors && get('cpf').errors['required']">Campo Obrigatório
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="col col-md-6">
+            <input matInput placeholder="Email" formControlName="email" type="text">
+            <mat-error *ngIf="get('email').errors && get('email').errors['required']">Campo Obrigatório
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field class="col col-md-6">
+            <input matInput placeholder="Senha" formControlName="senha" type="password">
+            <mat-error *ngIf="get('senha').errors && get('senha').errors['required']">Campo Obrigatório
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="col col-md-6">
+            <input matInput placeholder="Confirmação da Senha" formControlName="confirmarSenha" type="password">
+            <mat-error *ngIf="get('confirmarSenha').errors && get('confirmarSenha').errors['required']">Campo
+              Obrigatório
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <button mat-raised-button [disabled]="!associadoForm.valid" (click)="cadastrar()"
+            id="btnCadastrarAssociado">Cadastrar</button>
+        </div>
+
+      </form>
+
+    </mat-card-content>
+  </mat-card>
 </div>

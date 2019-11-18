@@ -81,6 +81,11 @@ export class LoginComponent implements OnInit {
     const funcionario = await this.funcionarioService.login(
       this.loginForm.value
     );
-    this.sessionService.login(funcionario.id.toString(), "funcionario");
+    if (funcionario.isAdministrador) {
+      this.sessionService.login(funcionario.id.toString(), "admin");
+    } else {
+      this.sessionService.login(funcionario.id.toString(), "funcionario");
+    }
+
   }
 }
