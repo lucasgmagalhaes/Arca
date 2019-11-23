@@ -27,7 +27,7 @@
    <!-- Symbol Column -->
    <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> Delete </th>
-    <td mat-cell *matCellDef="let element" (click)="deletar(element.id)">Apagar</td>
+    <td mat-cell *matCellDef="let element">Apagar</td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
