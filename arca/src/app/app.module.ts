@@ -41,6 +41,7 @@ import { FormatDatepickerComponent } from './format-datepicker/format-datepicker
 import { FuncionariosInternaComponent } from './funcionarios-interna/funcionarios-interna.component';
 import { LoadingComponent } from './loading/loading.component';
 import { AnimalService } from './services/animal.service';
+import { ParceirosComponent } from './parceiros/parceiros.component';
 
 //import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
@@ -68,6 +69,7 @@ import { AnimalService } from './services/animal.service';
     LoadingComponent,
     HomeAdocaoComponent,
     TipoUsuarioComponent,
+    ParceirosComponent,
   //  MDBBootstrapModule,
   ],
   imports: [

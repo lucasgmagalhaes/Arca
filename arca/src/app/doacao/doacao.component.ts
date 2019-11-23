@@ -24,29 +24,29 @@ export class DoacaoComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+
   async doar(valor) {
-    var doacao: Doacao =
-    {
-      valor: valor,
-      associadoId: this.userLogado.getUserId()
-    }
-    try {
-      await this.doacaoService.cadastrar(doacao);
-      this.notificacao.open("Doação realizada com sucesso", "Ok",
+
+ 
+      var doacao: Doacao =
       {
-        duration: 3000
-      });
+        valor: valor,
+        associadoId: this.userLogado.getUserId()
+      }
+      try {
+        await this.doacaoService.cadastrar(doacao);
+        this.notificacao.open("Doação realizada com sucesso", "Ok",
+          {
+            duration: 3000
+          });
 
-      setTimeout(function() {
-        document.location.reload(true);
-      }, 2000); 
-    
-      
-    } catch (error) {
-      console.log(error);
-    }
-  
-  }
+        setTimeout(function () {
+          document.location.reload(true);
+        }, 2000);
 
+
+      } catch (error) {
+        console.log(error);
+      }
+    } 
 }

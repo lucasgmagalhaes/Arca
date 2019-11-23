@@ -1,0 +1,13 @@
+<div class="container paginaParceiros">
+    <div class="row parceiros">
+        <h1>NOSSOS PARCEIROS</h1>
+        <div class="col-md-2" *ngFor="let p of parceiros">
+            <mat-card class="parceirosCard">
+                <div id="iconPet">
+                    <mat-icon aria-hidden="false" aria-label="account_circle icon">pets</mat-icon>
+                </div>
+            </mat-card>
+            <label id="nomeParceiro">&nbsp;{{p.nome}}</label>
+        </div>
+    </div>
+</div>
