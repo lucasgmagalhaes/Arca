@@ -40,7 +40,6 @@ import { TESTEAPIComponent } from './testeapi/testeapi.component';
 import { FormatDatepickerComponent } from './format-datepicker/format-datepicker.component';
 import { FuncionariosInternaComponent } from './funcionarios-interna/funcionarios-interna.component';
 import { LoadingComponent } from './loading/loading.component';
-import { AnimalService } from './services/animal.service';
 import { ParceirosComponent } from './parceiros/parceiros.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AnimalComponent } from './animal/animal.component';
