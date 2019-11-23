@@ -3,12 +3,12 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item *ngIf="isAssociadoPermitionLevel()" routerLink="/cadastro-animal">Cadastro Adoção</a>
+      <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/cadastro-animal">Cadastro Animal</a>
       <a mat-list-item *ngIf="isAdminPermissionLevelOnly()" routerLink="/cadastro-funcionario">Cadastro Funcionário</a>
       <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/cadastro-parceiro">Cadastro Parceiros</a>
       <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/servicos">Cadastro Serviços</a>
       <a mat-list-item *ngIf="isAssociadoPermitionLevel()" routerLink="/doacao">Doação</a>
-      <a mat-list-item routerLink="/cadastro-atendimento">Cadastro Atendimento</a>
+      <a mat-list-item  *ngIf="isAdminPermissionLevel()" routerLink="/cadastro-atendimento">Cadastro Atendimento</a>
       <a mat-list-item (click)="logout()" class="area-restrita">Logout</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -23,12 +23,12 @@
       </div>
       <div class="menu-desktop">
         <a routerLink="/home"><img class="logo__imagem" src="../../assets/imagens/logo.png"></a>
-        <a *ngIf="isAssociadoPermitionLevel()" routerLink="/cadastro-animal">Cadastro Adoção</a>
+        <a *ngIf="isAdminPermissionLevel()" routerLink="/cadastro-animal">Cadastro Animal</a>
         <a *ngIf="isAdminPermissionLevelOnly()" routerLink="/cadastro-funcionario">Cadastro Funcionário</a>
         <a *ngIf="isAdminPermissionLevel()" routerLink="/cadastro-parceiro">Cadastro Parceiros</a>
         <a *ngIf="isAdminPermissionLevel()" routerLink="/servicos">Cadastro Serviços</a>
         <a *ngIf="isAssociadoPermitionLevel()" routerLink="/doacao">Doação</a>
-        <a routerLink="/cadastro-atendimento">Cadastro Atendimento</a>
+        <a  *ngIf="isAdminPermissionLevel()" routerLink="/cadastro-atendimento">Cadastro Atendimento</a>
         <a (click)="logout()" class="area-restrita">Logout</a>
       </div>
     </mat-toolbar>
