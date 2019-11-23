@@ -47,6 +47,7 @@ import { AnimalComponent } from './animal/animal.component';
 import { ParceiroComponent } from './parceiro/parceiro.component';
 import { AtendimentoComponent } from './atendimento/atendimento.component';
 import { AtendimentoInternaComponent } from './atendimento-interna/atendimento-interna.component';
+import { FuncionarioComponent } from './funcionario/funcionario.component';
 
 //import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
@@ -79,6 +80,7 @@ import { AtendimentoInternaComponent } from './atendimento-interna/atendimento-i
     ParceiroComponent,
     AtendimentoComponent,
     AtendimentoInternaComponent,
+    FuncionarioComponent,
   //  MDBBootstrapModule,
   ],
   imports: [

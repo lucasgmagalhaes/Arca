@@ -4,14 +4,14 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item *ngIf="isAssociadoPermitionLevel()" routerLink="/adocao">Adoção</a>
-      <a mat-list-item *ngIf="isAssociadoPermitionLevel()" routerLink="/parceiroTabs">Parceiros</a>
+      <a mat-list-item *ngIf="isAssociadoPermitionLevel()" routerLink="/parceiros">Parceiros</a>
       <a mat-list-item *ngIf="isAssociadoPermitionLevel()" routerLink="/servicos">Serviços</a>
       <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/animalTabs">Animais</a>
-      <a mat-list-item *ngIf="isAdminPermissionLevelOnly()" routerLink="/cadastro-funcionario">Cadastro Funcionário</a>
-      <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/cadastro-parceiro">Cadastro Parceiros</a>
+      <a mat-list-item *ngIf="isAdminPermissionLevelOnly()" routerLink="/funcionarioTabs">Funcionários</a>
+      <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/parceiroTabs">Parceiros</a>
       <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/servicos">Serviços</a>
       <a mat-list-item *ngIf="isAssociadoPermitionLevel()" routerLink="/doacao">Doação</a>
-      <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/cadastro-atendimento">Cadastro Atendimento</a>
+      <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/atendimentoTabs">Atendimentos</a>
       <a mat-list-item (click)="logout()" class="area-restrita">Logout</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -30,11 +30,11 @@
         <a *ngIf="isAssociadoPermitionLevel()" routerLink="/parceiros">Parceiros</a>
         <a *ngIf="isAssociadoPermitionLevel()" routerLink="/servicos">Serviços</a>
         <a *ngIf="isAdminPermissionLevel()" routerLink="/animalTabs">Animais</a>
-        <a *ngIf="isAdminPermissionLevelOnly()" routerLink="/cadastro-funcionario">Cadastro Funcionário</a>
+        <a *ngIf="isAdminPermissionLevelOnly()" routerLink="/funcionarioTabs">Funcionários</a>
         <a *ngIf="isAdminPermissionLevel()" routerLink="/parceiroTabs">Parceiros</a>
         <a *ngIf="isAdminPermissionLevel()" routerLink="/servicos">Serviços</a>
         <a *ngIf="isAssociadoPermitionLevel()" routerLink="/doacao">Doação</a>
-        <a *ngIf="isAdminPermissionLevel()" routerLink="/cadastro-atendimento">Cadastro Atendimento</a>
+        <a *ngIf="isAdminPermissionLevel()" routerLink="/atendimentoTabs">Atendimentos</a>
         <a (click)="logout()" class="area-restrita">Logout</a>
       </div>
     </mat-toolbar>

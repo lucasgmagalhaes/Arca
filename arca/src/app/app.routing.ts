@@ -1,3 +1,5 @@
+import { AtendimentoComponent } from './atendimento/atendimento.component';
+import { FuncionarioComponent } from './funcionario/funcionario.component';
 import { Animais } from './animais-interna/animais-interna.component';
 import { DoacaoInternaComponent } from './doacao-interna/doacao-interna.component';
 import { CadastroAssociadoComponent } from './cadastro-associado/cadastro-associado.component';
@@ -34,5 +36,7 @@ export const ROUTES: Routes =
   { path: 'doacao-interna', component: DoacaoInternaComponent },
   { path: 'parceiros', component: ParceirosComponent },
   { path: 'parceiroTabs', component: ParceiroComponent },
+  { path: 'funcionarioTabs', component: FuncionarioComponent },
+  { path: 'atendimentoTabs', component: AtendimentoComponent },
   { path: 'animalTabs', component: AnimalComponent },
   { path: '', pathMatch: 'full', redirectTo: '/home' }];

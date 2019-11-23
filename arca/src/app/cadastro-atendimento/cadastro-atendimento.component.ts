@@ -22,7 +22,7 @@ export class CadastroAtendimentoComponent implements OnInit {
     // MaterialDesignModule
     this.atendimentoForm = new FormGroup({
       raca: new FormControl("", Validators.required),
-      data: new FormControl("", Validators.required),
+      dataAtendimento: new FormControl("", Validators.required),
       tipoAtendimento: new FormControl("", Validators.required),
       descricao: new FormControl("", Validators.required),
       funcionarioId: new FormControl (this.userLogado.getUserId(), Validators.required)

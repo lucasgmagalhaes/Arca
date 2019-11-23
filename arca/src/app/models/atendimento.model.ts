@@ -1,6 +1,6 @@
 export interface Atendimento {
     id: number;
-    data: Date;
+    dataAtendimento: Date;
     raca: string
     tipoAtendimento: string;
     descricao: string;

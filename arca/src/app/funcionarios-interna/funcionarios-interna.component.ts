@@ -5,7 +5,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { Funcionario } from "../models/funcionario.model";
 
 
-export class FuncionarioDataSource extends DataSource<any> {
+export class FuncionarioDataSource extends DataSource<Funcionario> {
   constructor(private funcionarioService: FuncionarioService) {
     super();
   }

@@ -96,7 +96,7 @@ namespace GerenciaMicroservice.Controllers
             {
                 return Ok(_atendimentoService.Inserir(new Atendimento()
                 {
-                    DataAtendimento = atendimento.Data,
+                    DataAtendimento = atendimento.DataAtendimento,
                     FuncionarioId = atendimento.FuncionarioId,
                     Descricao = atendimento.Descricao,
                     Raca = atendimento.Raca,
