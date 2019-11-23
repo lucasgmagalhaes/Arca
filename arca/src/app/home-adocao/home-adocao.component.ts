@@ -4,6 +4,8 @@ import { MaterialDesignModule } from '../material-design/material-design.module'
 import { AnimalService } from '../services/animal.service';
 import { Observable } from 'rxjs';
 import { DataSource } from '@angular/cdk/collections';
+import { mergeMap, map } from 'rxjs/operators';
+import { AnimalHome } from '../models/animal.home';
 
 
 @Component({
@@ -12,12 +14,32 @@ import { DataSource } from '@angular/cdk/collections';
   styleUrls: ['./home-adocao.component.scss']
 })
 
+
 export class HomeAdocaoComponent implements OnInit {
   public animal
+
+  animais: Array<AnimalHome> = [];
+  imgAleatoria: string;
+
+
   constructor(private animalService: AnimalService) { }
   ngOnInit() {
-    this.animal = this.animalService.listar();
-    console.log(this.animal);
+    this.listar();
     MaterialDesignModule;
   }
+
+  listar() {
+    this.animalService.listar().subscribe(animaisRetorno => {
+      animaisRetorno.forEach(async (animal) => {
+        this.animais.push(await this.criarAnimal(animal));
+      });
+    });
+  }
+
+  async criarAnimal(animal: Animal) {
+    const novoAnimal: AnimalHome = animal;
+    novoAnimal.img = await this.animalService.buscarImgAleatoria().toPromise();
+    return novoAnimal;
+  }
+
 }

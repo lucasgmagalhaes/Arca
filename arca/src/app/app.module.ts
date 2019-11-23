@@ -42,6 +42,7 @@ import { FuncionariosInternaComponent } from './funcionarios-interna/funcionario
 import { LoadingComponent } from './loading/loading.component';
 import { AnimalService } from './services/animal.service';
 import { ParceirosComponent } from './parceiros/parceiros.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 //import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
@@ -92,6 +93,7 @@ import { ParceirosComponent } from './parceiros/parceiros.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule
   //  MDBBootstrapModule.forRoot(),
   ],
   providers: [MatDatepickerModule, MatNativeDateModule, FuncionarioService, DoacaoService],

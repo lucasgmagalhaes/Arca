@@ -10,7 +10,7 @@ import { map, debounceTime } from "rxjs/operators";
 })
 
 export class AnimalService {
-  private readonly rotaAnimal = "Animal";
+  private readonly rotaAnimal = "animal";
   constructor(private http: HttpClient) { }
 
   listar(): Observable<Animal[]> {
