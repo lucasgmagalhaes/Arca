@@ -49,7 +49,7 @@ export class CadastroAnimalComponent implements OnInit {
       this._form.resetForm();
       this.animalForm.reset();
     } catch (error) {
-      console.log(error);
+      console.log(error);   
       this.notificacao.open("Não foi possível cadastrar o animal :(", "Ok", { duration: 5000 });
     }
 

@@ -26,6 +26,7 @@ export class MenuInternoComponent {
   logout() {
     this.sessionService.logout();
     this.router.navigate([""]);
+    document.location.reload(true);
   }
 
   isAssociadoPermitionLevel() {

@@ -34,8 +34,12 @@ export class CadastroParceiroComponent implements OnInit {
       this.notificacao.open("Parceiro cadastrado com sucesso", "Ok", {
         duration: 3000
       });
-    } catch (error) {
-      console.log(error);
+    } 
+      catch (error) {
+        console.log(error);     
+        this.notificacao.open("Falha ao cadastrar com parceiro", "Tentar Novamente", {
+          duration: 3000
+        });
     } finally {
       this.loading.esconder();
     }

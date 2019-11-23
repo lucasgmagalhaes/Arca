@@ -53,7 +53,7 @@ export class CadastroAssociadoComponent implements OnInit {
       this.sessionService.login(associado.id.toString(), "associado");
       this.router.navigate([""]);
     } catch (error) {
-      console.log(error);
+      console.log(error);     
     }
     this.loading.esconder();
   }
