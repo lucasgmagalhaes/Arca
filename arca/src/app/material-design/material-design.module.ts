@@ -16,7 +16,8 @@ import {
   MatTableModule,
   MatToolbarModule,
   MatDatepickerModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatTabsModule,
 
 } from '@angular/material';
 
@@ -42,6 +43,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     MatToolbarModule,
     MatDatepickerModule,
     MatSnackBarModule,
+    MatTabsModule,
+    
   ],
   exports: [
     BrowserAnimationsModule,
@@ -58,7 +61,9 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     MatTableModule,
     MatToolbarModule,
     MatDatepickerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTabsModule,
+    
   ]
 })
 export class MaterialDesignModule { }

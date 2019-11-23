@@ -43,6 +43,10 @@ import { LoadingComponent } from './loading/loading.component';
 import { AnimalService } from './services/animal.service';
 import { ParceirosComponent } from './parceiros/parceiros.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AnimalComponent } from './animal/animal.component';
+import { ParceiroComponent } from './parceiro/parceiro.component';
+import { AtendimentoComponent } from './atendimento/atendimento.component';
+import { AtendimentoInternaComponent } from './atendimento-interna/atendimento-interna.component';
 
 //import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
@@ -71,6 +75,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeAdocaoComponent,
     TipoUsuarioComponent,
     ParceirosComponent,
+    AnimalComponent,
+    ParceiroComponent,
+    AtendimentoComponent,
+    AtendimentoInternaComponent,
   //  MDBBootstrapModule,
   ],
   imports: [

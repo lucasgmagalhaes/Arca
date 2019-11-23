@@ -1,3 +1,4 @@
+import { Animais } from './animais-interna/animais-interna.component';
 import { DoacaoInternaComponent } from './doacao-interna/doacao-interna.component';
 import { CadastroAssociadoComponent } from './cadastro-associado/cadastro-associado.component';
 import {
@@ -15,6 +16,8 @@ import { CadastroParceiroComponent } from './cadastro-parceiro/cadastro-parceiro
 import { TipoUsuarioComponent } from './tipo-usuario/tipo-usuario.component';
 import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-atendimento.component';
 import { ParceirosComponent } from './parceiros/parceiros.component';
+import { AnimalComponent } from './animal/animal.component';
+import { ParceiroComponent } from './parceiro/parceiro.component';
 
 export const ROUTES: Routes =
   [{ path: 'cadastro-animal', component: CadastroAnimalComponent },
@@ -30,4 +33,6 @@ export const ROUTES: Routes =
   { path: 'tipo-usuario', component: TipoUsuarioComponent },
   { path: 'doacao-interna', component: DoacaoInternaComponent },
   { path: 'parceiros', component: ParceirosComponent },
+  { path: 'parceiroTabs', component: ParceiroComponent },
+  { path: 'animalTabs', component: AnimalComponent },
   { path: '', pathMatch: 'full', redirectTo: '/home' }];
