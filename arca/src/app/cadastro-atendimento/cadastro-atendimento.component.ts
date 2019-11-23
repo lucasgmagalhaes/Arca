@@ -4,6 +4,8 @@ import { Component, OnInit, NgModule } from '@angular/core';
 import { MaterialDesignModule } from '../material-design/material-design.module';
 import { AtendimentoService } from '../services/atendimento.service';
 import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/forms';
+import { LoadingService } from '../services/loading.service';
+import { MatSnackBar } from '@angular/material';
 
 @NgModule({})
 
@@ -14,13 +16,13 @@ import { FormGroup, FormControl, Validators, ValidationErrors } from '@angular/f
 })
 export class CadastroAtendimentoComponent implements OnInit {
   atendimentoForm: FormGroup;
-  constructor(private atendimentoService: AtendimentoService, private userLogado: SessionService) { }
+  constructor(private atendimentoService: AtendimentoService, private userLogado: SessionService, private loading: LoadingService, private notificacao: MatSnackBar) { }
 
   ngOnInit() {
     // MaterialDesignModule
     this.atendimentoForm = new FormGroup({
       raca: new FormControl("", Validators.required),
-      dataAtendimento: new FormControl("", Validators.required),
+      data: new FormControl("", Validators.required),
       tipoAtendimento: new FormControl("", Validators.required),
       descricao: new FormControl("", Validators.required),
       funcionarioId: new FormControl (this.userLogado.getUserId(), Validators.required)
@@ -35,16 +37,24 @@ export class CadastroAtendimentoComponent implements OnInit {
   }
 
   async cadastrar() {
-    alert("cadastro");
     if (!this.atendimentoForm.valid) {
-      alert("formulário inválido");
-      // Deve exibir algo na tela para o usuário
-      console.log("Formulário inválido");
+      return;
     }
 
-    await this.atendimentoService.cadastrar(this.atendimentoForm.value);
-    alert("Atendimento cadastrado com sucesso");
-    console.log("Atendimento cadastrado com sucesso");
+    try {
+      this.loading.exibir();
+      await this.atendimentoService.cadastrar(this.atendimentoForm.value);
+      this.atendimentoForm.reset();
+      this.notificacao.open("Atendimento cadastrado com sucesso", "Ok", {
+        duration: 3000
+      });
+    } catch (error) {
+      this.notificacao.open("Falha ao cadastrar com atendimento", "Tentar Novamente", {
+        duration: 3000
+      });
+      console.log(error);
+    } finally {
+      this.loading.esconder();
+    }
   }
-
 }
