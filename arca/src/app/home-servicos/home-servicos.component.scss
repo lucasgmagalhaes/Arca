@@ -7,7 +7,26 @@
     line-height: 38px;
       text-align: justify !important;
       &__disponiveis{
+        margin-top: 15px;
         text-align: center;
       }
     }
+
+    &__telefone { 
+       margin-top: 20px;
+      background-color: lightblue;
+      font-size: 22px;
+      text-align: center;
+      padding: 10px;
+      }
+}
+
+
+.acoes 
+{
+  margin-top: 10px;
+}
+.acoes h4
+{
+  color: #325829;
 }
