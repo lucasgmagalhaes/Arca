@@ -19,11 +19,22 @@ export class DoacaoInternaComponent implements OnInit {
   constructor(private doacaoService: DoacaoService, private userLogado: SessionService) { }
 
   ngOnInit() {
-     this.listarAssociado();
+
+    if (this.userLogado.getType() == "associado") {
+      this.listarAssociado();
+    }
+    else if (this.userLogado.getType() == "funcionario" || this.userLogado.getType() == "admin") {
+      this.listar();
+    }
+   
   }
 
   listarAssociado() {
     this.doacaoService.listarAssociado(this.userLogado.getUserId()).subscribe(dados => this.doacoes = dados);
   }
 
+  listar() {
+    this.doacaoService.listar().subscribe(dados => this.doacoes = dados);
+ 
+  }
 }

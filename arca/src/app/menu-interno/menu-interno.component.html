@@ -10,6 +10,7 @@
       <a mat-list-item *ngIf="isAdminPermissionLevelOnly()" routerLink="/funcionarioTabs">Funcionários</a>
       <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/parceiroTabs">Parceiros</a>
       <a mat-list-item *ngIf="isAssociadoPermitionLevel()" routerLink="/doacao">Doação</a>
+      <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/todasDoacoes">Doações</a>
       <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/atendimentoTabs">Atendimentos</a>
       <a mat-list-item routerLink="/perfilTabs">Perfil</a>
       <a routerLink="/servicos">Serviços</a>
@@ -34,6 +35,7 @@
         <a *ngIf="isAdminPermissionLevelOnly()" routerLink="/funcionarioTabs">Funcionários</a>
         <a *ngIf="isAdminPermissionLevel()" routerLink="/parceiroTabs">Parceiros</a>
         <a *ngIf="isAssociadoPermitionLevel()" routerLink="/doacao">Doação</a>
+        <a *ngIf="isAdminPermissionLevel()" routerLink="/todasDoacoes">Doações</a>
         <a *ngIf="isAdminPermissionLevel()" routerLink="/atendimentoTabs">Atendimentos</a>
         <a routerLink="/perfilTabs">Perfil</a>
         <a routerLink="/servicos">Serviços</a>

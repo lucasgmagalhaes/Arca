@@ -28,6 +28,7 @@ export const ROUTES: Routes =
   { path: 'cadastro-parceiro', component: CadastroParceiroComponent },
   { path: 'cadastro-atendimento', component: CadastroAtendimentoComponent },
   { path: 'doacao', component: DoacaoComponent },
+  { path: 'todasDoacoes', component: DoacaoInternaComponent },
   { path: 'servicos', component: HomeServicosComponent },
   { path: 'adocao', component: HomeAdocaoComponent },
   { path: 'home', component: HomeComponent },
