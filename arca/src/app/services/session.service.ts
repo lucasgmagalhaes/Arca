@@ -25,6 +25,16 @@ export class SessionService {
     localStorage.setItem("USER_TYPE", tipoUsuario);
     this._isLoged.next(true);
   }
+  dadosUsuarioLogado(userCode: string, tipoUsuario: "associado" | "funcionario" | "admin") {
+    localStorage.setItem("USERID", userCode);
+    localStorage.setItem("USER_TYPE", tipoUsuario);
+    this._isLoged.next(true);
+  }
+
+  tentativas (numTentativas: string)
+  {
+    localStorage.setItem("NUM_TENTATIVAS", numTentativas);
+  }
 
   logout() {
     localStorage.removeItem("USERID");
@@ -41,5 +51,13 @@ export class SessionService {
 
   getUserId() {
     return +localStorage.getItem("USERID");
+  }
+
+  getType() {
+    return localStorage.getItem("USER_TYPE");
+  }
+
+  getNumTentativas() {
+    return localStorage.getItem("NUM_TENTATIVAS");
   }
 }

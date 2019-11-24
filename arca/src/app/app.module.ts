@@ -49,6 +49,8 @@ import { AtendimentoInternaComponent } from './atendimento-interna/atendimento-i
 import { FuncionarioComponent } from './funcionario/funcionario.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { PerfilComponent } from './perfil/perfil.component';
+import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 
 //import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
@@ -82,6 +84,8 @@ import { environment } from '../environments/environment';
     AtendimentoComponent,
     AtendimentoInternaComponent,
     FuncionarioComponent,
+    PerfilComponent,
+    AlterarSenhaComponent,
   //  MDBBootstrapModule,
   ],
   imports: [

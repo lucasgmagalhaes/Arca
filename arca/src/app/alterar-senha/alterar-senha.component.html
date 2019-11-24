@@ -1,0 +1,25 @@
+<div class="alterarSenha">
+    <mat-card>
+        <form [formGroup]="alterarSenhaForm">
+            <div id="icon_alterarSenha">
+                <mat-icon aria-hidden="false" aria-label="account_circle icon">account_circle</mat-icon>
+                <p id="title_alterarSenha">Alterar Senha</p>
+            </div>
+            <hr>
+            <div class="row">
+                <mat-form-field class="col col-md-12">
+                    <input matInput placeholder="Senha" formControlName="senha" type="password"> 
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field class="col col-md-12">
+                    <input matInput placeholder="Confirmação da Senha" formControlName="confSenha" type="password">
+                </mat-form-field>
+            </div>
+            <div class="row align-right">
+                <button class="btn-alterarSenha" mat-raised-button (click)="alterarSenha()" type="submit">Alterar</button>
+            </div>
+            <hr>
+        </form>
+    </mat-card>
+</div>

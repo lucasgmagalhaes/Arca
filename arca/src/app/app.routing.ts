@@ -1,6 +1,5 @@
 import { AtendimentoComponent } from './atendimento/atendimento.component';
 import { FuncionarioComponent } from './funcionario/funcionario.component';
-import { Animais } from './animais-interna/animais-interna.component';
 import { DoacaoInternaComponent } from './doacao-interna/doacao-interna.component';
 import { CadastroAssociadoComponent } from './cadastro-associado/cadastro-associado.component';
 import {
@@ -20,6 +19,7 @@ import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-at
 import { ParceirosComponent } from './parceiros/parceiros.component';
 import { AnimalComponent } from './animal/animal.component';
 import { ParceiroComponent } from './parceiro/parceiro.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 export const ROUTES: Routes =
   [{ path: 'cadastro-animal', component: CadastroAnimalComponent },
@@ -28,6 +28,7 @@ export const ROUTES: Routes =
   { path: 'cadastro-parceiro', component: CadastroParceiroComponent },
   { path: 'cadastro-atendimento', component: CadastroAtendimentoComponent },
   { path: 'doacao', component: DoacaoComponent },
+  { path: 'todasDoacoes', component: DoacaoInternaComponent },
   { path: 'servicos', component: HomeServicosComponent },
   { path: 'adocao', component: HomeAdocaoComponent },
   { path: 'home', component: HomeComponent },
@@ -39,4 +40,5 @@ export const ROUTES: Routes =
   { path: 'funcionarioTabs', component: FuncionarioComponent },
   { path: 'atendimentoTabs', component: AtendimentoComponent },
   { path: 'animalTabs', component: AnimalComponent },
+  { path: 'perfilTabs', component: PerfilComponent },
   { path: '', pathMatch: 'full', redirectTo: '/home' }];

@@ -1,0 +1,46 @@
+.alterarSenha {
+    height: 76vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .mat-card {
+    width: 335px;
+    background: #fff;
+  }
+  body {
+    margin: 0px;
+  }
+  
+  .mat-card {
+    text-align: center;
+  }
+  .mat-icon {
+    margin-left: -22px;
+    font-size: 50px;
+  }
+  
+  #title_alterarSenha {
+    font-size: 15px;
+  }
+  #footer_alterarSenha {
+    font-size: 10px;
+  }
+  
+  .mat-raised-button {
+    margin-top: 10px;
+  }
+  
+  .captcha {
+    margin-top: 10px;
+  }
+  
+  .btn-alterarSenha {
+    margin-right: 15px;
+  }
+  
+  .signup {
+    margin-right: 26px;
+  }
+  

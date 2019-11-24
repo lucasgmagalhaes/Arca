@@ -24,7 +24,8 @@ export class FuncionarioDataSource extends DataSource<Funcionario> {
 
 export class FuncionariosInternaComponent implements OnInit {
   dataSource = new FuncionarioDataSource(this.funcionarioService);
-  displayedColumns: string[] = ['nome', 'dataNascimento', 'setor', 'id'];
+  displayedColumns: string[] = ['nome', 'dataNascimento', 'setor'];
   constructor(private funcionarioService: FuncionarioService) { }
-  ngOnInit() { }
+  ngOnInit() {
+   }
 }

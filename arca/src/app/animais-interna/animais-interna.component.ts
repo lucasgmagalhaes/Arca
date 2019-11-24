@@ -1,25 +1,18 @@
+import { AnimalService } from './../services/animal.service';
 import { Component, OnInit } from '@angular/core';
+import { Animal } from "../models/animal.model";
+import { Observable} from 'rxjs';
+import { DataSource } from '@angular/cdk/collections';
 
-
-export interface Animais {
-  animal: string;
-  nomeAnimal: string;
-  raca: string;
-  idadeAnimal: string;
+export class AnimalDataSource extends DataSource<Animal> {
+  constructor(private animalService: AnimalService) {
+    super();
+  }
+  connect(): Observable<Animal[]> {
+    return this.animalService.listar();
+  }
+  disconnect() { }
 }
-
-const ELEMENT_DATA: Animais[] = [
-  {animal: "Cachorro", nomeAnimal: 'Hydrogen', raca: "SRD", idadeAnimal: "7 meses"},
-  {animal: "Cachorro", nomeAnimal: 'Helium', raca: "SRD", idadeAnimal: "9 meses"},
-  {animal: "Gato", nomeAnimal: 'Lithium', raca: "SRD", idadeAnimal: "2 meses"},
-  {animal: "Cachorro", nomeAnimal: 'Beryllium', raca: "SRD", idadeAnimal: "5 meses"},
-  {animal: "Cahorro", nomeAnimal: 'Boron', raca: "SRD", idadeAnimal: "3 anos"},
-  {animal: "Gato", nomeAnimal: 'Carbon', raca: "SRD", idadeAnimal: "4 meses"},
-  {animal: "Gato", nomeAnimal: 'Nitrogen', raca: "SRD", idadeAnimal: "11 meses"},
-  {animal: "Cachorro", nomeAnimal: 'Oxygen', raca: "SRD", idadeAnimal: "11 meses"},
-  {animal: "Cachorro", nomeAnimal: 'Fluorine', raca: "SRD", idadeAnimal: "5 anos"},
-  {animal: "Cachorro", nomeAnimal: 'Neon', raca: "SRD", idadeAnimal: "5 meses"},
-];
 
 @Component({
   selector: 'app-animais-interna',
@@ -29,13 +22,9 @@ const ELEMENT_DATA: Animais[] = [
 
 export class AnimaisInternaComponent implements OnInit {
 
-  
-  displayedColumns: string[] = ['animal', 'nomeAnimal', 'raca', 'idadeAnimal'];
-  dataSource = ELEMENT_DATA;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  dataSource = new AnimalDataSource(this.animalService);
+  displayedColumns: string[] = ['especie', 'nome', 'raca', 'isDisponivelParaAdoacao'];
+  constructor(private animalService: AnimalService) { }
+  ngOnInit() { }
 
 }
