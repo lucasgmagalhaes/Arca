@@ -1,33 +1,44 @@
 <div class="cadastroParceiro">
-    <form [formGroup]="formCadastro">
-        <mat-card class="card-cadastroParceiro">
-            <mat-card-title>
-                <label><mat-icon aria-hidden="false" aria-label="account_circle icon">supervised_user_circle</mat-icon>
-                    &nbsp;Novo Parceiro</label>
-            </mat-card-title>
-            <hr>
-            <mat-card-content>
-                <div class="row">
-                    <mat-form-field class="col col-md-3">
-                        <input matInput placeholder="CNPJ" formControlName="cnpj" type="text"
-                            mask="00.000.000/0000-00">
-                    </mat-form-field>
-                    <mat-form-field class="col col-md-5">
-                        <input matInput placeholder="Nome Parceiro" formControlName="nome" type="text">
-                    </mat-form-field>
-                    <mat-form-field class="col col-md-4">
-                        <mat-label>Ramo</mat-label>
-                        <select matNativeControl formControlName="ramo" required>
-                            <option value="veterinaria">Clínica Veterinária</option>
-                            <option value="fornecedor">Fornecedor de Ração</option>
-                        </select>
-                    </mat-form-field>
-                </div>
-                <div class="row">
-                    <button mat-raised-button (click)="cadastrar()" id="btnCadastrarParceiro">Cadastrar</button>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </form>
+  <form [formGroup]="formCadastro">
+    <mat-card class="card-cadastroParceiro">
+      <mat-card-title>
+        <label>
+          <mat-icon aria-hidden="false" aria-label="account_circle icon">supervised_user_circle</mat-icon>
+          &nbsp;Novo Parceiro
+        </label>
+      </mat-card-title>
+      <hr>
+      <mat-card-content>
+        <div class="row">
+
+          <div class="col col-md-3 col-sm-12">
+            <mat-form-field>
+              <input matInput placeholder="CNPJ" formControlName="cnpj" type="text" mask="00.000.000/0000-00">
+            </mat-form-field>
+          </div>
+
+          <div class="col col-md-5 col-sm-12">
+            <mat-form-field>
+              <input matInput placeholder="Nome Parceiro" formControlName="nome" type="text">
+            </mat-form-field>
+          </div>
+
+          <div class="col col-md-4 col-sm-12">
+            <mat-form-field>
+              <mat-label>Ramo</mat-label>
+              <select matNativeControl formControlName="ramo" required>
+                <option value="veterinaria">Clínica Veterinária</option>
+                <option value="fornecedor">Fornecedor de Ração</option>
+              </select>
+            </mat-form-field>
+          </div>
+
+        </div>
+        <div class="row">
+          <button mat-raised-button (click)="cadastrar()" id="btnCadastrarParceiro">Cadastrar</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
 
 </div>
