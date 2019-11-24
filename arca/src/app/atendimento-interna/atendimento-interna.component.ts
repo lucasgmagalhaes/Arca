@@ -27,17 +27,5 @@ export class AtendimentoInternaComponent implements OnInit {
   displayedColumns: string[] = ['dataAtendimento', 'raca', 'tipoAtendimento', 'descricao'];
   constructor(private atendimentoService: AtendimentoService) { }
   ngOnInit() { }
-
-
-  // version = VERSION.full;
   
-  // formatsDateTest: string[] = [
-  //   'dd/MM/yyyy'
-  //   ];
-  
-  // dateNow : Date = new Date();
-  // dateNowISO = this.dateNow.toISOString();
-  // dateNowMilliseconds = this.dateNow.getTime();
-
-
 }
