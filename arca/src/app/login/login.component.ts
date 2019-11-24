@@ -20,6 +20,8 @@ import { Router } from "@angular/router";
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   authValid: boolean;
+
+
   constructor(
     private associadoService: AssociadoService,
     private funcionarioService: FuncionarioService,
@@ -50,10 +52,24 @@ export class LoginComponent implements OnInit {
       try {
         await this.tentarLogar();
         this.router.navigate([""]);
+        this.sessionService.tentativas("0");
       } catch {
-        this.notificacao.open("Usuário ou senha inválidos", "Ok", {
-          duration: 5000
-        });
+        if (+this.sessionService.getNumTentativas() > 3) {
+          this.notificacao.open("Bloqueado após 3 tentativas", "Ok", {
+            duration: 5000
+          });               
+        }
+        else {
+
+          this.notificacao.open("Usuário ou senha inválidos", "Ok", {
+            duration: 5000
+          });
+        }
+        if (this.sessionService.getNumTentativas() == null) {
+          this.sessionService.tentativas("0");
+
+        }
+        this.sessionService.tentativas((1 + (+this.sessionService.getNumTentativas())).toString());
       }
 
       this.loading.esconder();
@@ -84,10 +100,12 @@ export class LoginComponent implements OnInit {
     );
     if (funcionario.isAdministrador) {
       this.sessionService.login(funcionario.id.toString(), "admin");
-     
+
     } else {
-      this.sessionService.login(funcionario.id.toString(), "funcionario");    
+      this.sessionService.login(funcionario.id.toString(), "funcionario");
     }
 
   }
+
 }
+

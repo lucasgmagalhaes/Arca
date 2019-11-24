@@ -31,6 +31,11 @@ export class SessionService {
     this._isLoged.next(true);
   }
 
+  tentativas (numTentativas: string)
+  {
+    localStorage.setItem("NUM_TENTATIVAS", numTentativas);
+  }
+
   logout() {
     localStorage.removeItem("USERID");
     this._isLoged.next(false);
@@ -48,8 +53,11 @@ export class SessionService {
     return +localStorage.getItem("USERID");
   }
 
-
   getType() {
     return localStorage.getItem("USER_TYPE");
+  }
+
+  getNumTentativas() {
+    return localStorage.getItem("NUM_TENTATIVAS");
   }
 }
