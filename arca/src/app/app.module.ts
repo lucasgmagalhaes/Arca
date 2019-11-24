@@ -47,6 +47,8 @@ import { ParceiroComponent } from './parceiro/parceiro.component';
 import { AtendimentoComponent } from './atendimento/atendimento.component';
 import { AtendimentoInternaComponent } from './atendimento-interna/atendimento-interna.component';
 import { FuncionarioComponent } from './funcionario/funcionario.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 //import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
@@ -102,7 +104,8 @@ import { FuncionarioComponent } from './funcionario/funcionario.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   //  MDBBootstrapModule.forRoot(),
   ],
   providers: [MatDatepickerModule, MatNativeDateModule, FuncionarioService, DoacaoService],

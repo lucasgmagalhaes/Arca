@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "run-apis": "run_apis.bat"
+    "run-apis": "run_apis.bat",
+    "pwa": "http-server -p 8080 -c-1 ./dist/arca"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +22,9 @@
     "@angular/material": "^8.2.2",
     "@angular/platform-browser": "~8.2.4",
     "@angular/platform-browser-dynamic": "~8.2.4",
+    "@angular/pwa": "^0.803.19",
     "@angular/router": "~8.2.4",
+    "@angular/service-worker": "~8.2.4",
     "@ng-bootstrap/ng-bootstrap": "^5.1.4",
     "hammerjs": "^2.0.8",
     "material-design-icons": "^3.0.1",
