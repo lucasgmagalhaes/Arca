@@ -1,45 +1,50 @@
 .parceiros {
-    padding-top: 50px;
-    text-align: center;
+  padding-top: 50px;
+  text-align: center;
 }
 
-.parceirosCard
- {
+.parceiros-card {
+  min-height: 120px;
+  display: inline-grid;
+  .label {
+    width: 100%;
+  }
+}
 
-        background-color: transparent;
-        box-shadow: none;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            overflow: hidden;
-            float: left;
-            margin: 15px;
-            margin-left: 25%;        
-            transition: 0.3s ease;
-            background: #1dd1a1;
-            color: white;
-            font-size: 25px;
-            font-family: "Varela Round", sans-serif;
-            margin-top: 50%;   
+.parceirosCardBall {
+  background-color: transparent;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  margin: 15px 0px;
+  transition: 0.3s ease;
+  background: #1dd1a1;
+  color: white;
+  font-size: 25px;
+  font-family: "Varela Round", sans-serif;
 }
 
 #nomeParceiro {
-    color: #1dd1a1;
-    font-size: 15px;
-    font-family: "Varela Round", sans-serif;
+  color: #1dd1a1;
+  font-size: 15px;
+  font-family: "Varela Round", sans-serif;
 }
 
-#iconPet 
-{
-    margin-top: 25%;
-    font-size: 100%;  
+#iconPet {
+  cursor: pointer;
+  font-size: 100%;
+  display: inherit;
+  text-align: center;
+  align-items: center;
 }
 
 #iconPet:hover {
-transform: rotateY(180deg);
-color: yellow;
+  transform: rotateY(180deg);
+  color: yellow;
 }
