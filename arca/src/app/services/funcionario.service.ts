@@ -33,4 +33,15 @@ export class FuncionarioService {
       .post<Funcionario>(`${environment.contaApi}/${this.rotaFuncionario}`, funcionario)
       .toPromise();
   }
+  
+  alterar(funcionario: Funcionario): Promise<Funcionario> {
+    return this.http
+      .put<Funcionario>(`${environment.contaApi}/${this.rotaFuncionario}`, funcionario)
+      .toPromise();
+  }
+
+  listarFuncionario(id: number): Observable<Funcionario> {
+    return this.http.get<Funcionario>(`${environment.contaApi}/${this.rotaFuncionario}/${id}`);
+  }
+ 
 }

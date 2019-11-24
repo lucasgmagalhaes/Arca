@@ -22,4 +22,11 @@ export class AssociadoService {
     return this.http.post<Associado>(`${environment.contaApi}/${this.rotaAssociado}`, dadosAssociado).toPromise();
   }
 
+  alterar(dadosAssociado: Associado) {
+    return this.http.put<Associado>(`${environment.contaApi}/${this.rotaAssociado}`, dadosAssociado).toPromise();
+  }
+
+  listarAssociado(id: number): Observable<Associado> {
+    return this.http.get<Associado>(`${environment.contaApi}/${this.rotaAssociado}/${id}`);
+  }
 }

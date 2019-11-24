@@ -20,6 +20,7 @@ import { CadastroAtendimentoComponent } from './cadastro-atendimento/cadastro-at
 import { ParceirosComponent } from './parceiros/parceiros.component';
 import { AnimalComponent } from './animal/animal.component';
 import { ParceiroComponent } from './parceiro/parceiro.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 export const ROUTES: Routes =
   [{ path: 'cadastro-animal', component: CadastroAnimalComponent },
@@ -39,4 +40,5 @@ export const ROUTES: Routes =
   { path: 'funcionarioTabs', component: FuncionarioComponent },
   { path: 'atendimentoTabs', component: AtendimentoComponent },
   { path: 'animalTabs', component: AnimalComponent },
+  { path: 'perfilTabs', component: PerfilComponent },
   { path: '', pathMatch: 'full', redirectTo: '/home' }];

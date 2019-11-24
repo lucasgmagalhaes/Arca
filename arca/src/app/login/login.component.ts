@@ -75,6 +75,7 @@ export class LoginComponent implements OnInit {
   private async fazerLoginAssociado() {
     const associado = await this.associadoService.login(this.loginForm.value);
     this.sessionService.login(associado.id.toString(), "associado");
+
   }
 
   private async fazerLoginFuncionario() {
@@ -83,8 +84,9 @@ export class LoginComponent implements OnInit {
     );
     if (funcionario.isAdministrador) {
       this.sessionService.login(funcionario.id.toString(), "admin");
+     
     } else {
-      this.sessionService.login(funcionario.id.toString(), "funcionario");
+      this.sessionService.login(funcionario.id.toString(), "funcionario");    
     }
 
   }

@@ -3,15 +3,16 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
+        <mat-icon aria-hidden="false" aria-label="account_circle icon">pets</mat-icon>&nbsp;Novo Animal
       <a mat-list-item *ngIf="isAssociadoPermitionLevel()" routerLink="/adocao">Adoção</a>
       <a mat-list-item *ngIf="isAssociadoPermitionLevel()" routerLink="/parceiros">Parceiros</a>
-      <a mat-list-item *ngIf="isAssociadoPermitionLevel()" routerLink="/servicos">Serviços</a>
       <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/animalTabs">Animais</a>
       <a mat-list-item *ngIf="isAdminPermissionLevelOnly()" routerLink="/funcionarioTabs">Funcionários</a>
       <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/parceiroTabs">Parceiros</a>
-      <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/servicos">Serviços</a>
       <a mat-list-item *ngIf="isAssociadoPermitionLevel()" routerLink="/doacao">Doação</a>
       <a mat-list-item *ngIf="isAdminPermissionLevel()" routerLink="/atendimentoTabs">Atendimentos</a>
+      <a mat-list-item routerLink="/perfilTabs">Perfil</a>
+      <a routerLink="/servicos">Serviços</a>
       <a mat-list-item (click)="logout()" class="area-restrita">Logout</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -32,13 +33,13 @@
         <a *ngIf="isAdminPermissionLevel()" routerLink="/animalTabs">Animais</a>
         <a *ngIf="isAdminPermissionLevelOnly()" routerLink="/funcionarioTabs">Funcionários</a>
         <a *ngIf="isAdminPermissionLevel()" routerLink="/parceiroTabs">Parceiros</a>
-        <a *ngIf="isAdminPermissionLevel()" routerLink="/servicos">Serviços</a>
         <a *ngIf="isAssociadoPermitionLevel()" routerLink="/doacao">Doação</a>
         <a *ngIf="isAdminPermissionLevel()" routerLink="/atendimentoTabs">Atendimentos</a>
+        <a routerLink="/perfilTabs">Perfil</a>
+        <a routerLink="/servicos">Serviços</a>
         <a (click)="logout()" class="area-restrita">Logout</a>
       </div>
     </mat-toolbar>
     <ng-content></ng-content>
-    <!-- Add Content Here -->
   </mat-sidenav-content>
 </mat-sidenav-container>

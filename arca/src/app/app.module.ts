@@ -47,6 +47,8 @@ import { ParceiroComponent } from './parceiro/parceiro.component';
 import { AtendimentoComponent } from './atendimento/atendimento.component';
 import { AtendimentoInternaComponent } from './atendimento-interna/atendimento-interna.component';
 import { FuncionarioComponent } from './funcionario/funcionario.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 
 //import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
@@ -80,6 +82,8 @@ import { FuncionarioComponent } from './funcionario/funcionario.component';
     AtendimentoComponent,
     AtendimentoInternaComponent,
     FuncionarioComponent,
+    PerfilComponent,
+    AlterarSenhaComponent,
   //  MDBBootstrapModule,
   ],
   imports: [
