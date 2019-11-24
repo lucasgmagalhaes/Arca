@@ -5,7 +5,7 @@ export interface Animal {
     idade: number,
     medicaoidade: string,
     descricao: string,
-    isdisponivelparaadocao: string,
-    ismorto: string,
+    isDisponivelParaAdocao: boolean,
+    isMorto: boolean,
     AdotanteId: string
   }
