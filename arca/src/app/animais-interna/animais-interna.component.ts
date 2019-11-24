@@ -1,7 +1,7 @@
 import { AnimalService } from './../services/animal.service';
 import { Component, OnInit } from '@angular/core';
 import { Animal } from "../models/animal.model";
-import { Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 import { DataSource } from '@angular/cdk/collections';
 
 export class AnimalDataSource extends DataSource<Animal> {
@@ -27,4 +27,7 @@ export class AnimaisInternaComponent implements OnInit {
   constructor(private animalService: AnimalService) { }
   ngOnInit() { }
 
+  isAnimalDisponivel(isDisponivel: boolean) {
+    return isDisponivel ? 'Sim' : 'Não';
+  }
 }
